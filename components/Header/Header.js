@@ -41,6 +41,7 @@ export default function Header() {
                 width={180}
                 height={45}
                 className="h-8 md:h-10 w-auto object-contain"
+                unoptimized
                 priority
               />
             </Link>
@@ -150,6 +151,7 @@ export default function Header() {
               width={150}
               height={36}
               className="h-8 w-auto object-contain"
+              unoptimized
             />
           </Link>
           <button onClick={closeSidebar} className="p-2 text-gray-500 hover:bg-gray-100 rounded-full transition-colors">

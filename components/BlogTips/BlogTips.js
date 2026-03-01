@@ -31,7 +31,7 @@ export default function BlogTips() {
                     {posts.map((post) => (
                         <Link href={`/blog/${post.id}`} key={post.id} className="group flex flex-col bg-white rounded-xl md:rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-lg hover:border-brand-red/20 transition-all duration-300 min-w-[220px] md:min-w-0 flex-shrink-0">
                             <div className="w-full aspect-[16/9] relative overflow-hidden bg-gray-100">
-                                <Image src={post.imageUrl} alt={post.title} fill unoptimized className="object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+                                <Image src={post.imageUrl} alt={post.name} fill unoptimized className="object-cover object-center group-hover:scale-105 transition-transform duration-500" />
                                 <div className="absolute top-2 left-2 md:top-3 md:left-3">
                                     <span className="bg-brand-red text-white text-[8px] md:text-[10px] font-bold px-2 md:px-2.5 py-0.5 md:py-1 rounded-full uppercase tracking-wider">{post.category}</span>
                                 </div>
