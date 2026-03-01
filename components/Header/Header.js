@@ -30,41 +30,46 @@ export default function Header() {
       <header className="w-full shadow-sm sticky top-0 z-50 bg-white">
 
         {/* Main Navigation */}
-        <div className="bg-white py-2 md:py-3 border-b border-gray-100 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)]">
-          <div className="max-w-7xl mx-auto flex justify-between items-center px-3 md:px-6 gap-2 md:gap-6">
+        <div className="bg-white py-2 md:py-3 border-b border-gray-100 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] overflow-hidden">
+          <div className="max-w-7xl mx-auto flex justify-between items-center px-2 sm:px-3 md:px-6 gap-1 sm:gap-2 md:gap-6">
 
             {/* Logo */}
-            <Link href="/"className="flex items-center flex-shrink-0 z-10" aria-label="Home">
+            <Link href="/" className="flex items-center flex-shrink-0 z-10 mr-1 sm:mr-0" aria-label="Home">
               <Image
                 src="/logo-main.png"
                 alt="Pochondo Shop"
                 width={180}
                 height={45}
-                className="h-8 md:h-10 w-auto object-contain"
+                className="h-6 sm:h-8 md:h-10 w-auto object-contain"
                 unoptimized
                 priority
               />
             </Link>
 
             {/* Global Search Bar (Mobile & Desktop) */}
-            <div className="flex-grow flex items-center bg-gray-50 border-2 border-transparent focus-within:border-brand-blue/30 focus-within:bg-white rounded-full px-4 py-1.5 transition-all mx-1 md:mx-6 group">
-              <FiSearch size={18} className="text-gray-400 group-focus-within:text-brand-blue mr-3 flex-shrink-0 transition-colors" />
+            <div className="flex-grow flex items-center bg-gray-50 border border-gray-200 md:border-2 md:border-transparent focus-within:border-brand-blue/30 focus-within:bg-white rounded-full px-2 md:px-4 py-1 md:py-1.5 transition-all mx-0 md:mx-6 group w-full">
+              <FiSearch className="text-gray-400 group-focus-within:text-brand-blue mr-1.5 md:mr-3 flex-shrink-0 transition-colors w-3.5 h-3.5 md:w-[18px] md:h-[18px]" />
+              <input
+                type="text"
+                placeholder="Search..."
+                className="flex-grow bg-transparent border-none outline-none text-[11px] md:text-sm text-gray-800 min-w-0 w-full md:hidden"
+              />
               <input
                 type="text"
                 placeholder="Search laptops, smartphones, accessories..."
-                className="flex-grow bg-transparent border-none outline-none text-[13px] md:text-sm text-gray-800 min-w-0"
+                className="flex-grow bg-transparent border-none outline-none text-[11px] md:text-sm text-gray-800 min-w-0 w-full hidden md:block"
               />
-              <button className="text-gray-400 hover:text-brand-blue transition-colors flex items-center justify-center p-1 flex-shrink-0 border-l border-gray-200 pl-3 ml-2">
-                <FiMic size={18} />
+              <button className="text-gray-400 hover:text-brand-blue transition-colors flex items-center justify-center p-0.5 md:p-1 flex-shrink-0 border-l border-gray-200 pl-1.5 md:pl-3 ml-1 md:ml-2">
+                <FiMic className="w-3.5 h-3.5 md:w-[18px] md:h-[18px]" />
               </button>
             </div>
 
             {/* Desktop Nav Links */}
             <nav className="hidden lg:flex gap-6 font-semibold text-gray-700">
-              <Link href="/"className="hover:text-brand-blue transition-colors">Home</Link>
-              <Link href="/"className="hover:text-brand-blue transition-colors">Shop</Link>
-              <Link href="/"className="hover:text-brand-blue transition-colors">About</Link>
-              <Link href="/"className="hover:text-brand-blue transition-colors">Contact</Link>
+              <Link href="/" className="hover:text-brand-blue transition-colors">Home</Link>
+              <Link href="/" className="hover:text-brand-blue transition-colors">Shop</Link>
+              <Link href="/" className="hover:text-brand-blue transition-colors">About</Link>
+              <Link href="/" className="hover:text-brand-blue transition-colors">Contact</Link>
             </nav>
 
             {/* Desktop Action Icons */}
@@ -95,10 +100,10 @@ export default function Header() {
             {/* Mobile Hamburger Menu */}
             <button
               onClick={() => setIsSidebarOpen(true)}
-              className="md:hidden text-gray-800 hover:text-brand-blue transition-colors p-1.5 flex-shrink-0"
+              className="md:hidden text-gray-800 hover:text-brand-blue transition-colors p-1 sm:p-1.5 flex-shrink-0 ml-0.5 sm:ml-0"
               aria-label="Menu"
             >
-              <FiMenu size={26} />
+              <FiMenu className="w-6 h-6 sm:w-[26px] sm:h-[26px]" />
             </button>
           </div>
         </div>
@@ -110,17 +115,17 @@ export default function Header() {
               <FiGrid size={12} /> Categories
             </span>
             <div className="w-px h-3 bg-gray-300 mx-1"></div>
-            <Link href="/"className="text-gray-600 text-xs font-semibold hover:text-brand-blue transition-colors">Laptops</Link>
-            <Link href="/"className="text-gray-600 text-xs font-semibold hover:text-brand-blue transition-colors">Smartphones</Link>
-            <Link href="/"className="text-gray-600 text-xs font-semibold hover:text-brand-blue transition-colors">Tablets & Pads</Link>
-            <Link href="/"className="text-gray-600 text-xs font-semibold hover:text-brand-blue transition-colors">Accessories</Link>
-            <Link href="/"className="text-gray-600 text-xs font-semibold hover:text-brand-blue transition-colors">Smart Watches</Link>
-            <Link href="/"className="text-gray-600 text-xs font-semibold hover:text-brand-blue transition-colors">Audio</Link>
-            <Link href="/"className="text-gray-600 text-xs font-semibold hover:text-brand-blue transition-colors">Networking</Link>
-            <Link href="/"className="text-gray-600 text-xs font-semibold hover:text-brand-blue transition-colors">PC Components</Link>
+            <Link href="/" className="text-gray-600 text-xs font-semibold hover:text-brand-blue transition-colors">Laptops</Link>
+            <Link href="/" className="text-gray-600 text-xs font-semibold hover:text-brand-blue transition-colors">Smartphones</Link>
+            <Link href="/" className="text-gray-600 text-xs font-semibold hover:text-brand-blue transition-colors">Tablets & Pads</Link>
+            <Link href="/" className="text-gray-600 text-xs font-semibold hover:text-brand-blue transition-colors">Accessories</Link>
+            <Link href="/" className="text-gray-600 text-xs font-semibold hover:text-brand-blue transition-colors">Smart Watches</Link>
+            <Link href="/" className="text-gray-600 text-xs font-semibold hover:text-brand-blue transition-colors">Audio</Link>
+            <Link href="/" className="text-gray-600 text-xs font-semibold hover:text-brand-blue transition-colors">Networking</Link>
+            <Link href="/" className="text-gray-600 text-xs font-semibold hover:text-brand-blue transition-colors">PC Components</Link>
             <div className="ml-auto flex items-center gap-4">
-              <Link href="/"className="text-gray-500 text-[11px] font-semibold hover:text-brand-blue transition-colors">Track Order</Link>
-              <Link href="/"className="text-white text-[11px] font-bold hover:opacity-90 transition-opacity bg-brand-red px-3 py-1 rounded-full flex items-center gap-1.5 shadow-sm shadow-brand-red/20">
+              <Link href="/" className="text-gray-500 text-[11px] font-semibold hover:text-brand-blue transition-colors">Track Order</Link>
+              <Link href="/" className="text-white text-[11px] font-bold hover:opacity-90 transition-opacity bg-brand-red px-3 py-1 rounded-full flex items-center gap-1.5 shadow-sm shadow-brand-red/20">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5">
                   <path fillRule="evenodd" d="M12.963 2.286a.75.75 0 00-1.071-.136 9.742 9.742 0 00-3.539 6.177A7.547 7.547 0 016.648 6.61a.75.75 0 00-1.152-.082A9 9 0 1015.68 4.534a7.46 7.46 0 01-2.717-2.248zM15.75 14.25a3.75 3.75 0 11-7.313-1.172c.628.465 1.35.81 2.133 1a5.99 5.99 0 011.925-3.545 3.75 3.75 0 013.255 3.717z" clipRule="evenodd" />
                 </svg>
@@ -144,7 +149,7 @@ export default function Header() {
 
         {/* Sidebar Header */}
         <div className="bg-white p-4 flex justify-between items-center border-b border-gray-100 shadow-sm">
-          <Link href="/"onClick={closeSidebar} className="flex items-center flex-shrink-0" aria-label="Home">
+          <Link href="/" onClick={closeSidebar} className="flex items-center flex-shrink-0" aria-label="Home">
             <Image
               src="/logo-main.png"
               alt="Pochondo Shop"
@@ -189,38 +194,38 @@ export default function Header() {
         {/* Sidebar Links */}
         <div className="flex-1 overflow-y-auto py-2">
           <div className="px-5 py-3 bg-gray-50 text-[10px] font-extrabold text-gray-400 uppercase tracking-widest">Main Menu</div>
-          <Link href="/"onClick={closeSidebar} className="flex items-center justify-between px-5 py-3.5 text-gray-700 font-semibold border-b border-gray-50 hover:text-brand-blue hover:bg-blue-50/30 transition-colors">
+          <Link href="/" onClick={closeSidebar} className="flex items-center justify-between px-5 py-3.5 text-gray-700 font-semibold border-b border-gray-50 hover:text-brand-blue hover:bg-blue-50/30 transition-colors">
             <span>Home</span><FiChevronRight size={16} className="text-gray-300" />
           </Link>
-          <Link href="/"onClick={closeSidebar} className="flex items-center justify-between px-5 py-3.5 text-gray-700 font-semibold border-b border-gray-50 hover:text-brand-blue hover:bg-blue-50/30 transition-colors">
+          <Link href="/" onClick={closeSidebar} className="flex items-center justify-between px-5 py-3.5 text-gray-700 font-semibold border-b border-gray-50 hover:text-brand-blue hover:bg-blue-50/30 transition-colors">
             <span>Shop</span><FiChevronRight size={16} className="text-gray-300" />
           </Link>
-          <Link href="/"onClick={closeSidebar} className="flex items-center justify-between px-5 py-3.5 text-gray-700 font-semibold border-b border-gray-50 hover:text-brand-blue hover:bg-blue-50/30 transition-colors">
+          <Link href="/" onClick={closeSidebar} className="flex items-center justify-between px-5 py-3.5 text-gray-700 font-semibold border-b border-gray-50 hover:text-brand-blue hover:bg-blue-50/30 transition-colors">
             <span>About Us</span><FiChevronRight size={16} className="text-gray-300" />
           </Link>
-          <Link href="/"onClick={closeSidebar} className="flex items-center justify-between px-5 py-3.5 text-gray-700 font-semibold border-b border-gray-50 hover:text-brand-blue hover:bg-blue-50/30 transition-colors">
+          <Link href="/" onClick={closeSidebar} className="flex items-center justify-between px-5 py-3.5 text-gray-700 font-semibold border-b border-gray-50 hover:text-brand-blue hover:bg-blue-50/30 transition-colors">
             <span>Contact</span><FiChevronRight size={16} className="text-gray-300" />
           </Link>
-          <Link href="/"onClick={closeSidebar} className="flex items-center justify-between px-5 py-3.5 font-semibold border-b border-gray-50 text-brand-blue bg-blue-50/50 hover:bg-blue-50 transition-colors">
+          <Link href="/" onClick={closeSidebar} className="flex items-center justify-between px-5 py-3.5 font-semibold border-b border-gray-50 text-brand-blue bg-blue-50/50 hover:bg-blue-50 transition-colors">
             <span>Track Order</span><FiChevronRight size={16} className="text-brand-blue" />
           </Link>
 
           <div className="px-5 py-3 bg-gray-50 text-[10px] font-extrabold text-gray-400 uppercase tracking-widest mt-2 flex items-center gap-2">
             <FiGrid size={12} /> Tech Categories
           </div>
-          <Link href="/"onClick={closeSidebar} className="flex items-center justify-between px-5 py-3 text-sm text-gray-600 font-medium border-b border-gray-50 hover:text-brand-blue hover:bg-blue-50/30 transition-colors">
+          <Link href="/" onClick={closeSidebar} className="flex items-center justify-between px-5 py-3 text-sm text-gray-600 font-medium border-b border-gray-50 hover:text-brand-blue hover:bg-blue-50/30 transition-colors">
             <span>Laptops & Computers</span><FiChevronRight size={14} className="text-gray-300" />
           </Link>
-          <Link href="/"onClick={closeSidebar} className="flex items-center justify-between px-5 py-3 text-sm text-gray-600 font-medium border-b border-gray-50 hover:text-brand-blue hover:bg-blue-50/30 transition-colors">
+          <Link href="/" onClick={closeSidebar} className="flex items-center justify-between px-5 py-3 text-sm text-gray-600 font-medium border-b border-gray-50 hover:text-brand-blue hover:bg-blue-50/30 transition-colors">
             <span>Smartphones</span><FiChevronRight size={14} className="text-gray-300" />
           </Link>
-          <Link href="/"onClick={closeSidebar} className="flex items-center justify-between px-5 py-3 text-sm text-gray-600 font-medium border-b border-gray-50 hover:text-brand-blue hover:bg-blue-50/30 transition-colors">
+          <Link href="/" onClick={closeSidebar} className="flex items-center justify-between px-5 py-3 text-sm text-gray-600 font-medium border-b border-gray-50 hover:text-brand-blue hover:bg-blue-50/30 transition-colors">
             <span>Mobile Accessories</span><FiChevronRight size={14} className="text-gray-300" />
           </Link>
-          <Link href="/"onClick={closeSidebar} className="flex items-center justify-between px-5 py-3 text-sm text-gray-600 font-medium border-b border-gray-50 hover:text-brand-blue hover:bg-blue-50/30 transition-colors">
+          <Link href="/" onClick={closeSidebar} className="flex items-center justify-between px-5 py-3 text-sm text-gray-600 font-medium border-b border-gray-50 hover:text-brand-blue hover:bg-blue-50/30 transition-colors">
             <span>Audio & Watches</span><FiChevronRight size={14} className="text-gray-300" />
           </Link>
-          <Link href="/"onClick={closeSidebar} className="flex items-center justify-between px-5 py-3 text-sm text-gray-600 font-medium border-b border-gray-50 hover:text-brand-blue hover:bg-blue-50/30 transition-colors">
+          <Link href="/" onClick={closeSidebar} className="flex items-center justify-between px-5 py-3 text-sm text-gray-600 font-medium border-b border-gray-50 hover:text-brand-blue hover:bg-blue-50/30 transition-colors">
             <span>PC Components</span><FiChevronRight size={14} className="text-gray-300" />
           </Link>
         </div>
