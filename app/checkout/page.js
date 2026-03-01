@@ -298,8 +298,7 @@ export default function CheckoutPage() {
                         Add some products to your cart before checking out.
                     </p>
                     <Link
-                        href="/"
-                        className="mt-6 inline-block rounded-xl bg-brand-red px-8 py-3.5 text-white font-bold hover:bg-[#ff1a2b] transition-colors shadow-lg shadow-brand-red/20"
+                        href="/"className="mt-6 inline-block rounded-xl bg-brand-red px-8 py-3.5 text-white font-bold hover:bg-[#ff1a2b] transition-colors shadow-lg shadow-brand-red/20"
                     >
                         Continue Shopping
                     </Link>
@@ -702,7 +701,7 @@ export default function CheckoutPage() {
                             </div>
 
                             <div className="text-center text-xs text-gray-400 pb-4">
-                                <Link href="/terms" className="hover:underline">Terms</Link> · <Link href="/privacy" className="hover:underline">Privacy</Link>
+                                <Link href="/"className="hover:underline">Terms</Link> · <Link href="/"className="hover:underline">Privacy</Link>
                             </div>
                         </div>
                     </div>

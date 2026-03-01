@@ -6,7 +6,7 @@ export default function ProductCard({ product }) {
     const slug = product.name ? product.name.toLowerCase().replace(/\s+/g, '-') : 'product';
 
     return (
-        <Link href={`/product/${slug}`} className="bg-white border border-gray-100 rounded-[16px] pb-4 flex flex-col hover:border-brand-red/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 group overflow-hidden relative block">
+        <Link href="/"className="bg-white border border-gray-100 rounded-[16px] pb-4 flex flex-col hover:border-brand-red/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 group overflow-hidden relative block">
 
             {/* Discount Badge (Top Left Absolute) */}
             {product.discount && (

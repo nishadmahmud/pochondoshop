@@ -106,8 +106,8 @@ export default function PrivacyPage() {
                     <div className="mt-10 p-5 bg-gray-50 rounded-xl border border-gray-100">
                         <p className="text-sm text-gray-600">
                             If you have any questions about this Privacy Policy, please contact us at{" "}
-                            <a href="mailto:support@pochondoshop.com" className="text-brand-red font-semibold hover:underline">support@pochondoshop.com</a> or call{" "}
-                            <a href="tel:+8801714404100" className="text-brand-red font-semibold hover:underline">+880 1714-404100</a>.
+                            <a href="/"className="text-brand-red font-semibold hover:underline">support@pochondoshop.com</a> or call{" "}
+                            <a href="/"className="text-brand-red font-semibold hover:underline">+880 1714-404100</a>.
                         </p>
                     </div>
                 </div>

@@ -23,7 +23,7 @@ export default function FeaturedProducts() {
                         </h2>
                         <p className="text-gray-500 text-xs md:text-lg hidden sm:block">Explore curiated premium tech gear chosen just for you.</p>
                     </div>
-                    <Link href="/shop" className="text-xs md:text-sm font-bold text-gray-500 hover:text-brand-red uppercase tracking-wider transition-colors inline-block pb-1 border-b-2 border-transparent hover:border-brand-red whitespace-nowrap">
+                    <Link href="/"className="text-xs md:text-sm font-bold text-gray-500 hover:text-brand-red uppercase tracking-wider transition-colors inline-block pb-1 border-b-2 border-transparent hover:border-brand-red whitespace-nowrap">
                         View All
                     </Link>
                 </div>

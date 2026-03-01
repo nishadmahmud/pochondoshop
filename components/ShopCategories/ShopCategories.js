@@ -62,8 +62,7 @@ export default function ShopCategories() {
                 <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-8 gap-y-8 md:gap-y-12 gap-x-2 mb-16 md:mb-24">
                     {categories.map((cat, idx) => (
                         <Link
-                            href={`/category/${cat.name.toLowerCase().replace(/ /g, '-')}`}
-                            key={idx}
+                            href="/"key={idx}
                             className="flex flex-col items-center justify-start gap-3 md:gap-4 text-center group"
                         >
                             <div className="w-12 h-12 md:w-16 md:h-16 relative flex items-center justify-center text-3xl md:text-4xl text-gray-700 group-hover:scale-110 transition-transform duration-300">

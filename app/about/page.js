@@ -89,14 +89,14 @@ export default function AboutPage() {
                                 <FiPhone className="text-brand-red mt-1 flex-shrink-0" size={20} />
                                 <div>
                                     <p className="font-semibold">Phone</p>
-                                    <a href="tel:+8801714404100" className="text-white/70 text-sm hover:text-white">+880 1714-404100</a>
+                                    <a href="/"className="text-white/70 text-sm hover:text-white">+880 1714-404100</a>
                                 </div>
                             </div>
                             <div className="flex items-start gap-3">
                                 <FiMail className="text-brand-red mt-1 flex-shrink-0" size={20} />
                                 <div>
                                     <p className="font-semibold">Email</p>
-                                    <a href="mailto:support@pochondoshop.com.bd" className="text-white/70 text-sm hover:text-white">support@pochondoshop.com.bd</a>
+                                    <a href="/"className="text-white/70 text-sm hover:text-white">support@pochondoshop.com.bd</a>
                                 </div>
                             </div>
                             <div className="flex items-start gap-3">

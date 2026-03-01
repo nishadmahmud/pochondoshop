@@ -55,7 +55,7 @@ export default function BestDeals() {
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <span className="bg-green-50 text-green-700 text-[10px] md:text-xs font-bold px-2 md:px-3 py-1 md:py-1.5 rounded-lg border border-green-200">{deal.savings}</span>
-                                    <Link href="/shop" className="text-[10px] md:text-sm font-bold text-brand-red hover:text-red-700 underline underline-offset-4 transition-colors">Shop Now →</Link>
+                                    <Link href="/"className="text-[10px] md:text-sm font-bold text-brand-red hover:text-red-700 underline underline-offset-4 transition-colors">Shop Now →</Link>
                                 </div>
                             </div>
                         </div>

@@ -21,10 +21,10 @@ export default function CTABanner() {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
-                            <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-white text-gray-900 font-bold py-3 md:py-4 px-6 md:px-8 rounded-xl hover:bg-gray-50 transition-all hover:scale-105 hover:shadow-xl text-sm md:text-base">
+                            <Link href="/"className="inline-flex items-center justify-center gap-2 bg-white text-gray-900 font-bold py-3 md:py-4 px-6 md:px-8 rounded-xl hover:bg-gray-50 transition-all hover:scale-105 hover:shadow-xl text-sm md:text-base">
                                 Contact Experts <FiArrowRight size={18} />
                             </Link>
-                            <a href="tel:+8801714404100" className="inline-flex items-center justify-center gap-2 bg-transparent text-white font-bold py-3 md:py-4 px-6 md:px-8 rounded-xl border-2 border-white/30 hover:bg-white/10 transition-colors text-sm md:text-base">
+                            <a href="/"className="inline-flex items-center justify-center gap-2 bg-transparent text-white font-bold py-3 md:py-4 px-6 md:px-8 rounded-xl border-2 border-white/30 hover:bg-white/10 transition-colors text-sm md:text-base">
                                 <FiPhoneCall size={18} /> 01714404100
                             </a>
                         </div>

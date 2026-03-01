@@ -115,7 +115,7 @@ export default function RefundPage() {
 
                     <div className="mt-8 p-5 bg-gray-50 rounded-xl border border-gray-100 text-center">
                         <p className="text-sm text-gray-600 mb-3">Still have questions about our refund policy?</p>
-                        <Link href="/contact" className="inline-block px-6 py-2.5 bg-brand-red text-white font-bold text-sm rounded-xl shadow-lg shadow-brand-red/30 hover:bg-[#ff1a2b] transition-all">
+                        <Link href="/"className="inline-block px-6 py-2.5 bg-brand-red text-white font-bold text-sm rounded-xl shadow-lg shadow-brand-red/30 hover:bg-[#ff1a2b] transition-all">
                             Contact Support
                         </Link>
                     </div>

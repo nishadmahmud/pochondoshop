@@ -39,8 +39,7 @@ export default function MobileBottomNav() {
                     return (
                         <Link
                             key={item.name}
-                            href={item.href}
-                            onClick={(e) => {
+                            href="/"onClick={(e) => {
                                 if (isCartItem) {
                                     e.preventDefault();
                                     openCart();

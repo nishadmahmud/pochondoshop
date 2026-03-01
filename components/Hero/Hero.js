@@ -84,7 +84,7 @@ export default function Hero() {
                                 <p className={`text-xs sm:text-sm md:text-base text-gray-200 mb-4 md:mb-8 font-medium max-w-sm md:max-w-md drop-shadow-md leading-relaxed ${slide.textAlign}`}>
                                     {slide.desc}
                                 </p>
-                                <Link href={slide.ctaLink} className="inline-block">
+                                <Link href="/"className="inline-block">
                                     <button className="bg-white hover:bg-brand-red hover:text-white text-gray-900 font-bold text-xs md:text-sm py-2 px-6 md:py-3 md:px-8 rounded-full shadow-lg hover:shadow-brand-red/30 transition-all transform hover:-translate-y-0.5">
                                         {slide.ctaText}
                                     </button>
@@ -110,7 +110,7 @@ export default function Hero() {
                 <div className="lg:w-[32%] w-full flex flex-row lg:flex-col gap-3 md:gap-4">
 
                     {/* Top Banner: MacBook */}
-                    <Link href="/category/laptops" className="w-1/2 lg:w-full lg:flex-1 relative overflow-hidden rounded-xl border border-gray-100 bg-black group block h-[120px] sm:h-[180px]">
+                    <Link href="/"className="w-1/2 lg:w-full lg:flex-1 relative overflow-hidden rounded-xl border border-gray-100 bg-black group block h-[120px] sm:h-[180px]">
                         <Image
                             src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800&auto=format&fit=crop"
                             alt="MacBook Pro"
@@ -126,7 +126,7 @@ export default function Hero() {
                     </Link>
 
                     {/* Bottom Banner: iPads / Tablets */}
-                    <Link href="/category/tablets" className="w-1/2 lg:w-full lg:flex-1 relative overflow-hidden rounded-xl border border-gray-100 bg-gray-900 group block h-[120px] sm:h-[180px]">
+                    <Link href="/"className="w-1/2 lg:w-full lg:flex-1 relative overflow-hidden rounded-xl border border-gray-100 bg-gray-900 group block h-[120px] sm:h-[180px]">
                         <Image
                             src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800&auto=format&fit=crop" // iPad vibe
                             alt="iPads"

@@ -73,7 +73,7 @@ export default function TermsPage() {
                     <div className="mt-10 p-5 bg-gray-50 rounded-xl border border-gray-100">
                         <p className="text-sm text-gray-600">
                             Questions about these terms? Contact us at{" "}
-                            <a href="mailto:support@pochondoshop.com" className="text-brand-red font-semibold hover:underline">support@pochondoshop.com</a>.
+                            <a href="/"className="text-brand-red font-semibold hover:underline">support@pochondoshop.com</a>.
                         </p>
                     </div>
                 </div>

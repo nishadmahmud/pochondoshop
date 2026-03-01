@@ -36,7 +36,7 @@ export default function RepairServices() {
                 </div>
 
                 <div className="mt-8 md:mt-16 text-center">
-                    <Link href="/services" className="inline-flex items-center justify-center font-bold text-sm md:text-base text-brand-red hover:text-red-700 underline underline-offset-4 decoration-2 decoration-brand-red/30 hover:decoration-brand-red transition-all">
+                    <Link href="/"className="inline-flex items-center justify-center font-bold text-sm md:text-base text-brand-red hover:text-red-700 underline underline-offset-4 decoration-2 decoration-brand-red/30 hover:decoration-brand-red transition-all">
                         View All Repair Services &rarr;
                     </Link>
                 </div>
