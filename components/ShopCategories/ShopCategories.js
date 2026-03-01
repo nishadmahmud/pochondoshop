@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FiWind, FiThermometer, FiBox, FiDroplet, FiCoffee, FiHome, FiGrid, FiSettings, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import { FiMonitor, FiSmartphone, FiTablet, FiHeadphones, FiCpu, FiWifi, FiBox, FiHardDrive, FiCamera, FiTv, FiWatch, FiPrinter, FiSpeaker, FiMousePointer, FiBatteryCharging, FiRadio, FiChevronLeft, FiChevronRight, FiZap } from 'react-icons/fi';
 import ProductCard from '../Shared/ProductCard';
 
 export default function ShopCategories() {
@@ -24,38 +24,38 @@ export default function ShopCategories() {
 
     // Layout ready to accept image URLs from the user
     const categories = [
-        { name: "Kitchen Chimneys", icon: <FiWind />, image: "" },
-        { name: "Induction Cookers", icon: <FiThermometer />, image: "" },
-        { name: "Gas Stoves", icon: <FiSettings />, image: "" },
-        { name: "Built-in Ovens", icon: <FiBox />, image: "" },
-        { name: "Microwaves", icon: <FiBox />, image: "" },
-        { name: "Dishwashers", icon: <FiDroplet />, image: "" },
-        { name: "Refrigerators", icon: <FiHome />, image: "" },
-        { name: "Water Purifiers", icon: <FiDroplet />, image: "" },
-        { name: "Coffee Makers", icon: <FiCoffee />, image: "" },
-        { name: "Blenders", icon: <FiCoffee />, image: "" },
-        { name: "Toasters", icon: <FiGrid />, image: "" },
-        { name: "Cooking Ranges", icon: <FiSettings />, image: "" },
-        { name: "Kitchen Sinks", icon: <FiDroplet />, image: "" },
-        { name: "Faucets", icon: <FiDroplet />, image: "" },
-        { name: "Small Appliances", icon: <FiCoffee />, image: "" },
-        { name: "Accessories", icon: <FiSettings />, image: "" },
+        { name: "Smartphones", icon: <FiSmartphone />, image: "" },
+        { name: "Laptops", icon: <FiMonitor />, image: "" },
+        { name: "Tablets", icon: <FiTablet />, image: "" },
+        { name: "Audio", icon: <FiHeadphones />, image: "" },
+        { name: "Smart Watches", icon: <FiWatch />, image: "" },
+        { name: "PC Components", icon: <FiCpu />, image: "" },
+        { name: "Networking", icon: <FiWifi />, image: "" },
+        { name: "Storage", icon: <FiHardDrive />, image: "" },
+        { name: "Cameras", icon: <FiCamera />, image: "" },
+        { name: "Televisions", icon: <FiTv />, image: "" },
+        { name: "Printers", icon: <FiPrinter />, image: "" },
+        { name: "Speakers", icon: <FiSpeaker />, image: "" },
+        { name: "Peripherals", icon: <FiMousePointer />, image: "" },
+        { name: "Power Banks", icon: <FiBatteryCharging />, image: "" },
+        { name: "Gadgets", icon: <FiRadio />, image: "" },
+        { name: "Accessories", icon: <FiBox />, image: "" },
     ];
 
     const flashSaleProducts = [
-        { id: 101, name: "allion 90cm Auto-Clean Chimney", price: "৳ 12,500", oldPrice: "৳ 18,000", discount: "-30%", imageUrl: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=600" },
-        { id: 102, name: "Smart Induction Cooktop 2000W", price: "৳ 3,500", oldPrice: "৳ 5,000", discount: "-30%", imageUrl: "https://images.unsplash.com/photo-1590794055276-802cbb3e8c9b?q=80&w=600" },
-        { id: 103, name: "3-Burner Glass Top Stove", price: "৳ 4,200", oldPrice: "৳ 5,500", discount: "-23%", imageUrl: "https://images.unsplash.com/photo-1588854337236-6889d631faa8?q=80&w=600" },
-        { id: 104, name: "Built-in Convection Oven", price: "৳ 25,000", oldPrice: "৳ 32,000", discount: "-21%", imageUrl: "https://images.unsplash.com/photo-1584288081692-74baeaed5b6c?q=80&w=600" },
-        { id: 105, name: "Premium Water Purifier Plus", price: "৳ 15,000", oldPrice: "৳ 20,000", discount: "-25%", imageUrl: "https://images.unsplash.com/photo-1585863959955-e427d1a580a6?q=80&w=600" },
+        { id: 101, name: "Apple iPhone 15 Pro - 256GB Titanium", price: "৳ 145,000", oldPrice: "৳ 155,000", discount: "-6%", imageUrl: "https://images.unsplash.com/photo-1695048133142-1a20484d2569?q=80&w=400" },
+        { id: 102, name: "Sony WH-1000XM5 Wireless Headphones", price: "৳ 35,000", oldPrice: "৳ 42,000", discount: "-16%", imageUrl: "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?q=80&w=400" },
+        { id: 103, name: "Samsung Galaxy Watch 6 Classic", price: "৳ 28,500", oldPrice: "৳ 35,000", discount: "-18%", imageUrl: "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?q=80&w=400" },
+        { id: 104, name: "Logitech MX Master 3S Wireless Mouse", price: "৳ 10,500", oldPrice: "৳ 12,500", discount: "-16%", imageUrl: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?q=80&w=400" },
+        { id: 105, name: "Anker PowerCore 20000mAh Power Bank", price: "৳ 4,500", oldPrice: "৳ 6,000", discount: "-25%", imageUrl: "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?q=80&w=400" },
     ];
 
     return (
         <section className="bg-white py-10 md:py-20 border-b border-gray-100">
             <div className="max-w-7xl mx-auto px-3 md:px-6">
-                <div className="mb-10 md:mb-16">
-                    <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
-                        Featured <span className="text-brand-red">Categories</span>
+                <div className="mb-8 md:mb-12 flex justify-between items-end">
+                    <h2 className="text-2xl md:text-3xl font-black text-gray-900 tracking-tight">
+                        Shop By <span className="text-brand-blue">Category</span>
                     </h2>
                 </div>
 
@@ -83,8 +83,8 @@ export default function ShopCategories() {
                     {/* Header Strip */}
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-6 md:mb-10 gap-4">
                         <div className="flex items-center gap-2 md:gap-3">
-                            <h3 className="text-2xl md:text-3xl lg:text-[40px] font-extrabold text-gray-900 leading-[1.15]">
-                                🔥 Flash Sale
+                            <h3 className="flex items-center gap-2 text-2xl md:text-3xl lg:text-[40px] font-extrabold text-gray-900 leading-[1.15]">
+                                <FiZap className="text-yellow-400 fill-yellow-400" /> Flash Sale
                             </h3>
                         </div>
                         <div className="flex flex-wrap items-center gap-4">

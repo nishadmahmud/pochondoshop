@@ -5,11 +5,11 @@ import ProductCard from '../Shared/ProductCard';
 
 export default function NewArrivals() {
     const products = [
-        { id: 1, name: "allion Smart Island Chimney", price: "৳ 35,000", oldPrice: "৳ 42,000", discount: "৳ 7,000", imageUrl: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=600" },
-        { id: 2, name: "Eco Power Induction Cooktop", price: "৳ 2,750", oldPrice: "৳ 3,100", discount: "৳ 350", imageUrl: "https://images.unsplash.com/photo-1590794055276-802cbb3e8c9b?q=80&w=600" },
-        { id: 3, name: "Premium Built-in Oven 60L", price: "৳ 28,500", oldPrice: "৳ 32,500", discount: "৳ 4,000", imageUrl: "https://images.unsplash.com/photo-1584288081692-74baeaed5b6c?q=80&w=600" },
-        { id: 4, name: "allion Auto Ignition 4-Burner", price: "৳ 6,000", oldPrice: null, discount: null, imageUrl: "https://images.unsplash.com/photo-1588854337236-6889d631faa8?q=80&w=600" },
-        { id: 5, name: "Compact Dishwasher Pro", price: "৳ 25,000", oldPrice: "৳ 30,000", discount: "৳ 5,000", imageUrl: "https://images.unsplash.com/photo-1585863959955-e427d1a580a6?q=80&w=600" }
+        { id: 1, name: "Razer DeathAdder V3 Pro Gaming Mouse", price: "৳ 14,500", oldPrice: "৳ 16,000", discount: "৳ 1,500", imageUrl: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?q=80&w=400" },
+        { id: 2, name: "Keychron K2 Wireless Mechanical Keyboard", price: "৳ 11,000", oldPrice: "৳ 12,500", discount: "৳ 1,500", imageUrl: "https://images.unsplash.com/photo-1595225476474-87563907a212?q=80&w=400" },
+        { id: 3, name: "Samsung 32\" Odyssey G7 Gaming Monitor", price: "৳ 75,500", oldPrice: "৳ 82,000", discount: "৳ 6,500", imageUrl: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=400" },
+        { id: 4, name: "JBL Charge 5 Portable Bluetooth Speaker", price: "৳ 16,000", oldPrice: null, discount: null, imageUrl: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?q=80&w=400" },
+        { id: 5, name: "Elgato Stream Deck MK.2", price: "৳ 18,500", oldPrice: "৳ 20,000", discount: "৳ 1,500", imageUrl: "https://images.unsplash.com/photo-1626218174358-7769486c4b79?q=80&w=400" }
     ];
 
     return (
@@ -36,11 +36,14 @@ export default function NewArrivals() {
                 {/* Category Filter Pills */}
                 <div className="flex gap-3 mb-10 overflow-x-auto pb-2" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
                     <style jsx>{`div::-webkit-scrollbar { display: none; }`}</style>
-                    <button className="px-5 py-2 rounded-full bg-black text-white text-xs md:text-sm font-bold whitespace-nowrap">
-                        Chimneys
+                    <button className="px-5 py-2 rounded-full bg-brand-blue text-white text-xs md:text-sm font-bold whitespace-nowrap">
+                        Peripherals
                     </button>
                     <button className="px-5 py-2 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors text-xs md:text-sm font-semibold whitespace-nowrap">
-                        Cookers
+                        Gaming
+                    </button>
+                    <button className="px-5 py-2 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors text-xs md:text-sm font-semibold whitespace-nowrap">
+                        Smart Home
                     </button>
                 </div>
 

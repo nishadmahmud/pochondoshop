@@ -2,7 +2,6 @@ import Hero from "../components/Hero/Hero";
 import TrustStats from "../components/TrustStats/TrustStats";
 import RepairServices from "../components/RepairServices/RepairServices";
 import RepairPricing from "../components/RepairPricing/RepairPricing";
-import HowItWorks from "../components/HowItWorks/HowItWorks";
 import ShopCategories from "../components/ShopCategories/ShopCategories";
 import NewArrivals from "../components/NewArrivals/NewArrivals";
 import DiscountedParts from "../components/DiscountedParts/DiscountedParts";
@@ -26,12 +25,10 @@ export default function Home() {
       <DiscountedParts />
       <FeaturedProducts />
       <BestDeals />
-
-      <HowItWorks />
-      <Testimonials />
-      <FAQ />
       <BlogTips />
       <CTABanner />
+      <Testimonials />
+      <FAQ />
     </>
   );
 }

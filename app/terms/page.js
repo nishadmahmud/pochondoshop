@@ -1,14 +1,14 @@
 import Link from "next/link";
 
 export const metadata = {
-    title: "Terms & Conditions | allion",
-    description: "allion terms and conditions — rules and regulations for using our website and services.",
+    title: "Terms & Conditions | Pochondo Shop",
+    description: "Pochondo Shop terms and conditions — rules and regulations for using our website and services.",
 };
 
 const sections = [
     {
         title: "1. Acceptance of Terms",
-        content: "By accessing and using the allion website (allion.com.bd), you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use our website or services.",
+        content: "By accessing and using the Pochondo Shop website (pochondoshop.com), you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use our website or services.",
     },
     {
         title: "2. Products & Pricing",
@@ -36,11 +36,11 @@ const sections = [
     },
     {
         title: "8. Intellectual Property",
-        content: "All content on this website — including logos, images, text, graphics, and software — is the property of allion and is protected by intellectual property laws. You may not reproduce, distribute, or create derivative works from our content without explicit written permission.",
+        content: "All content on this website — including logos, images, text, graphics, and software — is the property of Pochondo Shop and is protected by intellectual property laws. You may not reproduce, distribute, or create derivative works from our content without explicit written permission.",
     },
     {
         title: "9. Limitation of Liability",
-        content: "allion shall not be liable for any indirect, incidental, special, or consequential damages arising from the use of our website or services. Our total liability shall not exceed the amount paid by you for the specific product or service in question.",
+        content: "Pochondo Shop shall not be liable for any indirect, incidental, special, or consequential damages arising from the use of our website or services. Our total liability shall not exceed the amount paid by you for the specific product or service in question.",
     },
     {
         title: "10. Governing Law",
@@ -73,7 +73,7 @@ export default function TermsPage() {
                     <div className="mt-10 p-5 bg-gray-50 rounded-xl border border-gray-100">
                         <p className="text-sm text-gray-600">
                             Questions about these terms? Contact us at{" "}
-                            <a href="mailto:support@allion.com.bd" className="text-brand-red font-semibold hover:underline">support@allion.com.bd</a>.
+                            <a href="mailto:support@pochondoshop.com" className="text-brand-red font-semibold hover:underline">support@pochondoshop.com</a>.
                         </p>
                     </div>
                 </div>

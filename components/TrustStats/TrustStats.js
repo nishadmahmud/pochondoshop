@@ -1,23 +1,26 @@
-import { MdVerifiedUser, MdOutlineEngineering, MdLocalShipping, MdShield } from 'react-icons/md';
+import { FiShield, FiTruck, FiAward, FiLock } from 'react-icons/fi';
 
 export default function TrustStats() {
     const stats = [
-        { label: "Premium Quality", icon: <MdVerifiedUser />, counter: "10,000+", counterLabel: "Installed" },
-        { label: "Certified Experts", icon: <MdOutlineEngineering />, counter: "5,000+", counterLabel: "Serviced" },
-        { label: "Free Delivery", icon: <MdLocalShipping />, counter: "4.9★", counterLabel: "Rating" },
-        { label: "Warranty", icon: <MdShield />, counter: "5 Yr", counterLabel: "Motor Guarantee" }
+        { label: "Genuine Products", desc: "100% Authentic", icon: <FiAward /> },
+        { label: "Official Warranty", desc: "Up to 2 Years", icon: <FiShield /> },
+        { label: "Fast Delivery", desc: "Nationwide", icon: <FiTruck /> },
+        { label: "Secure Payment", desc: "Safe checkout", icon: <FiLock /> }
     ];
 
     return (
-        <section className="bg-white py-4 md:py-10 border-b border-gray-100">
-            <div className="max-w-7xl mx-auto px-3 md:px-6">
-                <div className="grid grid-cols-4 gap-2 md:gap-6">
+        <section className="bg-white py-3 md:py-5 border-b border-gray-100">
+            <div className="max-w-7xl mx-auto px-4 md:px-6">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 divide-x-0 lg:divide-x divide-gray-100">
                     {stats.map((stat, idx) => (
-                        <div key={idx} className="flex flex-col items-center justify-center gap-0.5 md:gap-2 py-3 md:py-6 px-2 md:px-4 bg-white border border-gray-100 rounded-lg md:rounded-xl shadow-sm hover:shadow-md hover:border-brand-red/30 transition-all duration-300 text-center">
-                            <div className="text-xl md:text-3xl text-brand-red">{stat.icon}</div>
-                            <span className="text-sm md:text-2xl font-black text-gray-900">{stat.counter}</span>
-                            <span className="text-[8px] md:text-xs font-semibold text-gray-400 uppercase tracking-wider">{stat.counterLabel}</span>
-                            <span className="text-[9px] md:text-sm font-semibold text-gray-700 hidden sm:block">{stat.label}</span>
+                        <div key={idx} className="flex items-center gap-3 md:gap-4 px-2 md:px-6 justify-center lg:justify-start group">
+                            <div className="text-2xl md:text-3xl text-brand-blue group-hover:scale-110 transition-transform duration-300">
+                                {stat.icon}
+                            </div>
+                            <div className="flex flex-col">
+                                <span className="text-[11px] md:text-[13px] font-black text-gray-900 leading-tight">{stat.label}</span>
+                                <span className="text-[9px] md:text-[11px] font-medium text-gray-500">{stat.desc}</span>
+                            </div>
                         </div>
                     ))}
                 </div>

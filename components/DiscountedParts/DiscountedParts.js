@@ -4,30 +4,27 @@ import { useState } from 'react';
 import ProductCard from '../Shared/ProductCard';
 
 export default function DiscountedParts() {
-    const [activeTab, setActiveTab] = useState('Chimneys');
+    const [activeTab, setActiveTab] = useState('Accessories');
 
-    const tabs = ['Chimneys', 'Cookers'];
-
-    const batteryImage = "https://images.unsplash.com/photo-1588854337236-6889d631faa8?q=80&w=1095&auto=format&fit=crop";
-    const screenImage = "https://images.unsplash.com/photo-1585863959955-e427d1a580a6?q=80&w=400";
+    const tabs = ['Accessories', 'Components'];
 
     const products = {
-        'Chimneys': [
-            { id: 1, name: "allion Smart Island Chimney", price: "22000 TK", oldPrice: "30000", discount: "-27%", imageUrl: batteryImage },
-            { id: 2, name: "allion Auto-Clean Chimney", price: "15000 TK", oldPrice: "18000", discount: "-17%", imageUrl: batteryImage },
-            { id: 3, name: "Wall Mount Glass Chimney", price: "15000 TK", oldPrice: "18000", discount: "-17%", imageUrl: batteryImage },
-            { id: 4, name: "Filterless Auto-Clean", price: "9000 TK", oldPrice: "12000", discount: "-25%", imageUrl: batteryImage },
-            { id: 5, name: "allion Island Range Hood", price: "9000 TK", oldPrice: "12000", discount: "-25%", imageUrl: batteryImage },
-            { id: 6, name: "Ductless Downdraft Chimney", price: "7000 TK", oldPrice: "9000", discount: "-22%", imageUrl: batteryImage },
-            { id: 7, name: "Basic Wall Canopy Chimney", price: "7000 TK", oldPrice: "9000", discount: "-22%", imageUrl: batteryImage },
+        'Accessories': [
+            { id: 1, name: "Spigen iPhone 15 Pro Case", price: "1200 TK", oldPrice: "1800", discount: "-33%", imageUrl: "https://images.unsplash.com/photo-1574226516831-e1dff420e507?q=80&w=400" },
+            { id: 2, name: "UGREEN 65W GaN Fast Charger", price: "2500 TK", oldPrice: "3500", discount: "-28%", imageUrl: "https://images.unsplash.com/photo-1615526659134-4bcde6622ec9?q=80&w=400" },
+            { id: 3, name: "Anker USB-C to Lightning Cable", price: "1500 TK", oldPrice: "2000", discount: "-25%", imageUrl: "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?q=80&w=400" },
+            { id: 4, name: "Apple MagSafe Charger", price: "4500 TK", oldPrice: "5500", discount: "-18%", imageUrl: "https://images.unsplash.com/photo-1622323863152-7b0df020054e?q=80&w=400" },
+            { id: 5, name: "Logitech Desk Mat Studio Series", price: "3000 TK", oldPrice: "4000", discount: "-25%", imageUrl: "https://images.unsplash.com/photo-1613909207039-6b173b755f85?q=80&w=400" },
+            { id: 6, name: "Sony Replacement Ear Pads", price: "1800 TK", oldPrice: "2500", discount: "-28%", imageUrl: "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?q=80&w=400" },
+            { id: 7, name: "Baseus Magnetic Car Holder", price: "1000 TK", oldPrice: "1500", discount: "-33%", imageUrl: "https://images.unsplash.com/photo-1588620353536-41b997ccec7f?q=80&w=400" },
         ],
-        'Cookers': [
-            { id: 8, name: "Built-In Convection Oven", price: "12500 TK", oldPrice: "15000", discount: "-16%", imageUrl: screenImage },
-            { id: 9, name: "Smart Induction Cooktop", price: "8500 TK", oldPrice: "10000", discount: "-15%", imageUrl: screenImage },
-            { id: 10, name: "Eco Power Induction", price: "4500 TK", oldPrice: "5500", discount: "-18%", imageUrl: screenImage },
-            { id: 11, name: "4-Burner Glass Top Stove", price: "3500 TK", oldPrice: "4500", discount: "-22%", imageUrl: screenImage },
-            { id: 12, name: "Portable Gas Stove", price: "2000 TK", oldPrice: "2500", discount: "-20%", imageUrl: screenImage },
-            { id: 13, name: "allion Microwave Oven", price: "15000 TK", oldPrice: "20000", discount: "-25%", imageUrl: screenImage },
+        'Components': [
+            { id: 8, name: "Corsair Vengeance 32GB DDR5", price: "14500 TK", oldPrice: "18000", discount: "-19%", imageUrl: "https://images.unsplash.com/photo-1562976540-1502f75923ba?q=80&w=400" },
+            { id: 9, name: "Samsung 980 Pro 1TB NVMe", price: "12500 TK", oldPrice: "15000", discount: "-16%", imageUrl: "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?q=80&w=400" },
+            { id: 10, name: "Noctua NH-D15 CPU Cooler", price: "11500 TK", oldPrice: "13500", discount: "-14%", imageUrl: "https://images.unsplash.com/photo-1555617789-54d6fa3d9d30?q=80&w=400" },
+            { id: 11, name: "Corsair RM850x Power Supply", price: "16500 TK", oldPrice: "20000", discount: "-17%", imageUrl: "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?q=80&w=400" },
+            { id: 12, name: "Thermal Grizzly Kryonaut", price: "1200 TK", oldPrice: "1500", discount: "-20%", imageUrl: "https://images.unsplash.com/photo-1647427017045-31f0b0980753?q=80&w=400" },
+            { id: 13, name: "Arctic P12 PWM Case Fan 5-Pack", price: "3500 TK", oldPrice: "4500", discount: "-22%", imageUrl: "https://images.unsplash.com/photo-1581423855523-7fa3dcf10287?q=80&w=400" },
         ]
     };
 

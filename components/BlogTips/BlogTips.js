@@ -5,9 +5,9 @@ import Link from 'next/link';
 
 export default function BlogTips() {
     const posts = [
-        { id: 1, title: "5 Signs Your Kitchen Chimney Needs Cleaning", excerpt: "Is your kitchen getting smoky? Here are the telltale signs your chimney filters are blocked.", imageUrl: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=600", category: "Cleaning", readTime: "3 min" },
-        { id: 2, title: "How to Maintain Your Induction Cooktop", excerpt: "Prevention is better than repair. Keep your induction surface scratch-free and safe.", imageUrl: "https://images.unsplash.com/photo-1590794055276-802cbb3e8c9b?q=80&w=600", category: "Maintenance", readTime: "4 min" },
-        { id: 3, title: "Choosing the Right Built-in Oven", excerpt: "Selecting the right capacity and features for your ultimate baking experience.", imageUrl: "https://images.unsplash.com/photo-1584288081692-74baeaed5b6c?q=80&w=600", category: "Tips", readTime: "2 min" },
+        { id: 1, name: "5 Signs It's Time to Upgrade Your PC", excerpt: "Is your computer struggling with basic tasks? Here are telltale signs you need an upgrade.", imageUrl: "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?q=80&w=600", category: "Hardware", readTime: "5 min" },
+        { id: 2, name: "How to Maximize Phone Battery Life", excerpt: "Simple settings you can change right now to make your smartphone last through the day.", imageUrl: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=600", category: "Guides", readTime: "3 min" },
+        { id: 3, name: "Choosing the Right Mechanical Keyboard", excerpt: "Linear, tactile, or clicky? A beginner's guide to picking the perfect switches for you.", imageUrl: "https://images.unsplash.com/photo-1595225476474-87563907a212?q=80&w=600", category: "Peripherals", readTime: "4 min" },
     ];
 
     return (
@@ -18,7 +18,7 @@ export default function BlogTips() {
                         <h2 className="text-xl md:text-4xl font-extrabold text-gray-900 mb-1 md:mb-3 tracking-tight">
                             Tips & <span className="text-brand-red">Guides</span>
                         </h2>
-                        <p className="text-gray-500 text-xs md:text-lg hidden sm:block">Expert advice to keep your kitchen running perfectly.</p>
+                        <p className="text-gray-500 text-xs md:text-lg hidden sm:block">Stay up to date with the latest tech news and tutorials.</p>
                     </div>
                     <Link href="/blog" className="text-xs md:text-sm font-bold text-gray-500 hover:text-brand-red uppercase tracking-wider transition-colors inline-block pb-1 border-b-2 border-transparent hover:border-brand-red whitespace-nowrap">
                         View All
@@ -37,7 +37,7 @@ export default function BlogTips() {
                                 </div>
                             </div>
                             <div className="p-3 md:p-6 flex flex-col flex-grow">
-                                <h3 className="font-bold text-gray-900 text-xs md:text-lg mb-1 md:mb-2 leading-tight group-hover:text-brand-red transition-colors line-clamp-2">{post.title}</h3>
+                                <h3 className="font-bold text-gray-900 text-xs md:text-lg mb-1 md:mb-2 leading-tight group-hover:text-brand-red transition-colors line-clamp-2">{post.name}</h3>
                                 <p className="text-gray-500 text-[10px] md:text-sm leading-relaxed mb-2 md:mb-4 flex-grow line-clamp-2 hidden sm:block">{post.excerpt}</p>
                                 <span className="text-[9px] md:text-xs font-semibold text-gray-400 uppercase tracking-wider">{post.readTime}</span>
                             </div>

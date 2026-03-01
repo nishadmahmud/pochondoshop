@@ -13,13 +13,13 @@ export default function CategoryPage() {
 
     // Mock Products Data (replace with API call later)
     const products = [
-        { id: 1, name: "allion Smart Island Chimney", price: "৳ 35,000", oldPrice: "৳ 42,000", discount: "৳ 7,000", imageUrl: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=600" },
+        { id: 1, name: "pochondoshop Smart Island Chimney", price: "৳ 35,000", oldPrice: "৳ 42,000", discount: "৳ 7,000", imageUrl: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=600" },
         { id: 2, name: "Eco Power Induction Cooktop", price: "৳ 2,750", oldPrice: "৳ 3,100", discount: "৳ 350", imageUrl: "https://images.unsplash.com/photo-1590794055276-802cbb3e8c9b?q=80&w=600" },
         { id: 3, name: "Premium Built-in Oven 60L", price: "৳ 28,500", oldPrice: "৳ 32,500", discount: "৳ 4,000", imageUrl: "https://images.unsplash.com/photo-1584288081692-74baeaed5b6c?q=80&w=600" },
-        { id: 4, name: "allion Auto Ignition 4-Burner", price: "৳ 6,000", oldPrice: null, discount: null, imageUrl: "https://images.unsplash.com/photo-1588854337236-6889d631faa8?q=80&w=600" },
+        { id: 4, name: "pochondoshop Auto Ignition 4-Burner", price: "৳ 6,000", oldPrice: null, discount: null, imageUrl: "https://images.unsplash.com/photo-1588854337236-6889d631faa8?q=80&w=600" },
         { id: 5, name: "Compact Dishwasher Pro", price: "৳ 25,000", oldPrice: "৳ 30,000", discount: "৳ 5,000", imageUrl: "https://images.unsplash.com/photo-1585863959955-e427d1a580a6?q=80&w=600" },
         { id: 6, name: "Advanced RO Water Purifier", price: "৳ 12,200", oldPrice: "৳ 14,800", discount: "৳ 2,600", imageUrl: "https://images.unsplash.com/photo-1585863959955-e427d1a580a6?q=80&w=600" },
-        { id: 7, name: "allion Coffee Maker", price: "৳ 4,200", oldPrice: null, discount: null, imageUrl: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=600" },
+        { id: 7, name: "pochondoshop Coffee Maker", price: "৳ 4,200", oldPrice: null, discount: null, imageUrl: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=600" },
         { id: 8, name: "Stainless Steel Microwave", price: "৳ 13,500", oldPrice: "৳ 15,500", discount: "৳ 2,000", imageUrl: "https://images.unsplash.com/photo-1584288081692-74baeaed5b6c?q=80&w=600" },
     ];
 

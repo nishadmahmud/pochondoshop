@@ -15,7 +15,7 @@ export default function ProductDetailsPage() {
 
     // Mock Data for the PDP
     const productData = {
-        name: params.slug === 'iphone-16-plus' ? 'allion 90cm Auto-Clean Chimney' : productName,
+        name: params.slug === 'iphone-16-plus' ? 'pochondoshop 90cm Auto-Clean Chimney' : productName,
         price: '৳ 18,500',
         oldPrice: '৳ 25,000',
         images: [
@@ -33,7 +33,7 @@ export default function ProductDetailsPage() {
             regions: ['Wall Mount', 'Island', 'Built-in']
         },
         description: `
-            <p><strong>allion</strong> has officially launched the latest Auto-Clean Chimney series. This appliance brings a sleek and modern design that offers 1500 m3/hr suction power and heat auto-clean technology for a smoke-free cooking experience. Powered by a heavy-duty copper motor, it ensures efficient performance for heavy frying and grilling. The baffle filter setup with LED lighting delivers sharp visibility and stable operation. Featuring touch controls and gesture sensors, the allion chimney is built to make your kitchen smarter.</p>
+            <p><strong>pochondoshop</strong> has officially launched the latest Auto-Clean Chimney series. This appliance brings a sleek and modern design that offers 1500 m3/hr suction power and heat auto-clean technology for a smoke-free cooking experience. Powered by a heavy-duty copper motor, it ensures efficient performance for heavy frying and grilling. The baffle filter setup with LED lighting delivers sharp visibility and stable operation. Featuring touch controls and gesture sensors, the pochondoshop chimney is built to make your kitchen smarter.</p>
             <br/>
             <h3>Key Features</h3>
             <p>Under the hood, it runs quietly with advanced noise reduction architecture. With a powerful suction rate, removing smoke and odors is a breeze. From regular cooking to deep-frying, this chimney can handle it all without breaking a sweat. Paired with sturdy build quality and an elegant finish, you get both power and aesthetics. And if that's not enough, there's a 5-year warranty on the motor to keep you going.</p>

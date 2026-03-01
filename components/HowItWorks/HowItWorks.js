@@ -1,11 +1,11 @@
 export default function HowItWorks() {
     const steps = [
-        { num: "01", title: "Consultation", desc: "Tell us about your kitchen space and requirements." },
-        { num: "02", title: "Selection", desc: "Choose the perfect appliance from our premium range." },
-        { num: "03", title: "Checkout", desc: "Quick and secure checkout process." },
-        { num: "04", title: "Delivery", desc: "Fast and safe delivery to your doorstep." },
-        { num: "05", title: "Installation", desc: "Our certified technicians set up your appliance." },
-        { num: "06", title: "Enjoy", desc: "Start cooking with your new allion appliance." },
+        { num: "01", title: "Browse", desc: "Explore our massive catalog of premium tech and gadgets." },
+        { num: "02", title: "Selection", desc: "Choose the perfect device for your needs and budget." },
+        { num: "03", title: "Checkout", desc: "Quick, secure, and hassle-free payment process." },
+        { num: "04", title: "Delivery", desc: "Lightning fast and secure delivery to your doorstep." },
+        { num: "05", title: "Support", desc: "Our tech experts are always here to help you set up." },
+        { num: "06", title: "Enjoy", desc: "Experience the power of your new tech gear." },
     ];
 
     return (
@@ -13,10 +13,10 @@ export default function HowItWorks() {
             <div className="max-w-7xl mx-auto px-3 md:px-6">
                 <div className="text-center mb-8 md:mb-16">
                     <h2 className="text-xl md:text-4xl font-extrabold text-gray-900 mb-2 md:mb-4 tracking-tight">
-                        How <span className="text-brand-red">allion</span> Works
+                        How <span className="text-brand-red">Pochondo Shop</span> Works
                     </h2>
                     <p className="text-sm md:text-lg text-gray-500 max-w-2xl mx-auto">
-                        Our simple 6-step process ensures a seamless upgrade for your kitchen.
+                        Experience a seamless shopping journey from browsing to unboxing.
                     </p>
                 </div>
 

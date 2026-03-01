@@ -16,8 +16,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "allion - Premium Kitchen Appliances",
-  description: "Top quality kitchen chimneys, induction cookers, gas stoves, and more.",
+  title: "Pochondo Shop | Premium Tech & Gadgets",
+  description: "Your ultimate destination for smartphones, laptops, custom PCs, gaming gear, and tech accessories in Bangladesh.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }) {

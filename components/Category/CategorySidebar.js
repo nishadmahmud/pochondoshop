@@ -27,13 +27,13 @@ export default function CategorySidebar({ isOpen, onClose }) {
         }));
     };
 
-    const brands = ["Bosch", "allion", "Whirlpool", "Siemens", "Faber"];
+    const brands = ["Bosch", "pochondoshop", "Whirlpool", "Siemens", "Faber"];
     const colors = [
         { name: "Stainless Steel", hex: "#C0C0C0" },
         { name: "Black", hex: "#000000" },
         { name: "White", hex: "#FFFFFF" },
         { name: "Grey", hex: "#808080" },
-        { name: "allion Red", hex: "#e31e24" },
+        { name: "pochondoshop Red", hex: "#e31e24" },
         { name: "Glass Black", hex: "#1a1a1a" }
     ];
 

@@ -3,8 +3,8 @@ import { FiMapPin, FiPhone, FiMail, FiClock } from "react-icons/fi";
 import { Target, Handshake, Rocket, Smartphone, Laptop, ShoppingCart, Wrench } from "lucide-react";
 
 export const metadata = {
-    title: "About Us | allion",
-    description: "Learn about allion — Bangladesh's most trusted premium kitchen appliance store at Jamuna Future Park, Dhaka.",
+    title: "About Us | Pochondo Shop",
+    description: "Learn about Pochondo Shop — Bangladesh's most trusted premium tech and gadget store at Jamuna Future Park, Dhaka.",
 };
 
 export default function AboutPage() {
@@ -16,7 +16,7 @@ export default function AboutPage() {
                     <span className="inline-block px-4 py-1.5 bg-brand-red/20 text-brand-red text-xs font-bold rounded-full mb-4 border border-brand-red/20">ABOUT US</span>
                     <h1 className="text-3xl md:text-5xl font-extrabold mb-4">We Curate. We Install. <span className="text-brand-red">We Care.</span></h1>
                     <p className="text-gray-400 text-sm md:text-lg max-w-2xl mx-auto leading-relaxed">
-                        allion is Bangladesh's trusted destination for premium kitchen appliances. Located at Jamuna Future Park, Dhaka — we&apos;ve been serving thousands of happy customers with top-tier products and professional installation services.
+                        Pochondo Shop is Bangladesh's trusted destination for premium tech, gadgets, and PC components. Located at Jamuna Future Park, Dhaka — we've been serving thousands of happy customers with top-tier products and expert support.
                     </p>
                 </div>
             </div>
@@ -25,9 +25,9 @@ export default function AboutPage() {
                 {/* Mission Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-10">
                     {[
-                        { title: "Our Mission", desc: "To provide world-class kitchen appliances and professional installation services at competitive prices, ensuring every customer leaves satisfied.", gradient: "from-blue-500 to-blue-600", icon: <Target className="w-7 h-7 text-white" /> },
-                        { title: "Our Promise", desc: "Premium products, expert technicians, transparent pricing, and a hassle-free warranty on every installation. No hidden charges, ever.", gradient: "from-brand-red to-red-500", icon: <Handshake className="w-7 h-7 text-white" /> },
-                        { title: "Our Vision", desc: "To be Bangladesh's #1 one-stop shop for all things kitchen — from chimneys and hobs to built-in ovens and premium appliances.", gradient: "from-emerald-500 to-teal-600", icon: <Rocket className="w-7 h-7 text-white" /> },
+                        { title: "Our Mission", desc: "To provide world-class tech ranges and professional support services at competitive prices, ensuring every customer leaves satisfied.", gradient: "from-blue-500 to-blue-600", icon: <Target className="w-7 h-7 text-white" /> },
+                        { title: "Our Promise", desc: "Premium products, expert advice, transparent pricing, and a hassle-free warranty process. No hidden charges, ever.", gradient: "from-brand-red to-red-500", icon: <Handshake className="w-7 h-7 text-white" /> },
+                        { title: "Our Vision", desc: "To be Bangladesh's #1 one-stop shop for all things tech — from custom PCs and gaming gear to smartphones and smart home tech.", gradient: "from-emerald-500 to-teal-600", icon: <Rocket className="w-7 h-7 text-white" /> },
                     ].map((card, i) => (
                         <div key={i} className="bg-white rounded-2xl shadow-lg p-6 md:p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                             <div className={`w-14 h-14 bg-gradient-to-br ${card.gradient} rounded-xl flex items-center justify-center mb-4 shadow-lg`}>{card.icon}</div>
@@ -42,10 +42,10 @@ export default function AboutPage() {
                     <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6">What We Do</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                         {[
-                            { title: "Premium Appliances", desc: "High-quality kitchen chimneys, induction cookers, gas stoves, built-in ovens, and dishwashers from top brands.", icon: <ShoppingCart className="w-5 h-5 text-brand-red" /> },
-                            { title: "Professional Installation", desc: "Expert installation services for all kitchen appliances, ensuring safety, optimal performance, and perfect fit.", icon: <Wrench className="w-5 h-5 text-brand-red" /> },
-                            { title: "Maintenance & Repair", desc: "Comprehensive servicing, motor replacements, and deep cleaning for chimneys, ovens, and water purifiers.", icon: <Smartphone className="w-5 h-5 text-brand-red" /> },
-                            { title: "Appliance Accessories", desc: "Genuine spare parts, baffel filters, roasting pans, and smart kitchen accessories.", icon: <Laptop className="w-5 h-5 text-brand-red" /> },
+                            { title: "Premium Tech", desc: "High-quality smartphones, laptops, gaming consoles, PC components, and smart home gadgets from top global brands.", icon: <ShoppingCart className="w-5 h-5 text-brand-red" /> },
+                            { title: "Expert PC Builds", desc: "Professional custom PC assembly services, ensuring cable management, optimal cooling, and perfect performance.", icon: <Wrench className="w-5 h-5 text-brand-red" /> },
+                            { title: "Gadget Repair", desc: "Comprehensive servicing, screen replacements, and troubleshooting for smartphones, laptops, and peripherals.", icon: <Smartphone className="w-5 h-5 text-brand-red" /> },
+                            { title: "Accessories", desc: "Genuine chargers, cables, cases, mechanical keyboards, gaming mice, and audio equipment.", icon: <Laptop className="w-5 h-5 text-brand-red" /> },
                         ].map((item, i) => (
                             <div key={i} className="p-4 md:p-5 bg-gray-50 rounded-xl border border-gray-100 hover:border-brand-red/30 transition-colors">
                                 <h4 className="font-bold text-gray-900 mb-1.5 flex items-center gap-2">{item.icon}{item.title}</h4>
@@ -57,7 +57,7 @@ export default function AboutPage() {
 
                 {/* Why Choose Us */}
                 <div className="bg-white rounded-2xl shadow-lg p-6 md:p-10 mb-10">
-                    <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6">Why Choose allion?</h2>
+                    <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6">Why Choose Pochondo Shop?</h2>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center">
                         {[
                             { stat: "10,000+", label: "Appliances Installed", color: "text-blue-600" },
@@ -96,7 +96,7 @@ export default function AboutPage() {
                                 <FiMail className="text-brand-red mt-1 flex-shrink-0" size={20} />
                                 <div>
                                     <p className="font-semibold">Email</p>
-                                    <a href="mailto:support@allion.com.bd" className="text-white/70 text-sm hover:text-white">support@allion.com.bd</a>
+                                    <a href="mailto:support@pochondoshop.com.bd" className="text-white/70 text-sm hover:text-white">support@pochondoshop.com.bd</a>
                                 </div>
                             </div>
                             <div className="flex items-start gap-3">
@@ -116,7 +116,7 @@ export default function AboutPage() {
                                 allowFullScreen=""
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
-                                title="allion Location"
+                                title="pochondoshop Location"
                             />
                         </div>
                     </div>

@@ -2,8 +2,8 @@ import Link from "next/link";
 import { CheckCircle, XCircle, Smartphone, Landmark, Tag, AlertTriangle } from "lucide-react";
 
 export const metadata = {
-    title: "Refund Policy | allion",
-    description: "allion refund and return policy — learn about our return process, eligibility, and refund timelines.",
+    title: "Refund Policy | Pochondo Shop",
+    description: "Pochondo Shop refund and return policy — learn about our return process, eligibility, and refund timelines.",
 };
 
 const faqs = [
@@ -28,7 +28,7 @@ export default function RefundPage() {
                 {/* Overview */}
                 <div className="bg-white rounded-2xl shadow-lg p-6 md:p-10">
                     <p className="text-sm text-gray-600 leading-relaxed mb-6">
-                        At allion, we want you to be completely happy with your purchase. If you&apos;re not satisfied, we offer a hassle-free return and refund process. Please read the details below carefully.
+                        At Pochondo Shop, we want you to be completely happy with your purchase. If you're not satisfied, we offer a hassle-free return and refund process. Please read the details below carefully.
                     </p>
 
                     {/* Eligibility */}
@@ -61,7 +61,7 @@ export default function RefundPage() {
                     <h2 className="text-xl font-bold text-gray-900 mb-4">How to Request a Refund</h2>
                     <div className="space-y-4 mb-8">
                         {[
-                            { step: 1, title: "Contact Us", desc: "Call us at +880 1714-404100 or email support@allion.com.bd with your order details and reason for return.", color: "from-blue-500 to-blue-600" },
+                            { step: 1, title: "Contact Us", desc: "Call us at +880 1714-404100 or email support@pochondoshop.com with your order details and reason for return.", color: "from-blue-500 to-blue-600" },
                             { step: 2, title: "Get Approval", desc: "Our team will review your request and provide a Return Authorization (RA) number within 24 hours.", color: "from-indigo-500 to-purple-600" },
                             { step: 3, title: "Ship the Product", desc: "Pack the item securely in its original packaging and ship it to our store address. Include the RA number with your return.", color: "from-brand-red to-red-500" },
                             { step: 4, title: "Receive Refund", desc: "Once we receive and inspect the product, your refund will be processed within 7-10 business days.", color: "from-green-500 to-emerald-600" },

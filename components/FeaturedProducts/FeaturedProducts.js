@@ -3,14 +3,14 @@ import ProductCard from '../Shared/ProductCard';
 
 export default function FeaturedProducts() {
     const products = [
-        { id: 1, name: "allion Wall Mount Chimney", price: "৳12,500", oldPrice: "৳15,000", discount: "-16%", imageUrl: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=600" },
-        { id: 2, name: "Double Burner Gas Stove", price: "৳3,500", oldPrice: "৳4,000", discount: "-12%", imageUrl: "https://images.unsplash.com/photo-1588854337236-6889d631faa8?q=80&w=600" },
-        { id: 3, name: "Portable Induction Cooker", price: "৳2,299", oldPrice: null, discount: null, imageUrl: "https://images.unsplash.com/photo-1590794055276-802cbb3e8c9b?q=80&w=600" },
-        { id: 4, name: "Filterless Auto-Clean Chimney", price: "৳15,200", oldPrice: null, discount: null, imageUrl: "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=600" },
-        { id: 5, name: "Stainless Steel Built-in Hob", price: "৳11,800", oldPrice: "৳15,500", discount: "-28%", imageUrl: "https://images.unsplash.com/photo-1588854337236-6889d631faa8?q=80&w=600" },
-        { id: 6, name: "allion Advanced RO Purifier", price: "৳14,500", oldPrice: "৳16,500", discount: "-18%", imageUrl: "https://images.unsplash.com/photo-1585863959955-e427d1a580a6?q=80&w=600" },
-        { id: 7, name: "Premium Baking Oven 40L", price: "৳12,500", oldPrice: "৳15,000", discount: "-17%", imageUrl: "https://images.unsplash.com/photo-1584288081692-74baeaed5b6c?q=80&w=600" },
-        { id: 8, name: "Kitchen Exhaust Fan Heavy Duty", price: "৳1,500", oldPrice: "৳2,500", discount: "-40%", imageUrl: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=600" },
+        { id: 1, name: "Sony Alpha a7 IV Mirrorless Camera", price: "৳245,000", oldPrice: "৳260,000", discount: "-6%", imageUrl: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=400" },
+        { id: 2, name: "PlayStation 5 Console (Disc Edition)", price: "৳68,500", oldPrice: "৳75,000", discount: "-9%", imageUrl: "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?q=80&w=400" },
+        { id: 3, name: "DJI Mini 3 Pro Drone", price: "৳92,000", oldPrice: null, discount: null, imageUrl: "https://images.unsplash.com/photo-1473968512647-3e447244af8f?q=80&w=400" },
+        { id: 4, name: "Apple AirPods Pro (2nd Gen)", price: "৳28,200", oldPrice: null, discount: null, imageUrl: "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?q=80&w=400" },
+        { id: 5, name: "Asus ROG Zephyrus G14 Gaming Laptop", price: "৳185,000", oldPrice: "৳210,000", discount: "-12%", imageUrl: "https://images.unsplash.com/photo-1603302576837-37561b2e2302?q=80&w=400" },
+        { id: 6, name: "Samsung 65\" Class OLED 4K Smart TV", price: "৳215,000", oldPrice: "৳250,000", discount: "-14%", imageUrl: "https://images.unsplash.com/photo-1593784991095-a205069470b6?q=80&w=400" },
+        { id: 7, name: "Logitech G Pro X Superlight", price: "৳15,500", oldPrice: "৳17,000", discount: "-9%", imageUrl: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?q=80&w=400" },
+        { id: 8, name: "WD Black SN850X 2TB NVMe SSD", price: "৳22,500", oldPrice: "৳26,000", discount: "-13%", imageUrl: "https://images.unsplash.com/photo-1531492746076-161caa80d225?q=80&w=400" },
     ];
 
     return (
@@ -21,7 +21,7 @@ export default function FeaturedProducts() {
                         <h2 className="text-xl md:text-4xl font-extrabold text-gray-900 mb-1 md:mb-3 tracking-tight">
                             Featured <span className="text-brand-red">Products</span>
                         </h2>
-                        <p className="text-gray-500 text-xs md:text-lg hidden sm:block">Hand-picked premium kitchen appliances just for you.</p>
+                        <p className="text-gray-500 text-xs md:text-lg hidden sm:block">Explore curiated premium tech gear chosen just for you.</p>
                     </div>
                     <Link href="/shop" className="text-xs md:text-sm font-bold text-gray-500 hover:text-brand-red uppercase tracking-wider transition-colors inline-block pb-1 border-b-2 border-transparent hover:border-brand-red whitespace-nowrap">
                         View All
