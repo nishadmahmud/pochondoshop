@@ -33,11 +33,12 @@ export default function Testimonials() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                    {reviews.map((review) => (
-                        <ReviewCard key={review.id} review={review} />
-                    ))}
-                </div>
+            </div>
+
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-8">
+                {reviews.map((review) => (
+                    <ReviewCard key={review.id} review={review} />
+                ))}
             </div>
         </section>
     );
@@ -45,7 +46,7 @@ export default function Testimonials() {
 
 function ReviewCard({ review }) {
     return (
-        <div className="bg-white rounded-[24px] p-6 md:p-8 border border-gray-100 shadow-[0_4px_20px_rgb(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:border-brand-purple/30 transition-all duration-300 flex flex-col items-start text-left group">
+        <div className="bg-white rounded-[24px] p-6 md:p-8 border border-gray-100 shadow-[0_4px_20px_rgb(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:border-brand-purple/30 transition-all duration-300 flex flex-col items-start text-left group h-full w-full">
             <div className="flex gap-1 mb-5">
                 {[...Array(5)].map((_, i) => (
                     <FaStar key={i} className={`text-[12px] md:text-[14px] ${i < review.rating ? 'text-brand-purple' : 'text-gray-200'}`} />
@@ -54,13 +55,13 @@ function ReviewCard({ review }) {
             <p className="text-gray-800 text-sm md:text-[15px] leading-relaxed mb-8 font-medium">
                 "{review.text}"
             </p>
-            <div className="flex items-center gap-4 mt-auto w-full pt-5 border-t border-gray-50">
-                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#fdf3eb] flex items-center justify-center text-brand-purple font-bold text-sm md:text-lg border border-purple-100 shadow-sm">
+            <div className="flex flex-wrap items-center gap-3 lg:gap-4 mt-auto w-full pt-5 border-t border-gray-50">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#fdf3eb] flex items-center justify-center text-brand-purple font-bold text-sm md:text-lg border border-purple-100 shadow-sm shrink-0">
                     {review.avatar}
                 </div>
-                <div>
-                    <h4 className="text-sm md:text-[15px] font-bold text-gray-900 leading-none mb-1.5">{review.name}</h4>
-                    <p className="text-[10px] md:text-xs font-bold text-gray-400 tracking-wider uppercase leading-none">{review.role}</p>
+                <div className="flex-1 min-w-0">
+                    <h4 className="text-sm md:text-[15px] font-bold text-gray-900 leading-tight mb-1 truncate">{review.name}</h4>
+                    <p className="text-[10px] md:text-xs font-bold text-gray-400 tracking-wider uppercase leading-none truncate">{review.role}</p>
                 </div>
             </div>
         </div>
