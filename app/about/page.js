@@ -13,8 +13,8 @@ export default function AboutPage() {
             {/* Hero */}
             <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
                 <div className="max-w-5xl mx-auto px-4 md:px-8 py-12 md:py-20 text-center">
-                    <span className="inline-block px-4 py-1.5 bg-brand-red/20 text-brand-red text-xs font-bold rounded-full mb-4 border border-brand-red/20">ABOUT US</span>
-                    <h1 className="text-3xl md:text-5xl font-extrabold mb-4">We Curate. We Install. <span className="text-brand-red">We Care.</span></h1>
+                    <span className="inline-block px-4 py-1.5 bg-brand-purple/20 text-brand-purple text-xs font-bold rounded-full mb-4 border border-brand-purple/20">ABOUT US</span>
+                    <h1 className="text-3xl md:text-5xl font-extrabold mb-4">We Curate. We Install. <span className="text-brand-purple">We Care.</span></h1>
                     <p className="text-gray-400 text-sm md:text-lg max-w-2xl mx-auto leading-relaxed">
                         Pochondo Shop is Bangladesh's trusted destination for premium tech, gadgets, and PC components. Located at Jamuna Future Park, Dhaka — we've been serving thousands of happy customers with top-tier products and expert support.
                     </p>
@@ -26,7 +26,7 @@ export default function AboutPage() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-10">
                     {[
                         { title: "Our Mission", desc: "To provide world-class tech ranges and professional support services at competitive prices, ensuring every customer leaves satisfied.", gradient: "from-blue-500 to-blue-600", icon: <Target className="w-7 h-7 text-white" /> },
-                        { title: "Our Promise", desc: "Premium products, expert advice, transparent pricing, and a hassle-free warranty process. No hidden charges, ever.", gradient: "from-brand-red to-red-500", icon: <Handshake className="w-7 h-7 text-white" /> },
+                        { title: "Our Promise", desc: "Premium products, expert advice, transparent pricing, and a hassle-free warranty process. No hidden charges, ever.", gradient: "from-brand-purple to-purple-500", icon: <Handshake className="w-7 h-7 text-white" /> },
                         { title: "Our Vision", desc: "To be Bangladesh's #1 one-stop shop for all things tech — from custom PCs and gaming gear to smartphones and smart home tech.", gradient: "from-emerald-500 to-teal-600", icon: <Rocket className="w-7 h-7 text-white" /> },
                     ].map((card, i) => (
                         <div key={i} className="bg-white rounded-2xl shadow-lg p-6 md:p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
@@ -42,12 +42,12 @@ export default function AboutPage() {
                     <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6">What We Do</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                         {[
-                            { title: "Premium Tech", desc: "High-quality smartphones, laptops, gaming consoles, PC components, and smart home gadgets from top global brands.", icon: <ShoppingCart className="w-5 h-5 text-brand-red" /> },
-                            { title: "Expert PC Builds", desc: "Professional custom PC assembly services, ensuring cable management, optimal cooling, and perfect performance.", icon: <Wrench className="w-5 h-5 text-brand-red" /> },
-                            { title: "Gadget Repair", desc: "Comprehensive servicing, screen replacements, and troubleshooting for smartphones, laptops, and peripherals.", icon: <Smartphone className="w-5 h-5 text-brand-red" /> },
-                            { title: "Accessories", desc: "Genuine chargers, cables, cases, mechanical keyboards, gaming mice, and audio equipment.", icon: <Laptop className="w-5 h-5 text-brand-red" /> },
+                            { title: "Premium Tech", desc: "High-quality smartphones, laptops, gaming consoles, PC components, and smart home gadgets from top global brands.", icon: <ShoppingCart className="w-5 h-5 text-brand-purple" /> },
+                            { title: "Expert PC Builds", desc: "Professional custom PC assembly services, ensuring cable management, optimal cooling, and perfect performance.", icon: <Wrench className="w-5 h-5 text-brand-purple" /> },
+                            { title: "Gadget Repair", desc: "Comprehensive servicing, screen replacements, and troubleshooting for smartphones, laptops, and peripherals.", icon: <Smartphone className="w-5 h-5 text-brand-purple" /> },
+                            { title: "Accessories", desc: "Genuine chargers, cables, cases, mechanical keyboards, gaming mice, and audio equipment.", icon: <Laptop className="w-5 h-5 text-brand-purple" /> },
                         ].map((item, i) => (
-                            <div key={i} className="p-4 md:p-5 bg-gray-50 rounded-xl border border-gray-100 hover:border-brand-red/30 transition-colors">
+                            <div key={i} className="p-4 md:p-5 bg-gray-50 rounded-xl border border-gray-100 hover:border-brand-purple/30 transition-colors">
                                 <h4 className="font-bold text-gray-900 mb-1.5 flex items-center gap-2">{item.icon}{item.title}</h4>
                                 <p className="text-sm text-gray-600">{item.desc}</p>
                             </div>
@@ -62,7 +62,7 @@ export default function AboutPage() {
                         {[
                             { stat: "10,000+", label: "Appliances Installed", color: "text-blue-600" },
                             { stat: "99%", label: "Customer Satisfaction", color: "text-green-600" },
-                            { stat: "10+", label: "Years Experience", color: "text-brand-red" },
+                            { stat: "10+", label: "Years Experience", color: "text-brand-purple" },
                             { stat: "5 Years", label: "Motor Warranty", color: "text-purple-600" },
                         ].map((item, i) => (
                             <div key={i} className="p-4">
@@ -79,28 +79,28 @@ export default function AboutPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                         <div className="space-y-4">
                             <div className="flex items-start gap-3">
-                                <FiMapPin className="text-brand-red mt-1 flex-shrink-0" size={20} />
+                                <FiMapPin className="text-brand-purple mt-1 flex-shrink-0" size={20} />
                                 <div>
                                     <p className="font-semibold">Address</p>
                                     <p className="text-white/70 text-sm">Level-4, Block-C, Shop #35A, Jamuna Future Park, Dhaka-1229</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-3">
-                                <FiPhone className="text-brand-red mt-1 flex-shrink-0" size={20} />
+                                <FiPhone className="text-brand-purple mt-1 flex-shrink-0" size={20} />
                                 <div>
                                     <p className="font-semibold">Phone</p>
                                     <a href="/"className="text-white/70 text-sm hover:text-white">+880 1714-404100</a>
                                 </div>
                             </div>
                             <div className="flex items-start gap-3">
-                                <FiMail className="text-brand-red mt-1 flex-shrink-0" size={20} />
+                                <FiMail className="text-brand-purple mt-1 flex-shrink-0" size={20} />
                                 <div>
                                     <p className="font-semibold">Email</p>
                                     <a href="/"className="text-white/70 text-sm hover:text-white">support@pochondoshop.com.bd</a>
                                 </div>
                             </div>
                             <div className="flex items-start gap-3">
-                                <FiClock className="text-brand-red mt-1 flex-shrink-0" size={20} />
+                                <FiClock className="text-brand-purple mt-1 flex-shrink-0" size={20} />
                                 <div>
                                     <p className="font-semibold">Hours</p>
                                     <p className="text-white/70 text-sm">Saturday – Thursday: 10 AM – 9 PM<br />Friday: 2 PM – 9 PM</p>

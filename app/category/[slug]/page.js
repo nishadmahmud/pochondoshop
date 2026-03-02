@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import { useParams } from 'next/navigation';
+import Link from 'next/link';
+import Image from 'next/image';
 import { FiFilter } from 'react-icons/fi';
 import CategorySidebar from '../../../components/Category/CategorySidebar';
 import ProductGrid from '../../../components/Category/ProductGrid';
@@ -13,33 +15,44 @@ export default function CategoryPage() {
 
     // Mock Products Data (replace with API call later)
     const products = [
-        { id: 1, name: "pochondoshop Smart Island Chimney", price: "৳ 35,000", oldPrice: "৳ 42,000", discount: "৳ 7,000", imageUrl: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=600" },
-        { id: 2, name: "Eco Power Induction Cooktop", price: "৳ 2,750", oldPrice: "৳ 3,100", discount: "৳ 350", imageUrl: "https://images.unsplash.com/photo-1590794055276-802cbb3e8c9b?q=80&w=600" },
-        { id: 3, name: "Premium Built-in Oven 60L", price: "৳ 28,500", oldPrice: "৳ 32,500", discount: "৳ 4,000", imageUrl: "https://images.unsplash.com/photo-1584288081692-74baeaed5b6c?q=80&w=600" },
-        { id: 4, name: "pochondoshop Auto Ignition 4-Burner", price: "৳ 6,000", oldPrice: null, discount: null, imageUrl: "https://images.unsplash.com/photo-1588854337236-6889d631faa8?q=80&w=600" },
-        { id: 5, name: "Compact Dishwasher Pro", price: "৳ 25,000", oldPrice: "৳ 30,000", discount: "৳ 5,000", imageUrl: "https://images.unsplash.com/photo-1585863959955-e427d1a580a6?q=80&w=600" },
-        { id: 6, name: "Advanced RO Water Purifier", price: "৳ 12,200", oldPrice: "৳ 14,800", discount: "৳ 2,600", imageUrl: "https://images.unsplash.com/photo-1585863959955-e427d1a580a6?q=80&w=600" },
-        { id: 7, name: "pochondoshop Coffee Maker", price: "৳ 4,200", oldPrice: null, discount: null, imageUrl: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=600" },
-        { id: 8, name: "Stainless Steel Microwave", price: "৳ 13,500", oldPrice: "৳ 15,500", discount: "৳ 2,000", imageUrl: "https://images.unsplash.com/photo-1584288081692-74baeaed5b6c?q=80&w=600" },
+        { id: 1, name: "Apple iPhone 15 Pro Max - 256GB Black Titanium", price: "৳ 165,000", oldPrice: "৳ 175,000", discount: "৳ 10,000", imageUrl: "https://images.unsplash.com/photo-1695048133142-1a20484d2569?q=80&w=600" },
+        { id: 2, name: "Samsung Galaxy S24 Ultra - 512GB Titanium Gray", price: "৳ 145,000", oldPrice: "৳ 160,000", discount: "৳ 15,000", imageUrl: "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?q=80&w=600" },
+        { id: 3, name: "Sony WH-1000XM5 Wireless Noise Canceling Headphones", price: "৳ 35,500", oldPrice: "৳ 42,000", discount: "৳ 6,500", imageUrl: "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?q=80&w=600" },
+        { id: 4, name: "Apple AirPods Pro (2nd Generation)", price: "৳ 26,000", oldPrice: null, discount: null, imageUrl: "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?q=80&w=600" },
+        { id: 5, name: "MacBook Pro 14-inch M3 Pro chip", price: "৳ 225,000", oldPrice: "৳ 240,000", discount: "৳ 15,000", imageUrl: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=600" },
+        { id: 6, name: "Logitech MX Master 3S Wireless Mouse", price: "৳ 10,500", oldPrice: "৳ 12,000", discount: "৳ 1,500", imageUrl: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?q=80&w=600" },
+        { id: 7, name: "Anker PowerCore 20000mAh Power Bank", price: "৳ 4,500", oldPrice: null, discount: null, imageUrl: "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?q=80&w=600" },
+        { id: 8, name: "Samsung Galaxy Watch 6 Classic", price: "৳ 28,500", oldPrice: "৳ 35,000", discount: "৳ 6,500", imageUrl: "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?q=80&w=600" },
     ];
 
     return (
         <div className="bg-gray-50 min-h-screen py-8 md:py-12">
             <div className="max-w-7xl mx-auto px-4 md:px-6">
 
-                {/* Page Header */}
-                <div className="mb-3 md:mb-8 pb-3 md:pb-6 border-b border-gray-200">
-                    <div className="text-[11px] md:text-sm text-gray-400 mb-1 flex items-center gap-2">
-                        <span>Home</span> / <span>Categories</span> / <span className="text-brand-red font-semibold capitalize">{categoryName}</span>
+                {/* Top Banner Image */}
+                <div className="w-full relative rounded-2xl md:rounded-3xl overflow-hidden mb-6 md:mb-8" style={{ aspectRatio: '21/5' }}>
+                    <Image
+                        src="https://images.unsplash.com/photo-1616348436168-de43ad0db179?q=80&w=2000&auto=format&fit=crop"
+                        alt={`${categoryName} Banner`}
+                        fill
+                        unoptimized
+                        className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-gray-900/40 to-transparent flex items-center p-8 md:p-16">
+                        <div className="text-white">
+                            <h1 className="text-3xl md:text-6xl font-black mb-2 tracking-tight">Brand New</h1>
+                            <p className="text-lg md:text-2xl font-medium text-white/90">The latest : Have a look at a glance</p>
+                        </div>
                     </div>
-                    <div className="flex flex-col md:flex-row md:items-baseline gap-1 md:gap-4">
-                        <h1 className="text-xl md:text-4xl font-extrabold text-gray-900 capitalize tracking-tight">
-                            {categoryName}
-                        </h1>
-                        <p className="text-gray-500 text-[12px] md:text-sm font-medium">
-                            Showing <span className="font-bold text-gray-900">{products.length}</span> products
-                        </p>
-                    </div>
+                </div>
+
+                {/* Breadcrumbs */}
+                <div className="text-[12px] md:text-sm text-gray-500 mb-6 md:mb-10 flex items-center gap-2 font-medium">
+                    <Link href="/" className="hover:text-brand-purple transition-colors">Home</Link>
+                    <span>/</span>
+                    <span className="hover:text-brand-purple transition-colors cursor-pointer">Categories</span>
+                    <span>/</span>
+                    <span className="text-brand-purple font-bold capitalize">{categoryName}</span>
                 </div>
 
                 <div className="flex flex-col lg:flex-row gap-0 lg:gap-8 pt-2 lg:pt-0">
@@ -55,9 +68,9 @@ export default function CategoryPage() {
                     {/* Main Content (Product Grid) - Right Side on Desktop */}
                     <main className="lg:w-3/4 order-2">
                         {products.length > 0 ? (
-                            <ProductGrid products={products} onOpenFilter={() => setIsMobileFilterOpen(true)} />
+                            <ProductGrid products={products} onOpenFilter={() => setIsMobileFilterOpen(true)} categoryName={categoryName} />
                         ) : (
-                            <div className="flex flex-col items-center justify-center py-20 bg-white rounded-2xl border border-gray-100 border-dashed">
+                            <div className="flex flex-col items-center justify-center py-20 bg-gray-50 rounded-2xl border border-gray-200 border-dashed">
                                 <p className="text-gray-400 font-medium">No products found in this category.</p>
                             </div>
                         )}

@@ -52,22 +52,22 @@ export default function MobileBottomNav() {
                                     }
                                 }
                             }}
-                            className={`flex flex-col items-center justify-center w-full gap-1.5 transition-colors ${isActive ? 'text-brand-red' : 'text-white hover:text-gray-300'}`}
+                            className={`flex flex-col items-center justify-center w-full gap-1.5 transition-colors ${isActive ? 'text-brand-purple' : 'text-white hover:text-gray-300'}`}
                         >
                             <div className="relative">
                                 {isAuthItem && user?.image ? (
-                                    <div className="w-6 h-6 rounded-full overflow-hidden ring-2 ring-brand-red/60">
+                                    <div className="w-6 h-6 rounded-full overflow-hidden ring-2 ring-brand-purple/60">
                                         <Image src={user.image} alt="Profile" width={24} height={24} className="w-full h-full object-cover" unoptimized />
                                     </div>
                                 ) : isAuthItem && user ? (
-                                    <div className="w-6 h-6 rounded-full bg-brand-red/20 flex items-center justify-center text-[10px] font-bold text-brand-red ring-2 ring-brand-red/40">
+                                    <div className="w-6 h-6 rounded-full bg-brand-purple/20 flex items-center justify-center text-[10px] font-bold text-brand-purple ring-2 ring-brand-purple/40">
                                         {(user.first_name || user.name || 'U').charAt(0).toUpperCase()}
                                     </div>
                                 ) : (
                                     <>
-                                        <Icon size={20} className={isCartItem && cartCount > 0 ? "text-brand-red" : ""} strokeWidth={isActive ? 2.5 : 2} />
+                                        <Icon size={20} className={isCartItem && cartCount > 0 ? "text-brand-purple" : ""} strokeWidth={isActive ? 2.5 : 2} />
                                         {isCartItem && cartCount > 0 && (
-                                            <span className="absolute -top-2 -right-2 bg-brand-red text-white text-[9px] font-bold h-4 w-4 rounded-full flex items-center justify-center border border-gray-900">
+                                            <span className="absolute -top-2 -right-2 bg-brand-purple text-white text-[9px] font-bold h-4 w-4 rounded-full flex items-center justify-center border border-gray-900">
                                                 {cartCount}
                                             </span>
                                         )}

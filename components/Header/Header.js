@@ -87,10 +87,10 @@ export default function Header() {
                   <FiUser size={22} />
                 )}
               </button>
-              <button onClick={openCart} className="text-gray-600 hover:text-brand-red transition-colors relative p-2 rounded-full hover:bg-red-50" aria-label="Cart">
+              <button onClick={openCart} className="text-gray-600 hover:text-brand-purple transition-colors relative p-2 rounded-full hover:bg-purple-50" aria-label="Cart">
                 <FiShoppingCart size={22} />
                 {cartCount > 0 && (
-                  <span className="absolute top-0 right-0 bg-brand-red text-white text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center shadow-sm border border-white">
+                  <span className="absolute top-0 right-0 bg-brand-purple text-white text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center shadow-sm border border-white">
                     {cartCount}
                   </span>
                 )}
@@ -125,7 +125,7 @@ export default function Header() {
             <Link href="/" className="text-gray-600 text-xs font-semibold hover:text-brand-blue transition-colors">PC Components</Link>
             <div className="ml-auto flex items-center gap-4">
               <Link href="/" className="text-gray-500 text-[11px] font-semibold hover:text-brand-blue transition-colors">Track Order</Link>
-              <Link href="/" className="text-white text-[11px] font-bold hover:opacity-90 transition-opacity bg-brand-red px-3 py-1 rounded-full flex items-center gap-1.5 shadow-sm shadow-brand-red/20">
+              <Link href="/" className="text-white text-[11px] font-bold hover:opacity-90 transition-opacity bg-brand-purple px-3 py-1 rounded-full flex items-center gap-1.5 shadow-sm shadow-brand-purple/20">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5">
                   <path fillRule="evenodd" d="M12.963 2.286a.75.75 0 00-1.071-.136 9.742 9.742 0 00-3.539 6.177A7.547 7.547 0 016.648 6.61a.75.75 0 00-1.152-.082A9 9 0 1015.68 4.534a7.46 7.46 0 01-2.717-2.248zM15.75 14.25a3.75 3.75 0 11-7.313-1.172c.628.465 1.35.81 2.133 1a5.99 5.99 0 011.925-3.545 3.75 3.75 0 013.255 3.717z" clipRule="evenodd" />
                 </svg>
@@ -180,11 +180,11 @@ export default function Header() {
             )}
             <span className="text-[11px] font-bold uppercase tracking-wider">{user ? 'Profile' : 'Login'}</span>
           </button>
-          <button onClick={() => { closeSidebar(); openCart(); }} className="flex-1 py-4 flex flex-col items-center justify-center gap-2 text-gray-600 hover:text-brand-red hover:bg-red-50/50 transition-colors relative border-none">
+          <button onClick={() => { closeSidebar(); openCart(); }} className="flex-1 py-4 flex flex-col items-center justify-center gap-2 text-gray-600 hover:text-brand-purple hover:bg-purple-50/50 transition-colors relative border-none">
             <div className="relative">
               <FiShoppingCart size={22} className="text-gray-400" />
               {cartCount > 0 && (
-                <span className="absolute -top-1.5 -right-2 bg-brand-red text-white text-[9px] font-bold h-4 w-4 rounded-full flex items-center justify-center border border-white">{cartCount}</span>
+                <span className="absolute -top-1.5 -right-2 bg-brand-purple text-white text-[9px] font-bold h-4 w-4 rounded-full flex items-center justify-center border border-white">{cartCount}</span>
               )}
             </div>
             <span className="text-[11px] font-bold uppercase tracking-wider">Cart</span>

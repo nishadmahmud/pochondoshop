@@ -6,12 +6,12 @@ export default function ProductCard({ product }) {
     const slug = product.name ? product.name.toLowerCase().replace(/\s+/g, '-') : 'product';
 
     return (
-        <Link href="/"className="bg-white border border-gray-100 rounded-[16px] pb-4 flex flex-col hover:border-brand-red/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 group overflow-hidden relative block">
+        <Link href="/" className="bg-white border border-gray-100 rounded-[16px] pb-4 flex flex-col hover:border-brand-purple/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 group overflow-hidden relative block">
 
             {/* Discount Badge (Top Left Absolute) */}
             {product.discount && (
                 <div className="absolute top-3 left-3 z-10">
-                    <span className="bg-[#ff2a3b] text-white text-[11px] font-extrabold px-2.5 py-1 rounded-[6px] tracking-wide inline-flex items-center justify-center">
+                    <span className="bg-gradient-to-r from-brand-purple to-purple-600 text-white text-[11px] font-extrabold px-2.5 py-1 rounded-[6px] shadow-md shadow-brand-purple/30 tracking-wide inline-flex items-center justify-center">
                         {product.discount}
                     </span>
                 </div>

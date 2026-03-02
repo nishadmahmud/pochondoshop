@@ -19,11 +19,11 @@ export default function FeaturedProducts() {
                 <div className="flex items-end justify-between mb-6 md:mb-12 gap-4">
                     <div>
                         <h2 className="text-xl md:text-4xl font-extrabold text-gray-900 mb-1 md:mb-3 tracking-tight">
-                            Featured <span className="text-brand-red">Products</span>
+                            Featured <span className="text-brand-purple">Products</span>
                         </h2>
                         <p className="text-gray-500 text-xs md:text-lg hidden sm:block">Explore curiated premium tech gear chosen just for you.</p>
                     </div>
-                    <Link href="/"className="text-xs md:text-sm font-bold text-gray-500 hover:text-brand-red uppercase tracking-wider transition-colors inline-block pb-1 border-b-2 border-transparent hover:border-brand-red whitespace-nowrap">
+                    <Link href="/"className="text-xs md:text-sm font-bold text-gray-500 hover:text-brand-purple uppercase tracking-wider transition-colors inline-block pb-1 border-b-2 border-transparent hover:border-brand-purple whitespace-nowrap">
                         View All
                     </Link>
                 </div>

@@ -5,11 +5,14 @@ import { FiGrid, FiList, FiFilter, FiChevronDown } from 'react-icons/fi';
 import ProductCard from '../Shared/ProductCard';
 import CustomDropdown from '../Shared/CustomDropdown';
 
-export default function ProductGrid({ products, onOpenFilter }) {
-    const [sortBy, setSortBy] = useState("Sort by: Featured");
+export default function ProductGrid({ products, onOpenFilter, categoryName = "Products" }) {
+    const [sortBy, setSortBy] = useState("Default");
+
+    const brands = ["All", "Apple", "Google", "Honor", "iQOO", "Motorola", "Nothing", "Redmi", "Samsung", "Vivo"];
+    const [activeBrand, setActiveBrand] = useState("All");
 
     const sortOptions = [
-        { label: "Sort by: Featured", value: "Sort by: Featured" },
+        { label: "Default", value: "Default" },
         { label: "Price: Low to High", value: "Price: Low to High" },
         { label: "Price: High to Low", value: "Price: High to Low" },
         { label: "Newest Arrivals", value: "Newest Arrivals" },
@@ -17,36 +20,52 @@ export default function ProductGrid({ products, onOpenFilter }) {
 
     return (
         <div>
-            {/* Top Bar: View Toggles, Sort, filter (mobile) */}
-            <div className="flex items-center gap-2 mb-6">
-
-                {/* View Toggles */}
-                <div className="flex items-center gap-1 bg-white border border-gray-200 rounded-lg p-1 shrink-0">
-                    <button className="p-1.5 md:p-2 bg-gray-100 text-gray-900 rounded-md">
-                        <FiGrid size={16} className="md:w-5 md:h-5" />
+            {/* Brand Filter Pills */}
+            <div className="flex overflow-x-auto gap-2 md:gap-3 pb-4 mb-4 lg:-mt-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                {brands.map(brand => (
+                    <button
+                        key={brand}
+                        onClick={() => setActiveBrand(brand)}
+                        className={`px-4 md:px-6 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-colors border ${activeBrand === brand
+                            ? 'bg-brand-purple text-white border-brand-purple shadow-md shadow-brand-purple/20'
+                            : 'bg-white text-gray-700 border-gray-200 hover:border-brand-purple hover:text-brand-purple'
+                            }`}
+                    >
+                        {brand}
                     </button>
-                    <button className="p-1.5 md:p-2 text-gray-400 hover:text-gray-600 rounded-md">
-                        <FiList size={16} className="md:w-5 md:h-5" />
+                ))}
+            </div>
+
+            {/* Top Bar: Heading, Showing text, Sort, Filter (Mobile) */}
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+
+                <h2 className="text-xl md:text-2xl font-extrabold text-[#00382E] capitalize">
+                    Products of {categoryName}
+                </h2>
+
+                <div className="flex flex-wrap items-center gap-3 md:gap-4">
+                    <span className="text-xs md:text-sm text-gray-500 font-medium">
+                        Showing 1 to {products.length} from {products.length} Products
+                    </span>
+
+                    {/* Sort Dropdown */}
+                    <div className="w-[140px] md:w-[160px]">
+                        <CustomDropdown
+                            options={sortOptions}
+                            value={sortBy}
+                            onChange={setSortBy}
+                        />
+                    </div>
+
+                    {/* Mobile Filter Button */}
+                    <button
+                        onClick={onOpenFilter}
+                        className="lg:hidden flex items-center justify-center gap-1.5 bg-brand-purple text-white border-0 py-[9px] px-4 rounded-lg shadow-md shadow-brand-purple/20 hover:bg-[#7b3ba8] shrink-0 text-xs md:text-sm font-bold transition-all"
+                    >
+                        <FiFilter size={15} />
+                        <span>Filter</span>
                     </button>
                 </div>
-
-                {/* Sort Dropdown */}
-                <div className="flex-grow">
-                    <CustomDropdown
-                        options={sortOptions}
-                        value={sortBy}
-                        onChange={setSortBy}
-                    />
-                </div>
-
-                {/* Mobile Filter Button */}
-                <button
-                    onClick={onOpenFilter}
-                    className="lg:hidden flex items-center justify-center gap-1.5 bg-white border border-gray-200 py-[9px] px-3 rounded-lg text-gray-700 hover:bg-gray-50 shrink-0 text-xs md:text-sm font-semibold"
-                >
-                    <FiFilter size={15} />
-                    <span>Filter</span>
-                </button>
             </div>
 
             {/* Product Grid */}
@@ -58,7 +77,7 @@ export default function ProductGrid({ products, onOpenFilter }) {
 
             {/* Pagination */}
             <div className="flex justify-center mt-12 gap-2">
-                <button className="w-10 h-10 flex items-center justify-center rounded-full bg-brand-red text-white font-bold shadow-lg shadow-brand-red/30">1</button>
+                <button className="w-10 h-10 flex items-center justify-center rounded-full bg-brand-purple text-white font-bold shadow-lg shadow-brand-purple/30">1</button>
                 <button className="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-200 text-gray-600 hover:bg-gray-50 font-bold transition-colors">2</button>
                 <button className="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-200 text-gray-600 hover:bg-gray-50 font-bold transition-colors">3</button>
                 <button className="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-200 text-gray-600 hover:bg-gray-50 transition-colors">...</button>

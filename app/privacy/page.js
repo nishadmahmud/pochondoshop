@@ -75,7 +75,7 @@ export default function PrivacyPage() {
         <div className="min-h-screen bg-gray-50 pb-20 md:pb-10">
             <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
                 <div className="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-20 text-center">
-                    <span className="inline-block px-4 py-1.5 bg-brand-red/20 text-brand-red text-xs font-bold rounded-full mb-4 border border-brand-red/20">LEGAL</span>
+                    <span className="inline-block px-4 py-1.5 bg-brand-purple/20 text-brand-purple text-xs font-bold rounded-full mb-4 border border-brand-purple/20">LEGAL</span>
                     <h1 className="text-3xl md:text-5xl font-extrabold mb-4">Privacy Policy</h1>
                     <p className="text-gray-400 text-sm md:text-base">Last updated: February 2026</p>
                 </div>
@@ -94,7 +94,7 @@ export default function PrivacyPage() {
                                 <ul className="space-y-2">
                                     {section.content.map((item, j) => (
                                         <li key={j} className="text-sm text-gray-600 leading-relaxed flex items-start gap-2">
-                                            <span className="text-brand-red mt-1.5 flex-shrink-0">•</span>
+                                            <span className="text-brand-purple mt-1.5 flex-shrink-0">•</span>
                                             <span dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong class="text-gray-900">$1</strong>') }} />
                                         </li>
                                     ))}
@@ -106,8 +106,8 @@ export default function PrivacyPage() {
                     <div className="mt-10 p-5 bg-gray-50 rounded-xl border border-gray-100">
                         <p className="text-sm text-gray-600">
                             If you have any questions about this Privacy Policy, please contact us at{" "}
-                            <a href="/"className="text-brand-red font-semibold hover:underline">support@pochondoshop.com</a> or call{" "}
-                            <a href="/"className="text-brand-red font-semibold hover:underline">+880 1714-404100</a>.
+                            <a href="/"className="text-brand-purple font-semibold hover:underline">support@pochondoshop.com</a> or call{" "}
+                            <a href="/"className="text-brand-purple font-semibold hover:underline">+880 1714-404100</a>.
                         </p>
                     </div>
                 </div>

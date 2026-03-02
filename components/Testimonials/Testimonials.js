@@ -26,7 +26,7 @@ export default function Testimonials() {
                     {/* Rating Badge */}
                     <div className="inline-flex flex-wrap justify-center items-center gap-2 md:gap-3 px-4 py-2 md:px-6 md:py-3 bg-white rounded-full border border-gray-200 shadow-sm">
                         <span className="text-xl md:text-2xl font-black text-gray-900">4.9</span>
-                        <div className="flex gap-1 text-brand-red text-sm md:text-base">
+                        <div className="flex gap-1 text-brand-purple text-sm md:text-base">
                             <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
                         </div>
                         <span className="text-xs md:text-sm font-semibold text-gray-500">Based on 2,500+ reviews</span>
@@ -45,17 +45,17 @@ export default function Testimonials() {
 
 function ReviewCard({ review }) {
     return (
-        <div className="bg-white rounded-[24px] p-6 md:p-8 border border-gray-100 shadow-[0_4px_20px_rgb(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:border-brand-red/30 transition-all duration-300 flex flex-col items-start text-left group">
+        <div className="bg-white rounded-[24px] p-6 md:p-8 border border-gray-100 shadow-[0_4px_20px_rgb(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:border-brand-purple/30 transition-all duration-300 flex flex-col items-start text-left group">
             <div className="flex gap-1 mb-5">
                 {[...Array(5)].map((_, i) => (
-                    <FaStar key={i} className={`text-[12px] md:text-[14px] ${i < review.rating ? 'text-brand-red' : 'text-gray-200'}`} />
+                    <FaStar key={i} className={`text-[12px] md:text-[14px] ${i < review.rating ? 'text-brand-purple' : 'text-gray-200'}`} />
                 ))}
             </div>
             <p className="text-gray-800 text-sm md:text-[15px] leading-relaxed mb-8 font-medium">
                 "{review.text}"
             </p>
             <div className="flex items-center gap-4 mt-auto w-full pt-5 border-t border-gray-50">
-                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#fdf3eb] flex items-center justify-center text-brand-red font-bold text-sm md:text-lg border border-red-100 shadow-sm">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#fdf3eb] flex items-center justify-center text-brand-purple font-bold text-sm md:text-lg border border-purple-100 shadow-sm">
                     {review.avatar}
                 </div>
                 <div>

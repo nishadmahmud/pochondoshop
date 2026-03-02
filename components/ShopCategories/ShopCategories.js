@@ -62,7 +62,7 @@ export default function ShopCategories() {
                 <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-8 gap-y-8 md:gap-y-12 gap-x-2 mb-16 md:mb-24">
                     {categories.map((cat, idx) => (
                         <Link
-                            href="/"key={idx}
+                            href={`/category/${encodeURIComponent(cat.name.toLowerCase().replace(/\s+/g, '-'))}`} key={idx}
                             className="flex flex-col items-center justify-start gap-3 md:gap-4 text-center group"
                         >
                             <div className="w-12 h-12 md:w-16 md:h-16 relative flex items-center justify-center text-3xl md:text-4xl text-gray-700 group-hover:scale-110 transition-transform duration-300">
@@ -72,13 +72,13 @@ export default function ShopCategories() {
                                     cat.icon
                                 )}
                             </div>
-                            <span className="text-[10px] md:text-xs font-medium text-gray-700 leading-tight group-hover:text-brand-red transition-colors">{cat.name}</span>
+                            <span className="text-[10px] md:text-xs font-medium text-gray-700 leading-tight group-hover:text-brand-purple transition-colors">{cat.name}</span>
                         </Link>
                     ))}
                 </div>
 
                 {/* Flash Sale Banner */}
-                <div className="bg-brand-red rounded-2xl p-4 md:p-8 relative">
+                <div className="bg-brand-purple rounded-2xl p-4 md:p-8 relative">
                     {/* Header Strip */}
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-6 md:mb-10 gap-4">
                         <div className="flex items-center gap-2 md:gap-3">

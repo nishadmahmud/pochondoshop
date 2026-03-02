@@ -27,7 +27,7 @@ export default function ProductInfo({ product }) {
             {/* Header: Title, Reviews, Share */}
             <div className="flex justify-between items-start mb-2">
                 <div>
-                    <div className="bg-red-50 text-brand-red text-xs font-bold px-2.5 py-1 rounded-md inline-block mb-3">
+                    <div className="bg-purple-50 text-brand-purple text-xs font-bold px-2.5 py-1 rounded-md inline-block mb-3">
                         In Stock
                     </div>
                     <h1 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2">{product.name}</h1>
@@ -39,13 +39,13 @@ export default function ProductInfo({ product }) {
                                 <FaStar key={i} />
                             ))}
                         </div>
-                        <span className="text-gray-500 text-sm group-hover:text-brand-red transition-colors">
+                        <span className="text-gray-500 text-sm group-hover:text-brand-purple transition-colors">
                             (12 Reviews)
                         </span>
                     </div>
                 </div>
 
-                <button className="p-2 text-gray-400 hover:text-brand-red hover:bg-red-50 rounded-full transition-colors">
+                <button className="p-2 text-gray-400 hover:text-brand-purple hover:bg-purple-50 rounded-full transition-colors">
                     <FiShare2 size={20} />
                 </button>
             </div>
@@ -77,8 +77,8 @@ export default function ProductInfo({ product }) {
                                     key={size}
                                     onClick={() => setSelectedStorage(size)}
                                     className={`cursor-pointer px-4 py-2 rounded-lg text-sm font-medium border-2 transition-all ${selectedStorage === size
-                                        ? 'border-brand-red bg-brand-red text-white'
-                                        : 'border-gray-200 text-gray-600 hover:border-brand-red'
+                                        ? 'border-brand-purple bg-brand-purple text-white'
+                                        : 'border-gray-200 text-gray-600 hover:border-brand-purple'
                                         }`}
                                 >
                                     {size}
@@ -98,7 +98,7 @@ export default function ProductInfo({ product }) {
                                     key={color.name}
                                     onClick={() => setSelectedColor(color)}
                                     className={`cursor-pointer flex items-center gap-2 px-3 py-2 rounded-lg border-2 transition-all ${selectedColor?.name === color.name
-                                        ? 'border-brand-red bg-red-50'
+                                        ? 'border-brand-purple bg-purple-50'
                                         : 'border-gray-200 hover:border-gray-300'
                                         }`}
                                 >
@@ -120,8 +120,8 @@ export default function ProductInfo({ product }) {
                                     key={region}
                                     onClick={() => setSelectedRegion(region)}
                                     className={`cursor-pointer px-4 py-2 rounded-lg text-sm font-medium border-2 transition-all ${selectedRegion === region
-                                        ? 'border-brand-red text-brand-red bg-red-50/30'
-                                        : 'border-gray-200 text-gray-600 hover:border-brand-red'
+                                        ? 'border-brand-purple text-brand-purple bg-purple-50/30'
+                                        : 'border-gray-200 text-gray-600 hover:border-brand-purple'
                                         }`}
                                 >
                                     {region}
@@ -165,7 +165,7 @@ export default function ProductInfo({ product }) {
 
                 <button
                     onClick={handleAddToCart}
-                    className="cursor-pointer flex-[1.5] bg-brand-red text-white font-bold py-3 px-2 rounded-lg hover:bg-[#ff1a2b] shadow-lg shadow-brand-red/30 transition-all text-sm whitespace-nowrap"
+                    className="cursor-pointer flex-[1.5] bg-brand-purple text-white font-bold py-3 px-2 rounded-lg hover:bg-[#7b3ba8] shadow-lg shadow-brand-purple/30 transition-all text-sm whitespace-nowrap"
                 >
                     Buy Now
                 </button>

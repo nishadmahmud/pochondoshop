@@ -152,26 +152,26 @@ const AuthModal = () => {
                     <div className="flex border-b border-gray-200 mb-6">
                         <button
                             className={`flex-1 pb-3 text-sm font-semibold transition-all relative ${authModalMode === "login"
-                                ? "text-brand-red"
+                                ? "text-brand-purple"
                                 : "text-gray-500 hover:text-gray-700"
                                 }`}
                             onClick={() => setAuthModalMode("login")}
                         >
                             Login
                             {authModalMode === "login" && (
-                                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-red rounded-t-full" />
+                                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-purple rounded-t-full" />
                             )}
                         </button>
                         <button
                             className={`flex-1 pb-3 text-sm font-semibold transition-all relative ${authModalMode === "register"
-                                ? "text-brand-red"
+                                ? "text-brand-purple"
                                 : "text-gray-500 hover:text-gray-700"
                                 }`}
                             onClick={() => setAuthModalMode("register")}
                         >
                             Register
                             {authModalMode === "register" && (
-                                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-red rounded-t-full" />
+                                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-purple rounded-t-full" />
                             )}
                         </button>
                     </div>
@@ -181,7 +181,7 @@ const AuthModal = () => {
                 <div className="px-6 pb-8 max-h-[60vh] overflow-y-auto">
                     {/* Error */}
                     {error && (
-                        <div className="mb-4 p-3 bg-red-50 border border-red-100 rounded-xl flex items-start gap-2">
+                        <div className="mb-4 p-3 bg-purple-50 border border-purple-100 rounded-xl flex items-start gap-2">
                             <svg
                                 className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5"
                                 fill="none"
@@ -195,7 +195,7 @@ const AuthModal = () => {
                                     d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                                 />
                             </svg>
-                            <p className="text-sm text-red-600">{error}</p>
+                            <p className="text-sm text-purple-600">{error}</p>
                         </div>
                     )}
 
@@ -213,7 +213,7 @@ const AuthModal = () => {
                                     onChange={handleLoginChange}
                                     required
                                     placeholder="Enter your email"
-                                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-all text-gray-900"
+                                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-purple/20 focus:border-brand-purple transition-all text-gray-900"
                                     style={{ fontSize: "16px" }}
                                 />
                             </div>
@@ -230,7 +230,7 @@ const AuthModal = () => {
                                         onChange={handleLoginChange}
                                         required
                                         placeholder="Enter your password"
-                                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-all text-gray-900 pr-11"
+                                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-purple/20 focus:border-brand-purple transition-all text-gray-900 pr-11"
                                         style={{ fontSize: "16px" }}
                                     />
                                     <button
@@ -250,7 +250,7 @@ const AuthModal = () => {
                             <button
                                 type="submit"
                                 disabled={loading}
-                                className="w-full py-3.5 bg-brand-red text-white font-extrabold rounded-xl shadow-lg shadow-brand-red/30 hover:bg-[#ff1a2b] hover:-translate-y-0.5 active:translate-y-0 active:shadow-none transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed"
+                                className="w-full py-3.5 bg-brand-purple text-white font-extrabold rounded-xl shadow-lg shadow-brand-purple/30 hover:bg-[#7b3ba8] hover:-translate-y-0.5 active:translate-y-0 active:shadow-none transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed"
                             >
                                 {loading ? (
                                     <span className="flex items-center justify-center gap-2">
@@ -286,7 +286,7 @@ const AuthModal = () => {
                                     <button
                                         type="button"
                                         onClick={() => setAuthModalMode("register")}
-                                        className="font-bold text-brand-red hover:underline"
+                                        className="font-bold text-brand-purple hover:underline"
                                     >
                                         Register Now
                                     </button>
@@ -308,7 +308,7 @@ const AuthModal = () => {
                                         onChange={handleRegisterChange}
                                         required
                                         placeholder="First"
-                                        className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-all text-gray-900"
+                                        className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-purple/20 focus:border-brand-purple transition-all text-gray-900"
                                         style={{ fontSize: "16px" }}
                                     />
                                 </div>
@@ -323,7 +323,7 @@ const AuthModal = () => {
                                         onChange={handleRegisterChange}
                                         required
                                         placeholder="Last"
-                                        className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-all text-gray-900"
+                                        className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-purple/20 focus:border-brand-purple transition-all text-gray-900"
                                         style={{ fontSize: "16px" }}
                                     />
                                 </div>
@@ -340,7 +340,7 @@ const AuthModal = () => {
                                     onChange={handleRegisterChange}
                                     required
                                     placeholder="email@example.com"
-                                    className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-all text-gray-900"
+                                    className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-purple/20 focus:border-brand-purple transition-all text-gray-900"
                                     style={{ fontSize: "16px" }}
                                 />
                             </div>
@@ -360,7 +360,7 @@ const AuthModal = () => {
                                         onChange={handleRegisterChange}
                                         required
                                         placeholder="01XXXXXXXXX"
-                                        className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-r-xl focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-all text-gray-900"
+                                        className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-r-xl focus:outline-none focus:ring-2 focus:ring-brand-purple/20 focus:border-brand-purple transition-all text-gray-900"
                                         style={{ fontSize: "16px" }}
                                     />
                                 </div>
@@ -378,7 +378,7 @@ const AuthModal = () => {
                                         onChange={handleRegisterChange}
                                         required
                                         placeholder="Min. 6 characters"
-                                        className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-all text-gray-900 pr-11"
+                                        className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-purple/20 focus:border-brand-purple transition-all text-gray-900 pr-11"
                                         style={{ fontSize: "16px" }}
                                     />
                                     <button
@@ -407,7 +407,7 @@ const AuthModal = () => {
                                         onChange={handleRegisterChange}
                                         required
                                         placeholder="Re-enter password"
-                                        className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-all text-gray-900 pr-11"
+                                        className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-purple/20 focus:border-brand-purple transition-all text-gray-900 pr-11"
                                         style={{ fontSize: "16px" }}
                                     />
                                     <button
@@ -429,7 +429,7 @@ const AuthModal = () => {
                             <button
                                 type="submit"
                                 disabled={loading}
-                                className="w-full py-3.5 bg-brand-red text-white font-extrabold rounded-xl shadow-lg shadow-brand-red/30 hover:bg-[#ff1a2b] hover:-translate-y-0.5 active:translate-y-0 active:shadow-none transition-all duration-200 mt-4 disabled:opacity-70 disabled:cursor-not-allowed"
+                                className="w-full py-3.5 bg-brand-purple text-white font-extrabold rounded-xl shadow-lg shadow-brand-purple/30 hover:bg-[#7b3ba8] hover:-translate-y-0.5 active:translate-y-0 active:shadow-none transition-all duration-200 mt-4 disabled:opacity-70 disabled:cursor-not-allowed"
                             >
                                 {loading ? (
                                     <span className="flex items-center justify-center gap-2">
@@ -465,7 +465,7 @@ const AuthModal = () => {
                                     <button
                                         type="button"
                                         onClick={() => setAuthModalMode("login")}
-                                        className="font-bold text-brand-red hover:underline"
+                                        className="font-bold text-brand-purple hover:underline"
                                     >
                                         Log In
                                     </button>

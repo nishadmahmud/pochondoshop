@@ -66,7 +66,7 @@ export default function ProductDetailsPage() {
                     <div className="text-[11px] md:text-sm text-gray-500 flex items-center gap-2">
                         <span className="hover:text-[#1a3b34] cursor-pointer">Home</span> /
                         <span className="hover:text-[#1a3b34] cursor-pointer">Shop</span> /
-                        <span className="text-brand-red font-semibold capitalize truncate">{productData.name}</span>
+                        <span className="text-brand-purple font-semibold capitalize truncate">{productData.name}</span>
                     </div>
                 </div>
             </div>

@@ -30,7 +30,7 @@ export default function BestDeals() {
             <div className="max-w-7xl mx-auto px-3 md:px-6">
                 <div className="text-center mb-6 md:mb-14">
                     <h2 className="text-xl md:text-4xl font-extrabold text-gray-900 mb-2 md:mb-4 tracking-tight">
-                        Best <span className="text-brand-red">Deals</span>
+                        Best <span className="text-brand-purple">Deals</span>
                     </h2>
                     <p className="text-sm md:text-lg text-gray-500 max-w-2xl mx-auto hidden sm:block">
                         Unbeatable offers hand-picked for you. Grab them before they're gone.
@@ -47,15 +47,15 @@ export default function BestDeals() {
                                 </div>
                             </div>
                             <div className="sm:w-3/5 p-4 md:p-8 flex flex-col justify-center">
-                                <h3 className="text-base md:text-2xl font-extrabold text-gray-900 mb-1 md:mb-3 leading-tight group-hover:text-brand-red transition-colors">{deal.title}</h3>
+                                <h3 className="text-base md:text-2xl font-extrabold text-gray-900 mb-1 md:mb-3 leading-tight group-hover:text-brand-purple transition-colors">{deal.title}</h3>
                                 <p className="text-gray-500 text-xs md:text-sm leading-relaxed mb-3 md:mb-6 line-clamp-2">{deal.description}</p>
                                 <div className="flex items-end gap-2 md:gap-3 mb-2 md:mb-4">
-                                    <span className="text-xl md:text-3xl font-black text-brand-red">{deal.price}</span>
+                                    <span className="text-xl md:text-3xl font-black text-brand-purple">{deal.price}</span>
                                     <span className="text-gray-400 text-sm md:text-lg line-through mb-0.5">{deal.oldPrice}</span>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <span className="bg-green-50 text-green-700 text-[10px] md:text-xs font-bold px-2 md:px-3 py-1 md:py-1.5 rounded-lg border border-green-200">{deal.savings}</span>
-                                    <Link href="/"className="text-[10px] md:text-sm font-bold text-brand-red hover:text-red-700 underline underline-offset-4 transition-colors">Shop Now →</Link>
+                                    <Link href="/"className="text-[10px] md:text-sm font-bold text-brand-purple hover:text-purple-700 underline underline-offset-4 transition-colors">Shop Now →</Link>
                                 </div>
                             </div>
                         </div>

@@ -288,8 +288,8 @@ export default function CheckoutPage() {
         return (
             <div className="flex min-h-[70vh] flex-col items-center justify-center bg-gray-50">
                 <div className="text-center px-4">
-                    <div className="w-24 h-24 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <ShoppingBag className="h-12 w-12 text-brand-red/40" />
+                    <div className="w-24 h-24 bg-purple-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <ShoppingBag className="h-12 w-12 text-brand-purple/40" />
                     </div>
                     <h2 className="text-2xl font-extrabold text-gray-900">
                         Your cart is empty
@@ -298,7 +298,7 @@ export default function CheckoutPage() {
                         Add some products to your cart before checking out.
                     </p>
                     <Link
-                        href="/"className="mt-6 inline-block rounded-xl bg-brand-red px-8 py-3.5 text-white font-bold hover:bg-[#ff1a2b] transition-colors shadow-lg shadow-brand-red/20"
+                        href="/" className="mt-6 inline-block rounded-xl bg-brand-purple px-8 py-3.5 text-white font-bold hover:bg-[#7b3ba8] transition-colors shadow-lg shadow-brand-purple/20"
                     >
                         Continue Shopping
                     </Link>
@@ -328,7 +328,7 @@ export default function CheckoutPage() {
                             {/* ── Delivery Information ── */}
                             <section className="rounded-2xl border border-gray-100 bg-white p-5 md:p-6 shadow-sm">
                                 <div className="mb-5 flex items-center gap-3 border-b border-gray-100 pb-4">
-                                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-red-50 text-brand-red">
+                                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-50 text-brand-purple">
                                         <MapPin className="h-5 w-5" />
                                     </div>
                                     <div>
@@ -363,7 +363,7 @@ export default function CheckoutPage() {
                                                     name="firstName"
                                                     value={formData.firstName}
                                                     onChange={handleChange}
-                                                    className="block w-full rounded-xl border border-gray-200 bg-gray-50 py-3 pl-10 pr-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-brand-red focus:bg-white focus:outline-none focus:ring-1 focus:ring-brand-red"
+                                                    className="block w-full rounded-xl border border-gray-200 bg-gray-50 py-3 pl-10 pr-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-brand-purple focus:bg-white focus:outline-none focus:ring-1 focus:ring-brand-purple"
                                                     placeholder="Your full name"
                                                     style={{ fontSize: '16px' }}
                                                 />
@@ -385,7 +385,7 @@ export default function CheckoutPage() {
                                                     name="phone"
                                                     value={formData.phone}
                                                     onChange={handleChange}
-                                                    className="block w-full rounded-xl border border-gray-200 bg-gray-50 py-3 pl-10 pr-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-brand-red focus:bg-white focus:outline-none focus:ring-1 focus:ring-brand-red"
+                                                    className="block w-full rounded-xl border border-gray-200 bg-gray-50 py-3 pl-10 pr-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-brand-purple focus:bg-white focus:outline-none focus:ring-1 focus:ring-brand-purple"
                                                     placeholder="01XXXXXXXXX"
                                                     style={{ fontSize: '16px' }}
                                                 />
@@ -418,7 +418,7 @@ export default function CheckoutPage() {
                                                 name="email"
                                                 value={formData.email}
                                                 onChange={handleChange}
-                                                className="block w-full rounded-xl border border-gray-200 bg-gray-50 py-3 pl-10 pr-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-brand-red focus:bg-white focus:outline-none focus:ring-1 focus:ring-brand-red"
+                                                className="block w-full rounded-xl border border-gray-200 bg-gray-50 py-3 pl-10 pr-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-brand-purple focus:bg-white focus:outline-none focus:ring-1 focus:ring-brand-purple"
                                                 placeholder="email@example.com"
                                                 style={{ fontSize: '16px' }}
                                             />
@@ -446,7 +446,7 @@ export default function CheckoutPage() {
                                             rows={3}
                                             value={formData.address}
                                             onChange={handleChange}
-                                            className="block w-full rounded-xl border border-gray-200 bg-gray-50 py-3 px-4 text-sm text-gray-900 placeholder:text-gray-400 focus:border-brand-red focus:bg-white focus:outline-none focus:ring-1 focus:ring-brand-red resize-none"
+                                            className="block w-full rounded-xl border border-gray-200 bg-gray-50 py-3 px-4 text-sm text-gray-900 placeholder:text-gray-400 focus:border-brand-purple focus:bg-white focus:outline-none focus:ring-1 focus:ring-brand-purple resize-none"
                                             placeholder="Street address, house number, landmarks..."
                                             style={{ fontSize: '16px' }}
                                         />
@@ -473,8 +473,8 @@ export default function CheckoutPage() {
                                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                                     {/* Cash on Delivery */}
                                     <label
-                                        className={`relative flex cursor-pointer rounded-xl border-2 p-4 transition-all hover:border-brand-red ${paymentMethod === "Cash"
-                                            ? "border-brand-red bg-red-50/50 ring-1 ring-brand-red"
+                                        className={`relative flex cursor-pointer rounded-xl border-2 p-4 transition-all hover:border-brand-purple ${paymentMethod === "Cash"
+                                            ? "border-brand-purple bg-purple-50/50 ring-1 ring-brand-purple"
                                             : "border-gray-200"
                                             }`}
                                     >
@@ -488,7 +488,7 @@ export default function CheckoutPage() {
                                         />
                                         <div className="flex flex-1 flex-col">
                                             <span className="flex items-center gap-2 font-bold text-gray-900">
-                                                <Truck className="h-4 w-4 text-brand-red" />
+                                                <Truck className="h-4 w-4 text-brand-purple" />
                                                 Cash on Delivery
                                             </span>
                                             <span className="mt-1 text-xs text-gray-500">
@@ -497,7 +497,7 @@ export default function CheckoutPage() {
                                         </div>
                                         {paymentMethod === "Cash" && (
                                             <div className="absolute right-4 top-4">
-                                                <div className="h-3 w-3 rounded-full bg-brand-red" />
+                                                <div className="h-3 w-3 rounded-full bg-brand-purple" />
                                             </div>
                                         )}
                                     </label>
@@ -543,7 +543,7 @@ export default function CheckoutPage() {
                                                     <h3 className="line-clamp-1 text-sm font-bold text-gray-900 pr-2">
                                                         {item.name}
                                                     </h3>
-                                                    <p className="text-sm font-extrabold text-brand-red whitespace-nowrap">
+                                                    <p className="text-sm font-extrabold text-brand-purple whitespace-nowrap">
                                                         {formatPrice(item.numericPrice * item.quantity)}
                                                     </p>
                                                 </div>
@@ -605,7 +605,7 @@ export default function CheckoutPage() {
                                                 </div>
                                                 <button
                                                     onClick={handleRemoveCoupon}
-                                                    className="text-xs text-red-600 hover:underline font-medium"
+                                                    className="text-xs text-purple-600 hover:underline font-medium"
                                                 >
                                                     Remove
                                                 </button>
@@ -628,21 +628,21 @@ export default function CheckoutPage() {
                                                     }}
                                                     className={`flex-1 rounded-xl border px-4 py-2.5 text-sm focus:outline-none ${couponError
                                                         ? "border-red-300 bg-red-50 focus:border-red-500"
-                                                        : "border-gray-200 bg-gray-50 focus:border-brand-red"
+                                                        : "border-gray-200 bg-gray-50 focus:border-brand-purple"
                                                         }`}
                                                     style={{ fontSize: '16px' }}
                                                 />
                                                 <button
                                                     onClick={handleApplyCoupon}
                                                     disabled={couponLoading}
-                                                    className="rounded-xl bg-brand-red px-5 py-2.5 text-xs font-bold text-white transition hover:bg-[#ff1a2b] disabled:opacity-50"
+                                                    className="rounded-xl bg-brand-purple px-5 py-2.5 text-xs font-bold text-white transition hover:bg-[#7b3ba8] disabled:opacity-50"
                                                 >
                                                     {couponLoading ? "..." : "Apply"}
                                                 </button>
                                             </div>
                                         )}
                                         {couponError && (
-                                            <p className="mt-1.5 text-xs text-red-600">{couponError}</p>
+                                            <p className="mt-1.5 text-xs text-purple-600">{couponError}</p>
                                         )}
                                     </div>
                                 </div>
@@ -652,7 +652,7 @@ export default function CheckoutPage() {
                                     <span className="text-base font-extrabold text-gray-900">
                                         Grand Total
                                     </span>
-                                    <span className="text-xl font-extrabold text-brand-red">
+                                    <span className="text-xl font-extrabold text-brand-purple">
                                         {formatPrice(grandTotal)}
                                     </span>
                                 </div>
@@ -662,7 +662,7 @@ export default function CheckoutPage() {
                                     type="submit"
                                     form="checkout-form"
                                     disabled={isSubmitting}
-                                    className="flex w-full items-center justify-center gap-2 rounded-xl bg-brand-red px-6 py-4 text-sm font-extrabold text-white shadow-lg shadow-brand-red/20 transition-all hover:bg-[#ff1a2b] hover:translate-y-[-1px] hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-70"
+                                    className="flex w-full items-center justify-center gap-2 rounded-xl bg-brand-purple px-6 py-4 text-sm font-extrabold text-white shadow-lg shadow-brand-purple/20 transition-all hover:bg-[#7b3ba8] hover:translate-y-[-1px] hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-70"
                                 >
                                     {isSubmitting ? (
                                         <>
@@ -701,7 +701,7 @@ export default function CheckoutPage() {
                             </div>
 
                             <div className="text-center text-xs text-gray-400 pb-4">
-                                <Link href="/"className="hover:underline">Terms</Link> · <Link href="/"className="hover:underline">Privacy</Link>
+                                <Link href="/" className="hover:underline">Terms</Link> · <Link href="/" className="hover:underline">Privacy</Link>
                             </div>
                         </div>
                     </div>

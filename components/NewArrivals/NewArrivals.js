@@ -19,7 +19,7 @@ export default function NewArrivals() {
                 {/* Header Container */}
                 <div className="flex items-center justify-between mb-6 md:mb-8">
                     <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
-                        New <span className="text-brand-red">Arrivals</span>
+                        New <span className="text-brand-purple">Arrivals</span>
                     </h2>
 
                     {/* Navigation Arrows */}

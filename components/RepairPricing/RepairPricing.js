@@ -3,29 +3,29 @@
 import { useState } from 'react';
 
 export default function RepairPricing() {
-    const [activeDevice, setActiveDevice] = useState('Chimneys');
+    const [activeDevice, setActiveDevice] = useState('Smartphones');
 
-    const devices = ['Chimneys', 'Induction', 'Stoves'];
+    const devices = ['Smartphones', 'Laptops', 'Tablets'];
 
     const pricingData = {
-        'Chimneys': [
-            { model: "Wall Mount 90cm", main: "1,500", sub1: "500", sub2: "2,000" },
-            { model: "Wall Mount 60cm", main: "1,200", sub1: "450", sub2: "1,800" },
-            { model: "Island Chimney", main: "3,000", sub1: "800", sub2: "3,500" },
-            { model: "Filterless Auto-Clean", main: "1,800", sub1: "600", sub2: "2,500" },
-            { model: "Basic Hood", main: "1,000", sub1: "400", sub2: "1,200" },
+        'Smartphones': [
+            { model: "Premium Screen Replacement", main: "6,500", sub1: "1,500", sub2: "5,000" },
+            { battery: "Standard Screen Replacement", main: "3,500", sub1: "1,000", sub2: "2,500" },
+            { model: "Battery Replacement", main: "2,500", sub1: "500", sub2: "2,000" },
+            { model: "Charging Port Repair", main: "1,800", sub1: "800", sub2: "1,000" },
+            { model: "Camera Lens Replacement", main: "1,200", sub1: "400", sub2: "800" },
         ],
-        'Induction': [
-            { model: "4-Zone Built-in", main: "2,000", sub1: "800", sub2: "2,500" },
-            { model: "2-Zone Built-in", main: "1,500", sub1: "600", sub2: "1,800" },
-            { model: "Portable Cooker", main: "800", sub1: "300", sub2: "—" },
-            { model: "Infrared Cooker", main: "1,000", sub1: "400", sub2: "1,200" },
+        'Laptops': [
+            { model: "Screen Replacement", main: "8,500", sub1: "1,500", sub2: "7,000" },
+            { model: "Battery Replacement", main: "4,500", sub1: "500", sub2: "4,000" },
+            { model: "Keyboard Replacement", main: "3,500", sub1: "1,000", sub2: "2,500" },
+            { model: "Motherboard Repair (Level 3)", main: "5,000", sub1: "5,000", sub2: "—" },
         ],
-        'Stoves': [
-            { model: "4-Burner Glass Top", main: "1,500", sub1: "500", sub2: "—" },
-            { model: "3-Burner Glass Top", main: "1,200", sub1: "400", sub2: "—" },
-            { model: "Built-in Hob", main: "2,000", sub1: "600", sub2: "—" },
-            { model: "Stainless Steel Basic", main: "800", sub1: "300", sub2: "—" },
+        'Tablets': [
+            { model: "Glass & Digitizer", main: "4,500", sub1: "1,500", sub2: "3,000" },
+            { model: "Battery Replacement", main: "3,500", sub1: "1,000", sub2: "2,500" },
+            { model: "Logic Board Repair", main: "4,000", sub1: "4,000", sub2: "—" },
+            { model: "Power Button Repair", main: "1,200", sub1: "800", sub2: "400" },
         ]
     };
 
@@ -35,7 +35,7 @@ export default function RepairPricing() {
         <section className="bg-gray-50 py-16 md:py-28 border-b border-gray-100">
             <div className="max-w-6xl mx-auto px-4 md:px-6">
                 <div className="text-center mb-12 md:mb-20">
-                    <span className="text-brand-red uppercase tracking-[0.2em] text-xs font-bold mb-4 block">Transparent Service</span>
+                    <span className="text-brand-purple uppercase tracking-[0.2em] text-xs font-bold mb-4 block">Transparent Service</span>
                     <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4 tracking-tight">
                         Service <span className="text-gray-400 font-light italic">Menu</span>
                     </h2>
@@ -49,7 +49,7 @@ export default function RepairPricing() {
                                 key={device}
                                 onClick={() => setActiveDevice(device)}
                                 className={`px-6 py-2 md:py-3 text-xs md:text-sm font-bold uppercase tracking-widest transition-all duration-300 border-b-2 ${activeDevice === device
-                                    ? 'border-brand-red text-gray-900'
+                                    ? 'border-brand-purple text-gray-900'
                                     : 'border-transparent text-gray-400 hover:text-gray-900'
                                     }`}
                             >
@@ -66,7 +66,7 @@ export default function RepairPricing() {
                             <div className="flex justify-between items-end mb-2">
                                 <h3 className="text-lg md:text-xl font-bold text-gray-900 tracking-tight">{item.model}</h3>
                                 <div className="flex-grow border-b border-dotted border-gray-300 mx-4 mb-2"></div>
-                                <span className="text-brand-red font-bold text-lg md:text-xl">৳{item.main} <span className="text-[10px] md:text-xs text-gray-400 font-normal ml-1">Installation</span></span>
+                                <span className="text-brand-purple font-bold text-lg md:text-xl">৳{item.main} <span className="text-[10px] md:text-xs text-gray-400 font-normal ml-1">Installation</span></span>
                             </div>
 
                             <div className="flex items-center gap-4 text-xs md:text-sm text-gray-500 font-medium tracking-wide">

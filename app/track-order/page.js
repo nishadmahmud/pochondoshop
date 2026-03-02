@@ -22,18 +22,18 @@ const OrderTimeline = ({ currentStatus }) => {
             <div className="hidden sm:block">
                 <div className="relative flex items-center justify-between">
                     <div className="absolute left-0 right-0 top-5 h-1 bg-gray-200 rounded-full" />
-                    <div className="absolute left-0 top-5 h-1 bg-gradient-to-r from-brand-red to-red-400 rounded-full transition-all duration-500" style={{ width: `${((Math.min(status, 4) - 1) / 3) * 100}%` }} />
+                    <div className="absolute left-0 top-5 h-1 bg-gradient-to-r from-brand-purple to-purple-400 rounded-full transition-all duration-500" style={{ width: `${((Math.min(status, 4) - 1) / 3) * 100}%` }} />
                     {timelineStages.map((stage) => {
                         const isCompleted = status >= stage.id;
                         const isCurrent = status === stage.id;
                         const StageIcon = stage.icon;
                         return (
                             <div key={stage.id} className="relative flex flex-col items-center z-10">
-                                <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${isCompleted ? "bg-gradient-to-br from-brand-red to-red-500 text-white shadow-lg shadow-red-500/30" : "bg-white border-2 border-gray-300 text-gray-400"} ${isCurrent ? "ring-4 ring-red-100 scale-110" : ""}`}>
+                                <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${isCompleted ? "bg-gradient-to-br from-brand-purple to-purple-500 text-white shadow-lg shadow-purple-500/30" : "bg-white border-2 border-gray-300 text-gray-400"} ${isCurrent ? "ring-4 ring-purple-100 scale-110" : ""}`}>
                                     {isCompleted ? <CheckCircle2 className="w-6 h-6" /> : <span className="text-sm font-semibold">{stage.id}</span>}
                                 </div>
                                 <div className={`mt-4 flex flex-col items-center ${isCompleted ? "text-gray-900" : "text-gray-400"}`}>
-                                    <StageIcon className={`w-5 h-5 mb-1 ${isCompleted ? "text-brand-red" : ""}`} />
+                                    <StageIcon className={`w-5 h-5 mb-1 ${isCompleted ? "text-brand-purple" : ""}`} />
                                     <span className={`text-xs font-medium text-center max-w-[90px] ${isCurrent ? "font-bold" : ""}`}>{stage.label}</span>
                                 </div>
                             </div>
@@ -51,13 +51,13 @@ const OrderTimeline = ({ currentStatus }) => {
                     return (
                         <div key={stage.id} className="flex items-start gap-4">
                             <div className="flex flex-col items-center">
-                                <div className={`w-10 h-10 rounded-full flex items-center justify-center ${isCompleted ? "bg-gradient-to-br from-brand-red to-red-500 text-white shadow-md" : "bg-white border-2 border-gray-300 text-gray-400"} ${isCurrent ? "ring-3 ring-red-100" : ""}`}>
+                                <div className={`w-10 h-10 rounded-full flex items-center justify-center ${isCompleted ? "bg-gradient-to-br from-brand-purple to-purple-500 text-white shadow-md" : "bg-white border-2 border-gray-300 text-gray-400"} ${isCurrent ? "ring-3 ring-purple-100" : ""}`}>
                                     {isCompleted ? <CheckCircle2 className="w-5 h-5" /> : <span className="text-sm">{stage.id}</span>}
                                 </div>
-                                {!isLast && <div className={`w-0.5 h-8 ${isCompleted ? "bg-brand-red" : "bg-gray-200"}`} />}
+                                {!isLast && <div className={`w-0.5 h-8 ${isCompleted ? "bg-brand-purple" : "bg-gray-200"}`} />}
                             </div>
                             <div className={`flex items-center gap-2 pt-2 ${isCompleted ? "text-gray-900" : "text-gray-400"}`}>
-                                <StageIcon className={`w-5 h-5 ${isCompleted ? "text-brand-red" : ""}`} />
+                                <StageIcon className={`w-5 h-5 ${isCompleted ? "text-brand-purple" : ""}`} />
                                 <span className={`text-sm ${isCurrent ? "font-bold" : "font-medium"}`}>{stage.label}</span>
                             </div>
                         </div>
@@ -75,7 +75,7 @@ export default function TrackOrderPage() {
     const [searched, setSearched] = useState(false);
 
     const getStatusLabel = (s) => { s = Number(s); if (s === 1) return "Order Received"; if (s === 2) return "Confirmed"; if (s === 3) return "Processing"; if (s === 4) return "Delivered"; if (s === 5) return "Canceled"; if (s === 6) return "On Hold"; return "Pending"; };
-    const getStatusColor = (s) => { s = Number(s); if (s === 1) return "bg-blue-50 text-blue-700 border-blue-200"; if (s === 2) return "bg-indigo-50 text-indigo-700 border-indigo-200"; if (s === 3) return "bg-purple-50 text-purple-700 border-purple-200"; if (s === 4) return "bg-green-50 text-green-700 border-green-200"; if (s === 5) return "bg-red-50 text-red-700 border-red-200"; if (s === 6) return "bg-red-50 text-red-700 border-red-200"; return "bg-gray-100 text-gray-800"; };
+    const getStatusColor = (s) => { s = Number(s); if (s === 1) return "bg-blue-50 text-blue-700 border-blue-200"; if (s === 2) return "bg-indigo-50 text-indigo-700 border-indigo-200"; if (s === 3) return "bg-purple-50 text-purple-700 border-purple-200"; if (s === 4) return "bg-green-50 text-green-700 border-green-200"; if (s === 5) return "bg-purple-50 text-purple-700 border-purple-200"; if (s === 6) return "bg-purple-50 text-purple-700 border-purple-200"; return "bg-gray-100 text-gray-800"; };
 
     const handleTrack = async (e) => {
         e.preventDefault();
@@ -103,8 +103,8 @@ export default function TrackOrderPage() {
             {/* Hero Header */}
             <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
                 <div className="max-w-4xl mx-auto px-4 md:px-8 py-10 md:py-16 text-center">
-                    <div className="w-16 h-16 md:w-20 md:h-20 bg-brand-red/20 rounded-2xl flex items-center justify-center mx-auto mb-5 backdrop-blur-sm border border-brand-red/20">
-                        <Truck className="w-8 h-8 md:w-10 md:h-10 text-brand-red" />
+                    <div className="w-16 h-16 md:w-20 md:h-20 bg-brand-purple/20 rounded-2xl flex items-center justify-center mx-auto mb-5 backdrop-blur-sm border border-brand-purple/20">
+                        <Truck className="w-8 h-8 md:w-10 md:h-10 text-brand-purple" />
                     </div>
                     <h1 className="text-3xl md:text-4xl font-extrabold mb-3">Track Your Order</h1>
                     <p className="text-gray-400 text-sm md:text-base max-w-md mx-auto">
@@ -124,14 +124,14 @@ export default function TrackOrderPage() {
                                 value={invoiceId}
                                 onChange={(e) => setInvoiceId(e.target.value)}
                                 placeholder="Enter Invoice ID (e.g. INV-12345)"
-                                className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-all text-sm md:text-base"
+                                className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-purple/20 focus:border-brand-purple transition-all text-sm md:text-base"
                                 style={{ fontSize: "16px" }}
                             />
                         </div>
                         <button
                             type="submit"
                             disabled={loading}
-                            className="px-8 py-4 bg-brand-red text-white font-extrabold rounded-xl shadow-lg shadow-brand-red/30 hover:bg-[#ff1a2b] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed whitespace-nowrap"
+                            className="px-8 py-4 bg-brand-purple text-white font-extrabold rounded-xl shadow-lg shadow-brand-purple/30 hover:bg-[#7b3ba8] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed whitespace-nowrap"
                         >
                             {loading ? (
                                 <span className="flex items-center justify-center gap-2">
@@ -170,11 +170,11 @@ export default function TrackOrderPage() {
                         {/* Special Status (Canceled / On Hold) */}
                         {[5, 6].includes(Number(orderData.tran_status || orderData.status)) && (
                             <div className="px-5 md:px-8 py-8">
-                                <div className={`py-8 px-6 text-center rounded-xl ${Number(orderData.tran_status || orderData.status) === 5 ? "bg-red-50" : "bg-red-50"}`}>
-                                    <h3 className={`text-xl font-bold mb-2 ${Number(orderData.tran_status || orderData.status) === 5 ? "text-red-700" : "text-red-700"}`}>
+                                <div className={`py-8 px-6 text-center rounded-xl ${Number(orderData.tran_status || orderData.status) === 5 ? "bg-purple-50" : "bg-purple-50"}`}>
+                                    <h3 className={`text-xl font-bold mb-2 ${Number(orderData.tran_status || orderData.status) === 5 ? "text-purple-700" : "text-purple-700"}`}>
                                         {Number(orderData.tran_status || orderData.status) === 5 ? "Order Canceled" : "Order On Hold"}
                                     </h3>
-                                    <p className={`text-sm ${Number(orderData.tran_status || orderData.status) === 5 ? "text-red-600" : "text-red-600"}`}>
+                                    <p className={`text-sm ${Number(orderData.tran_status || orderData.status) === 5 ? "text-purple-600" : "text-purple-600"}`}>
                                         {Number(orderData.tran_status || orderData.status) === 5 ? "This order has been canceled." : "This order is currently on hold."}
                                     </p>
                                 </div>
@@ -200,7 +200,7 @@ export default function TrackOrderPage() {
                                                 <p className="text-xs text-gray-500 mt-1">Qty: {item.qty}{item.size ? ` • Size: ${item.size}` : ""}</p>
                                             </div>
                                             <div className="text-right flex-shrink-0">
-                                                <p className="font-bold text-brand-red">৳{item.price * item.qty}</p>
+                                                <p className="font-bold text-brand-purple">৳{item.price * item.qty}</p>
                                             </div>
                                         </div>
                                     ))}
@@ -235,7 +235,7 @@ export default function TrackOrderPage() {
                                 <div className="flex justify-between"><span className="text-gray-500">Subtotal</span><span className="font-medium">৳{orderData.sub_total || orderData.total || 0}</span></div>
                                 <div className="flex justify-between"><span className="text-gray-500">Delivery Fee</span><span className="font-medium">৳{orderData.delivery_fee || 0}</span></div>
                                 {Number(orderData.coupon_discount || 0) > 0 && <div className="flex justify-between text-green-600"><span>Coupon Discount</span><span>-৳{orderData.coupon_discount}</span></div>}
-                                <div className="flex justify-between pt-2 border-t border-gray-200 font-bold text-lg"><span>Grand Total</span><span className="text-brand-red">৳{(Number(orderData.sub_total ?? orderData.total ?? 0) + Number(orderData.delivery_fee ?? 0) - Number(orderData.coupon_discount ?? 0))}</span></div>
+                                <div className="flex justify-between pt-2 border-t border-gray-200 font-bold text-lg"><span>Grand Total</span><span className="text-brand-purple">৳{(Number(orderData.sub_total ?? orderData.total ?? 0) + Number(orderData.delivery_fee ?? 0) - Number(orderData.coupon_discount ?? 0))}</span></div>
                             </div>
                         </div>
                     </div>

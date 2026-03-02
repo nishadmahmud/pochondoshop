@@ -18,7 +18,7 @@ export default function RefundPage() {
         <div className="min-h-screen bg-gray-50 pb-20 md:pb-10">
             <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
                 <div className="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-20 text-center">
-                    <span className="inline-block px-4 py-1.5 bg-brand-red/20 text-brand-red text-xs font-bold rounded-full mb-4 border border-brand-red/20">POLICY</span>
+                    <span className="inline-block px-4 py-1.5 bg-brand-purple/20 text-brand-purple text-xs font-bold rounded-full mb-4 border border-brand-purple/20">POLICY</span>
                     <h1 className="text-3xl md:text-5xl font-extrabold mb-4">Refund & Return Policy</h1>
                     <p className="text-gray-400 text-sm md:text-base">Your satisfaction is our priority</p>
                 </div>
@@ -44,9 +44,9 @@ export default function RefundPage() {
                                 <li>• Product significantly differs from description</li>
                             </ul>
                         </div>
-                        <div className="p-4 bg-red-50 rounded-xl border border-red-100">
+                        <div className="p-4 bg-purple-50 rounded-xl border border-purple-100">
                             <h3 className="font-bold text-red-800 mb-2 flex items-center gap-2"><XCircle className="w-5 h-5" /> Not Eligible</h3>
-                            <ul className="text-sm text-red-700 space-y-1.5">
+                            <ul className="text-sm text-purple-700 space-y-1.5">
                                 <li>• Used or opened products</li>
                                 <li>• Products returned after 3 days</li>
                                 <li>• Sale or discounted items</li>
@@ -63,7 +63,7 @@ export default function RefundPage() {
                         {[
                             { step: 1, title: "Contact Us", desc: "Call us at +880 1714-404100 or email support@pochondoshop.com with your order details and reason for return.", color: "from-blue-500 to-blue-600" },
                             { step: 2, title: "Get Approval", desc: "Our team will review your request and provide a Return Authorization (RA) number within 24 hours.", color: "from-indigo-500 to-purple-600" },
-                            { step: 3, title: "Ship the Product", desc: "Pack the item securely in its original packaging and ship it to our store address. Include the RA number with your return.", color: "from-brand-red to-red-500" },
+                            { step: 3, title: "Ship the Product", desc: "Pack the item securely in its original packaging and ship it to our store address. Include the RA number with your return.", color: "from-brand-purple to-purple-500" },
                             { step: 4, title: "Receive Refund", desc: "Once we receive and inspect the product, your refund will be processed within 7-10 business days.", color: "from-green-500 to-emerald-600" },
                         ].map((item) => (
                             <div key={item.step} className="flex gap-4 items-start">
@@ -80,9 +80,9 @@ export default function RefundPage() {
                     <h2 className="text-xl font-bold text-gray-900 mb-4">Refund Methods</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-8">
                         {[
-                            { method: "bKash / Nagad", time: "1-3 business days", icon: <Smartphone className="w-6 h-6 text-brand-red" /> },
-                            { method: "Bank Transfer", time: "5-7 business days", icon: <Landmark className="w-6 h-6 text-brand-red" /> },
-                            { method: "Store Credit", time: "Instant", icon: <Tag className="w-6 h-6 text-brand-red" /> },
+                            { method: "bKash / Nagad", time: "1-3 business days", icon: <Smartphone className="w-6 h-6 text-brand-purple" /> },
+                            { method: "Bank Transfer", time: "5-7 business days", icon: <Landmark className="w-6 h-6 text-brand-purple" /> },
+                            { method: "Store Credit", time: "Instant", icon: <Tag className="w-6 h-6 text-brand-purple" /> },
                         ].map((item, i) => (
                             <div key={i} className="p-4 bg-gray-50 rounded-xl border border-gray-100 text-center">
                                 <span className="mb-2 block">{item.icon}</span>
@@ -115,7 +115,7 @@ export default function RefundPage() {
 
                     <div className="mt-8 p-5 bg-gray-50 rounded-xl border border-gray-100 text-center">
                         <p className="text-sm text-gray-600 mb-3">Still have questions about our refund policy?</p>
-                        <Link href="/"className="inline-block px-6 py-2.5 bg-brand-red text-white font-bold text-sm rounded-xl shadow-lg shadow-brand-red/30 hover:bg-[#ff1a2b] transition-all">
+                        <Link href="/"className="inline-block px-6 py-2.5 bg-brand-purple text-white font-bold text-sm rounded-xl shadow-lg shadow-brand-purple/30 hover:bg-[#7b3ba8] transition-all">
                             Contact Support
                         </Link>
                     </div>

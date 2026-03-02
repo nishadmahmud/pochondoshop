@@ -27,7 +27,7 @@ export default function CustomDropdown({ options, value, onChange, placeholder =
             <button
                 type="button"
                 onClick={() => setIsOpen(!isOpen)}
-                className="w-full flex items-center justify-between bg-white border border-gray-200 text-gray-700 py-2 md:py-2.5 pl-3 md:pl-4 pr-3 md:pr-4 rounded-lg focus:outline-none focus:border-brand-red text-xs md:text-sm transition-colors shadow-sm"
+                className="w-full flex items-center justify-between bg-white border border-gray-200 text-gray-700 py-2 md:py-2.5 pl-3 md:pl-4 pr-3 md:pr-4 rounded-lg focus:outline-none focus:border-brand-purple text-xs md:text-sm transition-colors shadow-sm"
             >
                 <span className="truncate">{displayValue}</span>
                 <FiChevronDown className={`text-gray-400 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
@@ -43,7 +43,7 @@ export default function CustomDropdown({ options, value, onChange, placeholder =
                                 onChange(option.value || option.label);
                                 setIsOpen(false);
                             }}
-                            className={`text-left px-4 py-2.5 text-xs md:text-sm hover:bg-red-50 hover:text-brand-red transition-colors ${(value === option.value || value === option.label) ? 'bg-red-50 text-brand-red font-semibold' : 'text-gray-700'
+                            className={`text-left px-4 py-2.5 text-xs md:text-sm hover:bg-purple-50 hover:text-brand-purple transition-colors ${(value === option.value || value === option.label) ? 'bg-purple-50 text-brand-purple font-semibold' : 'text-gray-700'
                                 }`}
                         >
                             {option.label}

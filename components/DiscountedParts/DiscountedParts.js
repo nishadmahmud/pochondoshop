@@ -35,7 +35,7 @@ export default function DiscountedParts() {
             <div className="max-w-7xl mx-auto px-3 md:px-6">
                 <div className="text-center mb-5 md:mb-10">
                     <h2 className="text-lg md:text-3xl font-extrabold text-gray-900 tracking-tight uppercase">
-                        <span className="text-brand-red">MOST</span> DISCOUNTED
+                        <span className="text-brand-purple">MOST</span> DISCOUNTED
                     </h2>
                 </div>
 
@@ -46,7 +46,7 @@ export default function DiscountedParts() {
                                 key={tab}
                                 onClick={() => setActiveTab(tab)}
                                 className={`pb-2 md:pb-3 text-xs md:text-sm font-bold uppercase transition-colors whitespace-nowrap ${activeTab === tab
-                                    ? 'text-brand-red border-b-2 border-brand-red'
+                                    ? 'text-brand-purple border-b-2 border-brand-purple'
                                     : 'text-gray-500 hover:text-gray-800 border-b-2 border-transparent'
                                     }`}
                             >

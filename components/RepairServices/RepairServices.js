@@ -1,14 +1,14 @@
 import Link from 'next/link';
-import { FiWind, FiThermometer, FiTool, FiHome, FiCheckCircle, FiSettings } from 'react-icons/fi';
+import { FiSmartphone, FiBatteryCharging, FiDroplet, FiMonitor, FiCpu, FiSettings } from 'react-icons/fi';
 
 export default function RepairServices() {
     const services = [
-        { title: "Chimney Setup", desc: "Expert wall mount and island chimney installation.", icon: <FiWind /> },
-        { title: "Cooker Repair", desc: "Diagnostics and repair for inductions and microwaves.", icon: <FiThermometer /> },
-        { title: "Stove Maintenance", desc: "Burner cleaning, pipe checks, and leak prevention.", icon: <FiTool /> },
-        { title: "Oven Installation", desc: "Built-in oven fitting and electrical configuration.", icon: <FiHome /> },
-        { title: "General Checkup", desc: "Routine health checks for all your major kitchen appliances.", icon: <FiCheckCircle /> },
-        { title: "Parts Replacement", desc: "Genuine motors, filters, and glass replacements.", icon: <FiSettings /> }
+        { title: "Screen Replacement", desc: "Expert display fitting for smartphones, tablets, and laptops.", icon: <FiSmartphone /> },
+        { title: "Battery Replacement", desc: "Original battery installation with capacity checks.", icon: <FiBatteryCharging /> },
+        { title: "Water Damage Repair", desc: "Deep cleaning and motherboard diagnostics for liquid damage.", icon: <FiDroplet /> },
+        { title: "Hardware Upgrades", desc: "RAM and SSD installation for laptops and PCs.", icon: <FiMonitor /> },
+        { title: "Motherboard Diagnostics", desc: "Advanced chip-level repairs and component-level fixes.", icon: <FiCpu /> },
+        { title: "Software & OS", desc: "OS installation, malware removal, and data recovery.", icon: <FiSettings /> }
     ];
 
     return (
@@ -16,17 +16,17 @@ export default function RepairServices() {
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-8 md:mb-16 max-w-2xl mx-auto">
                     <h2 className="text-xl md:text-4xl font-extrabold text-gray-900 mb-2 md:mb-4 tracking-tight">
-                        We Make <span className="text-brand-red">Appliance Installation</span> Stress Free
+                        We Make <span className="text-brand-purple">Device Repair</span> Stress Free
                     </h2>
                     <p className="text-sm md:text-lg text-gray-500">
-                        From simple setups to complex maintenance, our certified experts have you covered.
+                        From cracked screens to complex motherboard issues, our certified experts have you covered.
                     </p>
                 </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8">
                     {services.map((service, idx) => (
-                        <div key={idx} className="group bg-white rounded-xl md:rounded-2xl p-4 md:p-8 text-center border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 md:hover:-translate-y-2 hover:border-brand-red/50 transition-all duration-300 cursor-pointer">
-                            <div className="w-10 h-10 md:w-16 md:h-16 mx-auto mb-3 md:mb-6 bg-red-50 rounded-full flex items-center justify-center text-xl md:text-3xl text-brand-red group-hover:scale-110 transition-transform duration-300">
+                        <div key={idx} className="group bg-white rounded-xl md:rounded-2xl p-4 md:p-8 text-center border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 md:hover:-translate-y-2 hover:border-brand-purple/50 transition-all duration-300 cursor-pointer">
+                            <div className="w-10 h-10 md:w-16 md:h-16 mx-auto mb-3 md:mb-6 bg-purple-50 rounded-full flex items-center justify-center text-xl md:text-3xl text-brand-purple group-hover:scale-110 transition-transform duration-300">
                                 {service.icon}
                             </div>
                             <h3 className="text-sm md:text-xl font-bold text-gray-900 mb-1 md:mb-3">{service.title}</h3>
@@ -36,7 +36,7 @@ export default function RepairServices() {
                 </div>
 
                 <div className="mt-8 md:mt-16 text-center">
-                    <Link href="/"className="inline-flex items-center justify-center font-bold text-sm md:text-base text-brand-red hover:text-red-700 underline underline-offset-4 decoration-2 decoration-brand-red/30 hover:decoration-brand-red transition-all">
+                    <Link href="/" className="inline-flex items-center justify-center font-bold text-sm md:text-base text-brand-purple hover:text-purple-700 underline underline-offset-4 decoration-2 decoration-brand-purple/30 hover:decoration-brand-purple transition-all">
                         View All Repair Services &rarr;
                     </Link>
                 </div>

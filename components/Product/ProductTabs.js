@@ -12,25 +12,25 @@ export default function ProductTabs({ description, specifications }) {
                 <button
                     onClick={() => setActiveTab('description')}
                     className={`cursor-pointer pb-4 text-[15px] md:text-[17px] font-bold transition-colors relative ${activeTab === 'description'
-                        ? 'text-brand-red'
+                        ? 'text-brand-purple'
                         : 'text-gray-400 hover:text-gray-600'
                         }`}
                 >
                     Description
                     {activeTab === 'description' && (
-                        <span className="absolute bottom-[-1px] left-0 w-full h-[3px] bg-brand-red rounded-t-lg"></span>
+                        <span className="absolute bottom-[-1px] left-0 w-full h-[3px] bg-brand-purple rounded-t-lg"></span>
                     )}
                 </button>
                 <button
                     onClick={() => setActiveTab('specifications')}
                     className={`cursor-pointer pb-4 text-[15px] md:text-[17px] font-bold transition-colors relative ${activeTab === 'specifications'
-                        ? 'text-brand-red'
+                        ? 'text-brand-purple'
                         : 'text-gray-400 hover:text-gray-600'
                         }`}
                 >
                     Specifications
                     {activeTab === 'specifications' && (
-                        <span className="absolute bottom-[-1px] left-0 w-full h-[3px] bg-brand-red rounded-t-lg"></span>
+                        <span className="absolute bottom-[-1px] left-0 w-full h-[3px] bg-brand-purple rounded-t-lg"></span>
                     )}
                 </button>
             </div>

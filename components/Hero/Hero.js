@@ -85,7 +85,7 @@ export default function Hero() {
                                     {slide.desc}
                                 </p>
                                 <Link href="/"className="inline-block">
-                                    <button className="bg-white hover:bg-brand-red hover:text-white text-gray-900 font-bold text-xs md:text-sm py-2 px-6 md:py-3 md:px-8 rounded-full shadow-lg hover:shadow-brand-red/30 transition-all transform hover:-translate-y-0.5">
+                                    <button className="bg-white hover:bg-brand-purple hover:text-white text-gray-900 font-bold text-xs md:text-sm py-2 px-6 md:py-3 md:px-8 rounded-full shadow-lg hover:shadow-brand-purple/30 transition-all transform hover:-translate-y-0.5">
                                         {slide.ctaText}
                                     </button>
                                 </Link>
@@ -136,8 +136,8 @@ export default function Hero() {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10 group-hover:from-black/70 transition-colors duration-300"></div>
                         <div className="relative z-20 h-full flex flex-col justify-end items-center pb-2 md:pb-4 text-white w-full px-2">
-                            <h3 className="text-xs sm:text-base md:text-lg font-black leading-tight mb-1 group-hover:text-brand-red transition-colors capitalize text-center">Apple Intelligence</h3>
-                            <span className="text-[8px] sm:text-[10px] font-bold bg-white text-gray-900 px-2 py-1 rounded group-hover:bg-brand-red group-hover:text-white transition-colors">Buy Now</span>
+                            <h3 className="text-xs sm:text-base md:text-lg font-black leading-tight mb-1 group-hover:text-brand-purple transition-colors capitalize text-center">Apple Intelligence</h3>
+                            <span className="text-[8px] sm:text-[10px] font-bold bg-white text-gray-900 px-2 py-1 rounded group-hover:bg-brand-purple group-hover:text-white transition-colors">Buy Now</span>
                         </div>
                     </Link>
 
