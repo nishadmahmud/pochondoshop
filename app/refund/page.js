@@ -1,124 +1,66 @@
-import Link from "next/link";
-import { CheckCircle, XCircle, Smartphone, Landmark, Tag, AlertTriangle } from "lucide-react";
+import Link from 'next/link';
 
 export const metadata = {
-    title: "Refund Policy | Pochondo Shop",
-    description: "Pochondo Shop refund and return policy — learn about our return process, eligibility, and refund timelines.",
+    title: 'Refund Policy | Pochondo Shop',
+    description: 'Our refund and return policy. Learn about our hassle-free return process.',
 };
-
-const faqs = [
-    { q: "How long does a refund take?", a: "Refunds are typically processed within 7-10 business days after we receive and inspect the returned item. Bank refunds may take an additional 3-5 business days to appear in your account." },
-    { q: "Can I return a product after using it?", a: "Products must be unused, in original packaging, and returned within 3 days of delivery. Used products are not eligible for return unless they are defective." },
-    { q: "Who pays for return shipping?", a: "Return shipping costs are the customer's responsibility unless the product is defective or we shipped the wrong item." },
-    { q: "Are installation services refundable?", a: "Installation and maintenance service fees are non-refundable once the service is completed. If you are unsatisfied with the installation, please contact us within 7 days and we will re-inspect at no additional cost." },
-];
 
 export default function RefundPage() {
     return (
-        <div className="min-h-screen bg-gray-50 pb-20 md:pb-10">
-            <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
-                <div className="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-20 text-center">
-                    <span className="inline-block px-4 py-1.5 bg-brand-purple/20 text-brand-purple text-xs font-bold rounded-full mb-4 border border-brand-purple/20">POLICY</span>
-                    <h1 className="text-3xl md:text-5xl font-extrabold mb-4">Refund & Return Policy</h1>
-                    <p className="text-gray-400 text-sm md:text-base">Your satisfaction is our priority</p>
+        <div className="bg-white min-h-screen">
+            <div className="bg-gradient-to-br from-brand-purple/10 via-purple-50 to-white py-16 md:py-24">
+                <div className="max-w-4xl mx-auto px-4 md:px-6 text-center">
+                    <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Refund <span className="text-brand-purple">Policy</span></h1>
+                    <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                        Your satisfaction is our priority. Here's our refund and return policy.
+                    </p>
                 </div>
             </div>
 
-            <div className="max-w-4xl mx-auto px-4 md:px-8 -mt-6 space-y-6">
-                {/* Overview */}
-                <div className="bg-white rounded-2xl shadow-lg p-6 md:p-10">
-                    <p className="text-sm text-gray-600 leading-relaxed mb-6">
-                        At Pochondo Shop, we want you to be completely happy with your purchase. If you're not satisfied, we offer a hassle-free return and refund process. Please read the details below carefully.
+            <div className="max-w-4xl mx-auto px-4 md:px-6 py-12 md:py-16 space-y-10">
+                <section>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">Return Eligibility</h2>
+                    <ul className="list-disc pl-6 space-y-2 text-gray-600">
+                        <li>Products must be returned within 7 days of delivery</li>
+                        <li>Items must be in original, unused condition with all packaging intact</li>
+                        <li>All accessories, manuals, and free gifts must be included</li>
+                        <li>Product must not be damaged, scratched, or show signs of use</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">Non-Returnable Items</h2>
+                    <ul className="list-disc pl-6 space-y-2 text-gray-600">
+                        <li>Products with broken seals or missing original packaging</li>
+                        <li>Software, digital downloads, or activated products</li>
+                        <li>Items marked as "non-returnable" on the product page</li>
+                        <li>Products damaged by the customer</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">Refund Process</h2>
+                    <ol className="list-decimal pl-6 space-y-2 text-gray-600">
+                        <li>Contact us within 7 days of receiving your order</li>
+                        <li>Provide your order number and reason for return</li>
+                        <li>Our team will review and approve your return request</li>
+                        <li>Ship the product back to us (shipping costs may apply)</li>
+                        <li>Refund will be processed within 5-7 business days after receiving the product</li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">Refund Methods</h2>
+                    <p className="text-gray-600 leading-relaxed">
+                        Refunds are issued to the original payment method. For cash-on-delivery orders, refunds can be processed via bank transfer or mobile banking (bKash, Nagad). Please allow 5-7 business days for the refund to reflect in your account.
                     </p>
+                </section>
 
-                    {/* Eligibility */}
-                    <h2 className="text-xl font-bold text-gray-900 mb-4">Return Eligibility</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                        <div className="p-4 bg-green-50 rounded-xl border border-green-100">
-                            <h3 className="font-bold text-green-800 mb-2 flex items-center gap-2"><CheckCircle className="w-5 h-5" /> Eligible for Return</h3>
-                            <ul className="text-sm text-green-700 space-y-1.5">
-                                <li>• Unused, unopened products in original packaging</li>
-                                <li>• Returned within 3 days of delivery</li>
-                                <li>• Defective or damaged products (with proof)</li>
-                                <li>• Wrong product delivered</li>
-                                <li>• Product significantly differs from description</li>
-                            </ul>
-                        </div>
-                        <div className="p-4 bg-purple-50 rounded-xl border border-purple-100">
-                            <h3 className="font-bold text-red-800 mb-2 flex items-center gap-2"><XCircle className="w-5 h-5" /> Not Eligible</h3>
-                            <ul className="text-sm text-purple-700 space-y-1.5">
-                                <li>• Used or opened products</li>
-                                <li>• Products returned after 3 days</li>
-                                <li>• Sale or discounted items</li>
-                                <li>• Custom or special orders</li>
-                                <li>• Software or digital products</li>
-                                <li>• Products without original packaging</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    {/* Process */}
-                    <h2 className="text-xl font-bold text-gray-900 mb-4">How to Request a Refund</h2>
-                    <div className="space-y-4 mb-8">
-                        {[
-                            { step: 1, title: "Contact Us", desc: "Call us at +880 1714-404100 or email support@pochondoshop.com with your order details and reason for return.", color: "from-blue-500 to-blue-600" },
-                            { step: 2, title: "Get Approval", desc: "Our team will review your request and provide a Return Authorization (RA) number within 24 hours.", color: "from-indigo-500 to-purple-600" },
-                            { step: 3, title: "Ship the Product", desc: "Pack the item securely in its original packaging and ship it to our store address. Include the RA number with your return.", color: "from-brand-purple to-purple-500" },
-                            { step: 4, title: "Receive Refund", desc: "Once we receive and inspect the product, your refund will be processed within 7-10 business days.", color: "from-green-500 to-emerald-600" },
-                        ].map((item) => (
-                            <div key={item.step} className="flex gap-4 items-start">
-                                <div className={`w-10 h-10 bg-gradient-to-br ${item.color} text-white rounded-xl flex items-center justify-center font-bold text-sm flex-shrink-0 shadow-lg`}>{item.step}</div>
-                                <div>
-                                    <h4 className="font-bold text-gray-900 mb-0.5">{item.title}</h4>
-                                    <p className="text-sm text-gray-600">{item.desc}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Refund Methods */}
-                    <h2 className="text-xl font-bold text-gray-900 mb-4">Refund Methods</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-8">
-                        {[
-                            { method: "bKash / Nagad", time: "1-3 business days", icon: <Smartphone className="w-6 h-6 text-brand-purple" /> },
-                            { method: "Bank Transfer", time: "5-7 business days", icon: <Landmark className="w-6 h-6 text-brand-purple" /> },
-                            { method: "Store Credit", time: "Instant", icon: <Tag className="w-6 h-6 text-brand-purple" /> },
-                        ].map((item, i) => (
-                            <div key={i} className="p-4 bg-gray-50 rounded-xl border border-gray-100 text-center">
-                                <span className="mb-2 block">{item.icon}</span>
-                                <h4 className="font-bold text-gray-900 text-sm">{item.method}</h4>
-                                <p className="text-xs text-gray-500 mt-1">{item.time}</p>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Service Policies */}
-                    <div className="p-5 bg-amber-50 rounded-xl border border-amber-200 mb-8">
-                        <h3 className="font-bold text-amber-900 mb-2 flex items-center gap-2"><AlertTriangle className="w-5 h-5" /> Installation Services</h3>
-                        <p className="text-sm text-amber-800">
-                            Service fees are non-refundable once work has been completed. If you experience issues after installation, please contact us within 90 days and we will re-inspect and fix the installation at no additional cost. Warranty does not cover misuse, physical damage, or unauthorized modifications.
-                        </p>
-                    </div>
-                </div>
-
-                {/* FAQ */}
-                <div className="bg-white rounded-2xl shadow-lg p-6 md:p-10">
-                    <h2 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
-                    <div className="space-y-4">
-                        {faqs.map((faq, i) => (
-                            <div key={i} className="p-4 bg-gray-50 rounded-xl border border-gray-100">
-                                <h4 className="font-bold text-gray-900 mb-1.5 text-sm">{faq.q}</h4>
-                                <p className="text-sm text-gray-600">{faq.a}</p>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className="mt-8 p-5 bg-gray-50 rounded-xl border border-gray-100 text-center">
-                        <p className="text-sm text-gray-600 mb-3">Still have questions about our refund policy?</p>
-                        <Link href="/"className="inline-block px-6 py-2.5 bg-brand-purple text-white font-bold text-sm rounded-xl shadow-lg shadow-brand-purple/30 hover:bg-[#7b3ba8] transition-all">
-                            Contact Support
-                        </Link>
-                    </div>
+                <div className="text-center pt-8 border-t border-gray-100">
+                    <p className="text-gray-500 mb-4">Need to initiate a return?</p>
+                    <Link href="/contact" className="inline-block bg-brand-purple text-white font-bold px-8 py-3 rounded-xl hover:opacity-90 transition-opacity shadow-lg shadow-brand-purple/20">
+                        Contact Support
+                    </Link>
                 </div>
             </div>
         </div>

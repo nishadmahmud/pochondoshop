@@ -1,82 +1,82 @@
-import Link from "next/link";
-
 export const metadata = {
-    title: "Terms & Conditions | Pochondo Shop",
-    description: "Pochondo Shop terms and conditions — rules and regulations for using our website and services.",
+    title: 'Terms & Conditions | Pochondo Shop',
+    description: 'Read our terms and conditions, privacy policy, and usage guidelines for Pochondo Shop.',
 };
-
-const sections = [
-    {
-        title: "1. Acceptance of Terms",
-        content: "By accessing and using the Pochondo Shop website (pochondoshop.com), you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use our website or services.",
-    },
-    {
-        title: "2. Products & Pricing",
-        content: "All product prices are listed in Bangladeshi Taka (BDT) and are subject to change without prior notice. We strive to display accurate pricing, but errors may occur. In the event of a pricing error, we reserve the right to cancel the order and issue a full refund. Product images are for illustration purposes and may vary slightly from the actual product.",
-    },
-    {
-        title: "3. Orders & Payment",
-        content: "By placing an order, you confirm that all information provided is accurate. We accept Cash on Delivery (COD), bKash, Nagad, and bank transfers. Orders are subject to availability and confirmation. We reserve the right to refuse or cancel any order for any reason, including suspected fraud.",
-    },
-    {
-        title: "4. Shipping & Delivery",
-        content: "We deliver nationwide across Bangladesh. Delivery times vary by location — typically 1-3 business days within Dhaka and 3-7 business days outside Dhaka. Delivery charges are calculated at checkout based on your location. We are not responsible for delays caused by courier services, natural disasters, or unforeseen circumstances.",
-    },
-    {
-        title: "5. Installation & Maintenance Services",
-        content: "All installations and maintenance services are performed by certified technicians. Estimates are provided before work begins. We offer a 1-year warranty on installation labor. The warranty does not cover physical damage, water damage, or unauthorized modifications after the installation.",
-    },
-    {
-        title: "6. Returns & Exchanges",
-        content: "Products may be returned within 3 days of delivery if unused, unopened, and in original packaging. Refunds will be processed within 7-10 business days after we receive and inspect the returned item. Return shipping costs are the responsibility of the customer unless the product is defective or incorrect. Custom orders, software, and sale items are non-returnable.",
-    },
-    {
-        title: "7. User Accounts",
-        content: "You are responsible for maintaining the confidentiality of your account credentials. You agree not to share your account with others. We reserve the right to suspend or terminate accounts that violate these terms. You are responsible for all activities that occur under your account.",
-    },
-    {
-        title: "8. Intellectual Property",
-        content: "All content on this website — including logos, images, text, graphics, and software — is the property of Pochondo Shop and is protected by intellectual property laws. You may not reproduce, distribute, or create derivative works from our content without explicit written permission.",
-    },
-    {
-        title: "9. Limitation of Liability",
-        content: "Pochondo Shop shall not be liable for any indirect, incidental, special, or consequential damages arising from the use of our website or services. Our total liability shall not exceed the amount paid by you for the specific product or service in question.",
-    },
-    {
-        title: "10. Governing Law",
-        content: "These Terms and Conditions are governed by the laws of Bangladesh. Any disputes arising from these terms shall be resolved through the courts of Dhaka, Bangladesh.",
-    },
-];
 
 export default function TermsPage() {
     return (
-        <div className="min-h-screen bg-gray-50 pb-20 md:pb-10">
-            <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
-                <div className="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-20 text-center">
-                    <span className="inline-block px-4 py-1.5 bg-brand-purple/20 text-brand-purple text-xs font-bold rounded-full mb-4 border border-brand-purple/20">LEGAL</span>
-                    <h1 className="text-3xl md:text-5xl font-extrabold mb-4">Terms & Conditions</h1>
-                    <p className="text-gray-400 text-sm md:text-base">Last updated: February 2026</p>
+        <div className="bg-white min-h-screen">
+            <div className="bg-gradient-to-br from-brand-purple/10 via-purple-50 to-white py-16 md:py-24">
+                <div className="max-w-4xl mx-auto px-4 md:px-6 text-center">
+                    <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Terms & <span className="text-brand-purple">Conditions</span></h1>
+                    <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                        Please read these terms and conditions carefully before using our services.
+                    </p>
                 </div>
             </div>
 
-            <div className="max-w-4xl mx-auto px-4 md:px-8 -mt-6">
-                <div className="bg-white rounded-2xl shadow-lg p-6 md:p-10">
-                    <div className="space-y-8">
-                        {sections.map((section, i) => (
-                            <div key={i}>
-                                <h2 className="text-lg md:text-xl font-bold text-gray-900 mb-3">{section.title}</h2>
-                                <p className="text-sm text-gray-600 leading-relaxed">{section.content}</p>
-                            </div>
-                        ))}
-                    </div>
+            <div className="max-w-4xl mx-auto px-4 md:px-6 py-12 md:py-16 space-y-10">
+                <section>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">1. General Terms</h2>
+                    <p className="text-gray-600 leading-relaxed">
+                        By accessing and placing an order with Pochondo Shop, you confirm that you agree to and are bound by the terms and conditions contained herein. These terms apply to the entire website and any email or other communication between you and Pochondo Shop.
+                    </p>
+                </section>
 
-                    <div className="mt-10 p-5 bg-gray-50 rounded-xl border border-gray-100">
-                        <p className="text-sm text-gray-600">
-                            Questions about these terms? Contact us at{" "}
-                            <a href="/"className="text-brand-purple font-semibold hover:underline">support@pochondoshop.com</a>.
-                        </p>
-                    </div>
-                </div>
+                <section>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Products & Pricing</h2>
+                    <ul className="list-disc pl-6 space-y-2 text-gray-600">
+                        <li>All prices are listed in Bangladeshi Taka (BDT) and include applicable taxes unless stated otherwise</li>
+                        <li>Prices are subject to change without prior notice</li>
+                        <li>Product images are for illustration purposes and may differ slightly from the actual product</li>
+                        <li>We reserve the right to limit order quantities</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">3. Orders & Payment</h2>
+                    <ul className="list-disc pl-6 space-y-2 text-gray-600">
+                        <li>All orders are subject to acceptance and availability</li>
+                        <li>We accept Cash on Delivery, bank transfers, and mobile banking payments</li>
+                        <li>We reserve the right to refuse or cancel any order for any reason</li>
+                        <li>Order confirmation does not guarantee product availability</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">4. Delivery</h2>
+                    <p className="text-gray-600 leading-relaxed">
+                        We deliver across Bangladesh. Delivery times vary depending on your location and product availability. Estimated delivery times are provided at checkout. We are not responsible for delays caused by courier services or force majeure events.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Privacy Policy</h2>
+                    <p className="text-gray-600 leading-relaxed">
+                        We value your privacy. Personal information collected during the ordering process is used solely for order fulfillment and customer service. We do not sell or share your personal data with third parties except as necessary for order delivery and payment processing.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">6. Intellectual Property</h2>
+                    <p className="text-gray-600 leading-relaxed">
+                        All content on this website, including but not limited to text, images, graphics, logos, and software, is the property of Pochondo Shop or its content suppliers and is protected by intellectual property laws.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">7. Limitation of Liability</h2>
+                    <p className="text-gray-600 leading-relaxed">
+                        Pochondo Shop shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our services or products purchased through our platform.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">8. Contact</h2>
+                    <p className="text-gray-600 leading-relaxed">
+                        If you have any questions about these Terms & Conditions, please contact us at support@pochondoshop.com or visit our Contact Us page.
+                    </p>
+                </section>
             </div>
         </div>
     );

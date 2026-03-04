@@ -5,11 +5,15 @@ import { FiGrid, FiList, FiFilter, FiChevronDown } from 'react-icons/fi';
 import ProductCard from '../Shared/ProductCard';
 import CustomDropdown from '../Shared/CustomDropdown';
 
-export default function ProductGrid({ products, onOpenFilter, categoryName = "Products" }) {
+export default function ProductGrid({
+    products,
+    onOpenFilter,
+    categoryName = "Products",
+    brandsList = ["All"],
+    activeBrand = "All",
+    onSelectBrand
+}) {
     const [sortBy, setSortBy] = useState("Default");
-
-    const brands = ["All", "Apple", "Google", "Honor", "iQOO", "Motorola", "Nothing", "Redmi", "Samsung", "Vivo"];
-    const [activeBrand, setActiveBrand] = useState("All");
 
     const sortOptions = [
         { label: "Default", value: "Default" },
@@ -22,10 +26,10 @@ export default function ProductGrid({ products, onOpenFilter, categoryName = "Pr
         <div>
             {/* Brand Filter Pills */}
             <div className="flex overflow-x-auto gap-2 md:gap-3 pb-4 mb-4 lg:-mt-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-                {brands.map(brand => (
+                {brandsList.map(brand => (
                     <button
                         key={brand}
-                        onClick={() => setActiveBrand(brand)}
+                        onClick={() => onSelectBrand && onSelectBrand(brand)}
                         className={`px-4 md:px-6 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-colors border ${activeBrand === brand
                             ? 'bg-brand-purple text-white border-brand-purple shadow-md shadow-brand-purple/20'
                             : 'bg-white text-gray-700 border-gray-200 hover:border-brand-purple hover:text-brand-purple'
@@ -39,7 +43,7 @@ export default function ProductGrid({ products, onOpenFilter, categoryName = "Pr
             {/* Top Bar: Heading, Showing text, Sort, Filter (Mobile) */}
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
 
-                <h2 className="text-xl md:text-2xl font-extrabold text-[#00382E] capitalize">
+                <h2 className="text-xl md:text-2xl font-extrabold text-gray-800 capitalize">
                     Products of {categoryName}
                 </h2>
 
@@ -75,14 +79,6 @@ export default function ProductGrid({ products, onOpenFilter, categoryName = "Pr
                 ))}
             </div>
 
-            {/* Pagination */}
-            <div className="flex justify-center mt-12 gap-2">
-                <button className="w-10 h-10 flex items-center justify-center rounded-full bg-brand-purple text-white font-bold shadow-lg shadow-brand-purple/30">1</button>
-                <button className="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-200 text-gray-600 hover:bg-gray-50 font-bold transition-colors">2</button>
-                <button className="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-200 text-gray-600 hover:bg-gray-50 font-bold transition-colors">3</button>
-                <button className="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-200 text-gray-600 hover:bg-gray-50 transition-colors">...</button>
-                <button className="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-200 text-gray-600 hover:bg-gray-50 font-bold transition-colors">8</button>
-            </div>
         </div>
     );
 }

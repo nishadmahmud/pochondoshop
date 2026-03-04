@@ -1,125 +1,60 @@
-import Link from "next/link";
-import { FiMapPin, FiPhone, FiMail, FiClock } from "react-icons/fi";
-import { Target, Handshake, Rocket, Smartphone, Laptop, ShoppingCart, Wrench } from "lucide-react";
+import Link from 'next/link';
 
 export const metadata = {
-    title: "About Us | Pochondo Shop",
-    description: "Learn about Pochondo Shop — Bangladesh's most trusted premium tech and gadget store at Jamuna Future Park, Dhaka.",
+    title: 'About Us | Pochondo Shop',
+    description: 'Learn about Pochondo Shop — Bangladesh\'s premier destination for genuine tech gear, smart gadgets, and digital lifestyle accessories.',
 };
 
 export default function AboutPage() {
     return (
-        <div className="min-h-screen bg-gray-50 pb-20 md:pb-10">
+        <div className="bg-white min-h-screen">
             {/* Hero */}
-            <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
-                <div className="max-w-5xl mx-auto px-4 md:px-8 py-12 md:py-20 text-center">
-                    <span className="inline-block px-4 py-1.5 bg-brand-purple/20 text-brand-purple text-xs font-bold rounded-full mb-4 border border-brand-purple/20">ABOUT US</span>
-                    <h1 className="text-3xl md:text-5xl font-extrabold mb-4">We Curate. We Install. <span className="text-brand-purple">We Care.</span></h1>
-                    <p className="text-gray-400 text-sm md:text-lg max-w-2xl mx-auto leading-relaxed">
-                        Pochondo Shop is Bangladesh's trusted destination for premium tech, gadgets, and PC components. Located at Jamuna Future Park, Dhaka — we've been serving thousands of happy customers with top-tier products and expert support.
+            <div className="bg-gradient-to-br from-brand-purple/10 via-purple-50 to-white py-16 md:py-24">
+                <div className="max-w-4xl mx-auto px-4 md:px-6 text-center">
+                    <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">About <span className="text-brand-purple">Pochondo Shop</span></h1>
+                    <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                        Bangladesh's premier destination for genuine tech gear, smart gadgets, and digital lifestyle accessories.
                     </p>
                 </div>
             </div>
 
-            <div className="max-w-5xl mx-auto px-4 md:px-8 -mt-6">
-                {/* Mission Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-10">
-                    {[
-                        { title: "Our Mission", desc: "To provide world-class tech ranges and professional support services at competitive prices, ensuring every customer leaves satisfied.", gradient: "from-blue-500 to-blue-600", icon: <Target className="w-7 h-7 text-white" /> },
-                        { title: "Our Promise", desc: "Premium products, expert advice, transparent pricing, and a hassle-free warranty process. No hidden charges, ever.", gradient: "from-brand-purple to-purple-500", icon: <Handshake className="w-7 h-7 text-white" /> },
-                        { title: "Our Vision", desc: "To be Bangladesh's #1 one-stop shop for all things tech — from custom PCs and gaming gear to smartphones and smart home tech.", gradient: "from-emerald-500 to-teal-600", icon: <Rocket className="w-7 h-7 text-white" /> },
-                    ].map((card, i) => (
-                        <div key={i} className="bg-white rounded-2xl shadow-lg p-6 md:p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                            <div className={`w-14 h-14 bg-gradient-to-br ${card.gradient} rounded-xl flex items-center justify-center mb-4 shadow-lg`}>{card.icon}</div>
-                            <h3 className="text-lg font-bold text-gray-900 mb-2">{card.title}</h3>
-                            <p className="text-sm text-gray-600 leading-relaxed">{card.desc}</p>
-                        </div>
-                    ))}
-                </div>
+            <div className="max-w-4xl mx-auto px-4 md:px-6 py-12 md:py-16 space-y-12">
+                <section>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">Who We Are</h2>
+                    <p className="text-gray-600 leading-relaxed">
+                        Pochondo Shop is a leading electronics and gadget retailer in Bangladesh. We are passionate about bringing the latest technology to your doorstep at the most competitive prices. From smartphones and laptops to accessories and smart home devices, we curate only the best products from top global brands.
+                    </p>
+                </section>
 
-                {/* What We Do */}
-                <div className="bg-white rounded-2xl shadow-lg p-6 md:p-10 mb-10">
-                    <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6">What We Do</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                <section>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
+                    <p className="text-gray-600 leading-relaxed">
+                        Our mission is to make premium technology accessible to everyone in Bangladesh. We believe that everyone deserves access to genuine, high-quality tech products with reliable after-sales support and warranty coverage.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Us?</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {[
-                            { title: "Premium Tech", desc: "High-quality smartphones, laptops, gaming consoles, PC components, and smart home gadgets from top global brands.", icon: <ShoppingCart className="w-5 h-5 text-brand-purple" /> },
-                            { title: "Expert PC Builds", desc: "Professional custom PC assembly services, ensuring cable management, optimal cooling, and perfect performance.", icon: <Wrench className="w-5 h-5 text-brand-purple" /> },
-                            { title: "Gadget Repair", desc: "Comprehensive servicing, screen replacements, and troubleshooting for smartphones, laptops, and peripherals.", icon: <Smartphone className="w-5 h-5 text-brand-purple" /> },
-                            { title: "Accessories", desc: "Genuine chargers, cables, cases, mechanical keyboards, gaming mice, and audio equipment.", icon: <Laptop className="w-5 h-5 text-brand-purple" /> },
+                            { title: '100% Genuine Products', desc: 'Every product we sell is sourced directly from authorized distributors and manufacturers.' },
+                            { title: 'Best Prices Guaranteed', desc: 'We offer competitive pricing with regular discounts, deals, and special promotions.' },
+                            { title: 'Fast Delivery', desc: 'We deliver across Bangladesh with express shipping options available for urgent orders.' },
+                            { title: 'After-Sales Support', desc: 'Our dedicated support team is always ready to help you with any queries or issues.' },
                         ].map((item, i) => (
-                            <div key={i} className="p-4 md:p-5 bg-gray-50 rounded-xl border border-gray-100 hover:border-brand-purple/30 transition-colors">
-                                <h4 className="font-bold text-gray-900 mb-1.5 flex items-center gap-2">{item.icon}{item.title}</h4>
+                            <div key={i} className="bg-gray-50 rounded-xl p-6 border border-gray-100">
+                                <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
                                 <p className="text-sm text-gray-600">{item.desc}</p>
                             </div>
                         ))}
                     </div>
-                </div>
+                </section>
 
-                {/* Why Choose Us */}
-                <div className="bg-white rounded-2xl shadow-lg p-6 md:p-10 mb-10">
-                    <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6">Why Choose Pochondo Shop?</h2>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center">
-                        {[
-                            { stat: "10,000+", label: "Appliances Installed", color: "text-blue-600" },
-                            { stat: "99%", label: "Customer Satisfaction", color: "text-green-600" },
-                            { stat: "10+", label: "Years Experience", color: "text-brand-purple" },
-                            { stat: "5 Years", label: "Motor Warranty", color: "text-purple-600" },
-                        ].map((item, i) => (
-                            <div key={i} className="p-4">
-                                <p className={`text-2xl md:text-3xl font-extrabold ${item.color} mb-1`}>{item.stat}</p>
-                                <p className="text-xs md:text-sm text-gray-500 font-medium">{item.label}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Visit Us */}
-                <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-6 md:p-10 text-white">
-                    <h2 className="text-2xl font-extrabold mb-6">Visit Our Store</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                        <div className="space-y-4">
-                            <div className="flex items-start gap-3">
-                                <FiMapPin className="text-brand-purple mt-1 flex-shrink-0" size={20} />
-                                <div>
-                                    <p className="font-semibold">Address</p>
-                                    <p className="text-white/70 text-sm">Level-4, Block-C, Shop #35A, Jamuna Future Park, Dhaka-1229</p>
-                                </div>
-                            </div>
-                            <div className="flex items-start gap-3">
-                                <FiPhone className="text-brand-purple mt-1 flex-shrink-0" size={20} />
-                                <div>
-                                    <p className="font-semibold">Phone</p>
-                                    <a href="/"className="text-white/70 text-sm hover:text-white">+880 1714-404100</a>
-                                </div>
-                            </div>
-                            <div className="flex items-start gap-3">
-                                <FiMail className="text-brand-purple mt-1 flex-shrink-0" size={20} />
-                                <div>
-                                    <p className="font-semibold">Email</p>
-                                    <a href="/"className="text-white/70 text-sm hover:text-white">support@pochondoshop.com.bd</a>
-                                </div>
-                            </div>
-                            <div className="flex items-start gap-3">
-                                <FiClock className="text-brand-purple mt-1 flex-shrink-0" size={20} />
-                                <div>
-                                    <p className="font-semibold">Hours</p>
-                                    <p className="text-white/70 text-sm">Saturday – Thursday: 10 AM – 9 PM<br />Friday: 2 PM – 9 PM</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="rounded-xl overflow-hidden h-48 md:h-auto bg-gray-700">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.0!2d90.4315!3d23.8136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sJamuna+Future+Park!5e0!3m2!1sen!2sbd!4v1630000000000"
-                                width="100%"
-                                height="100%"
-                                style={{ border: 0, minHeight: "200px" }}
-                                allowFullScreen=""
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                                title="pochondoshop Location"
-                            />
-                        </div>
-                    </div>
+                <div className="text-center pt-8 border-t border-gray-100">
+                    <p className="text-gray-500 mb-4">Have questions? We'd love to hear from you.</p>
+                    <Link href="/contact" className="inline-block bg-brand-purple text-white font-bold px-8 py-3 rounded-xl hover:opacity-90 transition-opacity shadow-lg shadow-brand-purple/20">
+                        Contact Us
+                    </Link>
                 </div>
             </div>
         </div>

@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function BestDeals() {
-    const deals = [
+export default function BestDeals({ deals = [] }) {
+    const defaultDeals = [
         {
             id: 1,
             title: "Ultimate Creator Bundle",
@@ -25,6 +25,8 @@ export default function BestDeals() {
         },
     ];
 
+    const displayDeals = deals && deals.length > 0 ? deals : defaultDeals;
+
     return (
         <section className="bg-gray-50 py-10 md:py-20 border-b border-gray-100">
             <div className="max-w-7xl mx-auto px-3 md:px-6">
@@ -38,8 +40,8 @@ export default function BestDeals() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
-                    {deals.map((deal) => (
-                        <div key={deal.id} className="group bg-white rounded-xl md:rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row">
+                    {displayDeals.map((deal, idx) => (
+                        <div key={deal.id || idx} className="group bg-white rounded-xl md:rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row">
                             <div className="sm:w-2/5 aspect-[16/9] sm:aspect-auto relative overflow-hidden bg-gray-100">
                                 <Image src={deal.imageUrl} alt={deal.title} fill unoptimized className="object-cover object-center group-hover:scale-105 transition-transform duration-500" />
                                 <div className="absolute top-2 left-2 md:top-4 md:left-4 z-10">
@@ -51,11 +53,11 @@ export default function BestDeals() {
                                 <p className="text-gray-500 text-xs md:text-sm leading-relaxed mb-3 md:mb-6 line-clamp-2">{deal.description}</p>
                                 <div className="flex items-end gap-2 md:gap-3 mb-2 md:mb-4">
                                     <span className="text-xl md:text-3xl font-black text-brand-purple">{deal.price}</span>
-                                    <span className="text-gray-400 text-sm md:text-lg line-through mb-0.5">{deal.oldPrice}</span>
+                                    {deal.oldPrice && <span className="text-gray-400 text-sm md:text-lg line-through mb-0.5">{deal.oldPrice}</span>}
                                 </div>
                                 <div className="flex items-center gap-3">
-                                    <span className="bg-green-50 text-green-700 text-[10px] md:text-xs font-bold px-2 md:px-3 py-1 md:py-1.5 rounded-lg border border-green-200">{deal.savings}</span>
-                                    <Link href="/"className="text-[10px] md:text-sm font-bold text-brand-purple hover:text-purple-700 underline underline-offset-4 transition-colors">Shop Now →</Link>
+                                    {deal.savings && <span className="bg-green-50 text-green-700 text-[10px] md:text-xs font-bold px-2 md:px-3 py-1 md:py-1.5 rounded-lg border border-green-200">{deal.savings}</span>}
+                                    <Link href={deal.link || "/"} className="text-[10px] md:text-sm font-bold text-brand-purple hover:text-purple-700 underline underline-offset-4 transition-colors">Shop Now →</Link>
                                 </div>
                             </div>
                         </div>

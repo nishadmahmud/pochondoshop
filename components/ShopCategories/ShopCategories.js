@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { FiMonitor, FiSmartphone, FiTablet, FiHeadphones, FiCpu, FiWifi, FiBox, FiHardDrive, FiCamera, FiTv, FiWatch, FiPrinter, FiSpeaker, FiMousePointer, FiBatteryCharging, FiRadio, FiChevronLeft, FiChevronRight, FiZap } from 'react-icons/fi';
 import ProductCard from '../Shared/ProductCard';
 
-export default function ShopCategories() {
+export default function ShopCategories({ categories = [], flashSaleProducts = [] }) {
     // Countdown timer — starts at 23 Days 4h 4m 59s
     const [timeLeft, setTimeLeft] = useState(23 * 86400 + 4 * 3600 + 4 * 60 + 59);
 
@@ -22,33 +22,29 @@ export default function ShopCategories() {
     const minutes = String(Math.floor((timeLeft % 3600) / 60)).padStart(2, '0');
     const seconds = String(timeLeft % 60).padStart(2, '0');
 
-    // Layout ready to accept image URLs from the user
-    const categories = [
+    const defaultCategories = [
         { name: "Smartphones", icon: <FiSmartphone />, image: "" },
         { name: "Laptops", icon: <FiMonitor />, image: "" },
         { name: "Tablets", icon: <FiTablet />, image: "" },
         { name: "Audio", icon: <FiHeadphones />, image: "" },
         { name: "Smart Watches", icon: <FiWatch />, image: "" },
         { name: "PC Components", icon: <FiCpu />, image: "" },
-        { name: "Networking", icon: <FiWifi />, image: "" },
-        { name: "Storage", icon: <FiHardDrive />, image: "" },
-        { name: "Cameras", icon: <FiCamera />, image: "" },
-        { name: "Televisions", icon: <FiTv />, image: "" },
-        { name: "Printers", icon: <FiPrinter />, image: "" },
-        { name: "Speakers", icon: <FiSpeaker />, image: "" },
-        { name: "Peripherals", icon: <FiMousePointer />, image: "" },
-        { name: "Power Banks", icon: <FiBatteryCharging />, image: "" },
-        { name: "Gadgets", icon: <FiRadio />, image: "" },
         { name: "Accessories", icon: <FiBox />, image: "" },
     ];
 
-    const flashSaleProducts = [
+    const displayCategories = categories && categories.length > 0
+        ? categories.map(cat => ({ ...cat, icon: <FiBox /> }))
+        : defaultCategories;
+
+    const defaultFlashSaleProducts = [
         { id: 101, name: "Apple iPhone 15 Pro - 256GB Titanium", price: "৳ 145,000", oldPrice: "৳ 155,000", discount: "-6%", imageUrl: "https://images.unsplash.com/photo-1695048133142-1a20484d2569?q=80&w=400" },
         { id: 102, name: "Sony WH-1000XM5 Wireless Headphones", price: "৳ 35,000", oldPrice: "৳ 42,000", discount: "-16%", imageUrl: "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?q=80&w=400" },
         { id: 103, name: "Samsung Galaxy Watch 6 Classic", price: "৳ 28,500", oldPrice: "৳ 35,000", discount: "-18%", imageUrl: "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?q=80&w=400" },
         { id: 104, name: "Logitech MX Master 3S Wireless Mouse", price: "৳ 10,500", oldPrice: "৳ 12,500", discount: "-16%", imageUrl: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?q=80&w=400" },
         { id: 105, name: "Anker PowerCore 20000mAh Power Bank", price: "৳ 4,500", oldPrice: "৳ 6,000", discount: "-25%", imageUrl: "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?q=80&w=400" },
     ];
+
+    const displayFlashSale = flashSaleProducts && flashSaleProducts.length > 0 ? flashSaleProducts : defaultFlashSaleProducts;
 
     return (
         <section className="bg-white py-10 md:py-20 border-b border-gray-100">
@@ -60,14 +56,14 @@ export default function ShopCategories() {
                 </div>
 
                 <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-8 gap-y-8 md:gap-y-12 gap-x-2 mb-16 md:mb-24">
-                    {categories.map((cat, idx) => (
+                    {displayCategories.map((cat, idx) => (
                         <Link
-                            href={`/category/${encodeURIComponent(cat.name.toLowerCase().replace(/\s+/g, '-'))}`} key={idx}
+                            href={`/category/${cat.slug || encodeURIComponent(cat.name.toLowerCase().replace(/\s+/g, '-'))}`} key={cat.id || idx}
                             className="flex flex-col items-center justify-start gap-3 md:gap-4 text-center group"
                         >
                             <div className="w-12 h-12 md:w-16 md:h-16 relative flex items-center justify-center text-3xl md:text-4xl text-gray-700 group-hover:scale-110 transition-transform duration-300">
-                                {cat.image ? (
-                                    <Image src={cat.image} alt={cat.name} fill unoptimized className="object-contain" />
+                                {cat.image || cat.image_path || cat.image_url ? (
+                                    <Image src={cat.image || cat.image_path || cat.image_url} alt={cat.name} fill unoptimized className="object-contain" />
                                 ) : (
                                     cat.icon
                                 )}
@@ -121,7 +117,7 @@ export default function ShopCategories() {
                         </button>
 
                         <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 md:gap-4 overflow-hidden">
-                            {flashSaleProducts.map((product) => (
+                            {displayFlashSale.map((product) => (
                                 <ProductCard key={product.id} product={product} />
                             ))}
                         </div>
