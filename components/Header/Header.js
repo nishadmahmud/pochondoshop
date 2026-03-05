@@ -368,10 +368,16 @@ export default function Header({ categories = [] }) {
                 </Link>
               ))}
             </div>
-            <div className="ml-auto flex items-center gap-5 flex-shrink-0 pl-8">
-              <Link href="/track-order" className="text-gray-500 text-[12px] font-bold hover:text-brand-purple transition-all flex items-center gap-1.5 group">
-                <span className="w-1.5 h-1.5 rounded-full bg-green-500 group-hover:scale-125 transition-transform"></span>
-                Track Order
+            <div className="ml-auto flex items-center gap-4 flex-shrink-0 pl-8">
+              <Link href="/track-order" className="group relative flex items-center gap-2 px-5 py-2.5 rounded-full bg-blue-50/50 hover:bg-blue-100/50 border border-brand-blue/10 hover:border-brand-blue/30 transition-all duration-300">
+                <div className="relative flex items-center justify-center">
+                  <div className="absolute inset-0 bg-green-500 rounded-full blur-[4px] opacity-40 group-hover:opacity-60 group-hover:scale-150 transition-all duration-500"></div>
+                  <div className="relative w-2 h-2 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.8)]"></div>
+                </div>
+                <span className="text-gray-700 font-bold text-[12px] tracking-wide relative z-10 group-hover:text-brand-blue transition-colors duration-300">
+                  Track Order
+                </span>
+                <div className="absolute inset-0 rounded-full ring-1 ring-inset ring-brand-blue/0 group-hover:ring-brand-blue/20 transition-all duration-300"></div>
               </Link>
               <Link href="/special-offers" className="text-white text-[12px] font-black hover:scale-105 active:scale-95 transition-all bg-brand-purple px-5 py-2.5 rounded-full flex items-center gap-2 shadow-lg shadow-brand-purple/20 border border-brand-purple/10">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 animate-bounce-slow">

@@ -44,38 +44,32 @@ export default function Footer() {
 
                     {/* Quick Links */}
                     <div className="flex flex-col gap-4 md:gap-6 pl-0 lg:pl-4">
-                        <h3 className="text-sm md:text-lg font-black text-white uppercase tracking-wider">Services</h3>
-                        <div className="flex flex-col gap-2 md:gap-3 text-xs md:text-sm font-medium">
-                            <Link href="/warranty" className="hover:text-brand-purple hover:translate-x-1 transition-all">Warranty Claim</Link>
-                            <Link href="/refund" className="hover:text-brand-purple hover:translate-x-1 transition-all">Refund & Returns</Link>
-                            <Link href="/contact" className="hover:text-brand-purple hover:translate-x-1 transition-all">Device Repair</Link>
-                            <Link href="/contact" className="hover:text-brand-purple hover:translate-x-1 transition-all">Setup & Installation</Link>
-                            <Link href="/contact" className="hover:text-brand-purple hover:translate-x-1 transition-all">Tech Consultation</Link>
-                        </div>
-                    </div>
-
-                    {/* Shop Links */}
-                    <div className="flex flex-col gap-4 md:gap-6">
-                        <h3 className="text-sm md:text-lg font-black text-white uppercase tracking-wider">Shop Tech</h3>
-                        <div className="flex flex-col gap-2 md:gap-3 text-xs md:text-sm font-medium">
-                            <Link href="/" className="hover:text-brand-purple hover:translate-x-1 transition-all">Laptops & Computers</Link>
-                            <Link href="/" className="hover:text-brand-purple hover:translate-x-1 transition-all">Smartphones</Link>
-                            <Link href="/" className="hover:text-brand-purple hover:translate-x-1 transition-all">Mobile Accessories</Link>
-                            <Link href="/" className="hover:text-brand-purple hover:translate-x-1 transition-all">Audio & Wearables</Link>
-                            <Link href="/" className="hover:text-brand-purple hover:translate-x-1 transition-all">PC Components</Link>
-                        </div>
-                    </div>
-
-                    {/* Company Links */}
-                    <div className="flex flex-col gap-4 md:gap-6 col-span-2 sm:col-span-1">
-                        <h3 className="text-sm md:text-lg font-black text-white uppercase tracking-wider">Company</h3>
+                        <h3 className="text-sm md:text-lg font-black text-white uppercase tracking-wider">Quick Links</h3>
                         <div className="flex flex-col gap-2 md:gap-3 text-xs md:text-sm font-medium">
                             <Link href="/about" className="hover:text-brand-purple hover:translate-x-1 transition-all">About Us</Link>
                             <Link href="/contact" className="hover:text-brand-purple hover:translate-x-1 transition-all">Contact Us</Link>
-                            <Link href="/track-order" className="text-brand-purple hover:text-white font-bold transition-all">Track Order</Link>
+                            <Link href="/special-offers" className="text-brand-purple hover:text-white font-bold transition-all">Special Offers</Link>
+                            <Link href="/track-order" className="hover:text-brand-purple hover:translate-x-1 transition-all">Track Order</Link>
+                        </div>
+                    </div>
+
+                    {/* Customer Support */}
+                    <div className="flex flex-col gap-4 md:gap-6">
+                        <h3 className="text-sm md:text-lg font-black text-white uppercase tracking-wider">Support</h3>
+                        <div className="flex flex-col gap-2 md:gap-3 text-xs md:text-sm font-medium">
                             <Link href="/warranty" className="hover:text-brand-purple hover:translate-x-1 transition-all">Warranty Policy</Link>
+                            <Link href="/refund" className="hover:text-brand-purple hover:translate-x-1 transition-all">Refund & Returns</Link>
                             <Link href="/terms" className="hover:text-brand-purple hover:translate-x-1 transition-all">Terms & Conditions</Link>
-                            <Link href="/refund" className="hover:text-brand-purple hover:translate-x-1 transition-all">Refund Policy</Link>
+                        </div>
+                    </div>
+
+                    {/* Connect With Us */}
+                    <div className="flex flex-col gap-4 md:gap-6 col-span-2 sm:col-span-1">
+                        <h3 className="text-sm md:text-lg font-black text-white uppercase tracking-wider">Connect</h3>
+                        <div className="flex flex-col gap-2 md:gap-3 text-xs md:text-sm font-medium">
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-brand-purple hover:translate-x-1 transition-all"><FaFacebook size={16} /> Facebook</a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-brand-purple hover:translate-x-1 transition-all"><FaInstagram size={16} /> Instagram</a>
+                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-brand-purple hover:translate-x-1 transition-all"><FaYoutube size={16} /> YouTube</a>
                         </div>
                     </div>
 

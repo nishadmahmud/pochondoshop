@@ -101,21 +101,21 @@ export default function TrackOrderPage() {
     return (
         <div className="min-h-screen bg-gray-50 pb-20 md:pb-10">
             {/* Hero Header */}
-            <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
+            <div className="bg-gray-50 border-b border-gray-100">
                 <div className="max-w-4xl mx-auto px-4 md:px-8 py-10 md:py-16 text-center">
-                    <div className="w-16 h-16 md:w-20 md:h-20 bg-brand-purple/20 rounded-2xl flex items-center justify-center mx-auto mb-5 backdrop-blur-sm border border-brand-purple/20">
+                    <div className="w-16 h-16 md:w-20 md:h-20 bg-brand-purple/5 rounded-2xl flex items-center justify-center mx-auto mb-5 border border-brand-purple/10">
                         <Truck className="w-8 h-8 md:w-10 md:h-10 text-brand-purple" />
                     </div>
-                    <h1 className="text-3xl md:text-4xl font-extrabold mb-3">Track Your Order</h1>
-                    <p className="text-gray-400 text-sm md:text-base max-w-md mx-auto">
-                        Enter your invoice ID to see the real-time status of your order
+                    <h1 className="text-3xl md:text-4xl font-black text-gray-900 mb-3 tracking-tight">Track Your Order</h1>
+                    <p className="text-gray-500 text-sm md:text-base max-w-md mx-auto">
+                        Enter your invoice ID to see the real-time status of your order.
                     </p>
                 </div>
             </div>
 
-            <div className="max-w-4xl mx-auto px-4 md:px-8 -mt-6">
+            <div className="max-w-4xl mx-auto px-4 md:px-8 py-8">
                 {/* Search Card */}
-                <div className="bg-white rounded-2xl shadow-xl p-5 md:p-8 mb-6">
+                <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 md:p-8 mb-6">
                     <form onSubmit={handleTrack} className="flex flex-col sm:flex-row gap-3">
                         <div className="flex-1 relative">
                             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -131,7 +131,7 @@ export default function TrackOrderPage() {
                         <button
                             type="submit"
                             disabled={loading}
-                            className="px-8 py-4 bg-brand-purple text-white font-extrabold rounded-xl shadow-lg shadow-brand-purple/30 hover:bg-[#7b3ba8] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed whitespace-nowrap"
+                            className="px-8 py-4 bg-brand-purple text-white font-extrabold rounded-xl hover:bg-purple-700 transition-colors disabled:opacity-70 disabled:cursor-not-allowed whitespace-nowrap"
                         >
                             {loading ? (
                                 <span className="flex items-center justify-center gap-2">
@@ -145,7 +145,7 @@ export default function TrackOrderPage() {
 
                 {/* Results */}
                 {orderData && (
-                    <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
                         {/* Order Header */}
                         <div className="p-5 md:p-8 border-b border-gray-100">
                             <div className="flex flex-wrap gap-4 justify-between items-center">
@@ -243,8 +243,8 @@ export default function TrackOrderPage() {
 
                 {/* No Results */}
                 {searched && !loading && !orderData && (
-                    <div className="bg-white rounded-2xl shadow-lg p-10 md:p-16 text-center">
-                        <div className="w-20 h-20 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                    <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-10 md:p-16 text-center">
+                        <div className="w-20 h-20 bg-gray-50 rounded-2xl flex items-center justify-center mx-auto mb-5 border border-gray-100">
                             <Search className="w-10 h-10 text-gray-300" />
                         </div>
                         <h3 className="text-xl font-bold text-gray-900 mb-2">Order Not Found</h3>

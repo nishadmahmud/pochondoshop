@@ -3,6 +3,8 @@ export const metadata = {
     description: 'Get in touch with Pochondo Shop. We are here to help you with your tech needs.',
 };
 
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
+
 export default function ContactPage() {
     return (
         <div className="bg-white min-h-screen">
@@ -24,13 +26,15 @@ export default function ContactPage() {
                             <h2 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h2>
                             <div className="space-y-5">
                                 {[
-                                    { label: 'Address', value: 'Dhaka, Bangladesh', icon: '📍' },
-                                    { label: 'Phone', value: '+880 1234 567890', icon: '📞' },
-                                    { label: 'Email', value: 'support@pochondoshop.com', icon: '✉️' },
-                                    { label: 'Working Hours', value: 'Sat - Thu: 10AM - 8PM', icon: '🕐' },
+                                    { label: 'Address', value: 'Dhaka, Bangladesh', icon: <MapPin className="w-6 h-6" /> },
+                                    { label: 'Phone', value: '+880 1234 567890', icon: <Phone className="w-6 h-6" /> },
+                                    { label: 'Email', value: 'support@pochondoshop.com', icon: <Mail className="w-6 h-6" /> },
+                                    { label: 'Working Hours', value: 'Sat - Thu: 10AM - 8PM', icon: <Clock className="w-6 h-6" /> },
                                 ].map((item, i) => (
-                                    <div key={i} className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl border border-gray-100">
-                                        <span className="text-xl">{item.icon}</span>
+                                    <div key={i} className="flex items-center gap-4 p-4 bg-gray-50 rounded-xl border border-gray-100">
+                                        <div className="text-brand-purple bg-purple-100/50 p-2.5 rounded-lg border border-purple-100 flex-shrink-0">
+                                            {item.icon}
+                                        </div>
                                         <div>
                                             <p className="text-xs font-bold text-gray-400 uppercase tracking-wider">{item.label}</p>
                                             <p className="font-semibold text-gray-800">{item.value}</p>

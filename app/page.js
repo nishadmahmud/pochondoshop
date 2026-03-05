@@ -4,7 +4,7 @@ import RepairServices from "../components/RepairServices/RepairServices";
 import RepairPricing from "../components/RepairPricing/RepairPricing";
 import ShopCategories from "../components/ShopCategories/ShopCategories";
 import NewArrivals from "../components/NewArrivals/NewArrivals";
-import DiscountedParts from "../components/DiscountedParts/DiscountedParts";
+import PromoBanners from "../components/PromoBanners/PromoBanners";
 import FeaturedProducts from "../components/FeaturedProducts/FeaturedProducts";
 import BestDeals from "../components/BestDeals/BestDeals";
 import Testimonials from "../components/Testimonials/Testimonials";
@@ -228,7 +228,7 @@ export default async function Home() {
 
       <ShopCategories categories={categories} flashSaleProducts={flashSaleProducts} />
       <NewArrivals products={newArrivals} />
-      <DiscountedParts />
+      <PromoBanners />
       <FeaturedProducts products={featuredProducts} />
       <BestDeals deals={bestDealsCards} />
       <BlogTips posts={blogPosts} />

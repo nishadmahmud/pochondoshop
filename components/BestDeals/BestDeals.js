@@ -41,23 +41,23 @@ export default function BestDeals({ deals = [] }) {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
                     {displayDeals.map((deal, idx) => (
-                        <div key={deal.id || idx} className="group bg-white rounded-xl md:rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row">
-                            <div className="sm:w-2/5 aspect-[16/9] sm:aspect-auto relative overflow-hidden bg-gray-100">
+                        <div key={deal.id || idx} className="group bg-white rounded-xl md:rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-row items-stretch">
+                            <div className="w-2/5 md:w-2/5 relative flex-shrink-0 overflow-hidden bg-gray-50 border-r border-gray-100">
                                 <Image src={deal.imageUrl} alt={deal.title} fill unoptimized className="object-cover object-center group-hover:scale-105 transition-transform duration-500" />
                                 <div className="absolute top-2 left-2 md:top-4 md:left-4 z-10">
-                                    <span className="bg-red-500 text-white text-[8px] md:text-[10px] font-bold px-2 md:px-3 py-0.5 md:py-1 rounded-full uppercase tracking-wider shadow-md">{deal.badge}</span>
+                                    <span className="bg-[#ff2a3b] text-white text-[8px] md:text-[10px] font-bold px-1.5 py-0.5 md:px-3 md:py-1 rounded-sm md:rounded-full uppercase tracking-wider shadow-sm">{deal.badge}</span>
                                 </div>
                             </div>
-                            <div className="sm:w-3/5 p-4 md:p-8 flex flex-col justify-center">
-                                <h3 className="text-base md:text-2xl font-extrabold text-gray-900 mb-1 md:mb-3 leading-tight group-hover:text-brand-purple transition-colors">{deal.title}</h3>
-                                <p className="text-gray-500 text-xs md:text-sm leading-relaxed mb-3 md:mb-6 line-clamp-2">{deal.description}</p>
-                                <div className="flex items-end gap-2 md:gap-3 mb-2 md:mb-4">
-                                    <span className="text-xl md:text-3xl font-black text-brand-purple">{deal.price}</span>
-                                    {deal.oldPrice && <span className="text-gray-400 text-sm md:text-lg line-through mb-0.5">{deal.oldPrice}</span>}
+                            <div className="w-3/5 md:w-3/5 p-3 md:p-8 flex flex-col justify-center">
+                                <h3 className="text-sm md:text-2xl font-extrabold text-gray-900 mb-1 md:mb-3 leading-tight group-hover:text-brand-purple transition-colors line-clamp-2 md:line-clamp-none">{deal.title}</h3>
+                                <p className="text-gray-500 text-[10px] md:text-sm leading-relaxed mb-2 md:mb-6 line-clamp-1 md:line-clamp-2">{deal.description}</p>
+                                <div className="flex flex-wrap items-baseline gap-1.5 md:gap-3 mb-2 md:mb-4">
+                                    <span className="text-sm md:text-3xl font-black text-brand-purple">{deal.price}</span>
+                                    {deal.oldPrice && <span className="text-gray-400 text-[10px] md:text-lg line-through">{deal.oldPrice}</span>}
                                 </div>
-                                <div className="flex items-center gap-3">
-                                    {deal.savings && <span className="bg-green-50 text-green-700 text-[10px] md:text-xs font-bold px-2 md:px-3 py-1 md:py-1.5 rounded-lg border border-green-200">{deal.savings}</span>}
-                                    <Link href={deal.link || "/"} className="text-[10px] md:text-sm font-bold text-brand-purple hover:text-purple-700 underline underline-offset-4 transition-colors">Shop Now →</Link>
+                                <div className="flex flex-wrap items-center gap-2 mt-auto">
+                                    {deal.savings && <span className="bg-green-50 text-green-700 text-[9px] md:text-xs font-bold px-1.5 md:px-3 py-0.5 md:py-1.5 rounded whitespace-nowrap border border-green-200">{deal.savings}</span>}
+                                    <Link href={deal.link || "/"} className="text-[10px] md:text-sm font-bold text-brand-purple hover:text-purple-700 md:underline underline-offset-4 transition-colors ml-auto md:ml-0 whitespace-nowrap">Shop Now →</Link>
                                 </div>
                             </div>
                         </div>

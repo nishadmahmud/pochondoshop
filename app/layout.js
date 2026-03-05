@@ -22,6 +22,28 @@ export const metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  openGraph: {
+    title: "Pochondo Shop | Premium Tech & Gadgets",
+    description: "Your ultimate destination for smartphones, laptops, custom PCs, gaming gear, and tech accessories in Bangladesh.",
+    url: "https://pochondoshop.com", // Adjust this if the base URL is different
+    siteName: "Pochondo Shop",
+    images: [
+      {
+        url: "/og.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Pochondo Shop Showcase",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pochondo Shop | Premium Tech & Gadgets",
+    description: "Your ultimate destination for smartphones, laptops, custom PCs, gaming gear, and tech accessories.",
+    images: ["/og.jpeg"],
+  },
 };
 
 export default async function RootLayout({ children }) {
